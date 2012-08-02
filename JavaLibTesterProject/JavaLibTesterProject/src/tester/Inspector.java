@@ -13,8 +13,8 @@ import java.util.*;
  * This class leverages the use of the Java reflection classes to implement
  * comparison for extensional equality between two objects of arbitrary type.
  * 
- * @author Viera K. Proulx
- * @since 3 March 2008, 5 October 2010
+ * @author Viera K. Proulx, Sachin Venugopalan
+ * @since 3 March 2008, 5 October 2010, 17 June 2012
  * 
  */
 public class Inspector {
@@ -28,7 +28,7 @@ public class Inspector {
 	/**
 	 * a hashmap of pairs of hashcodes for two objects that are being compared:
 	 * if the same pair is compared again, the loop of comparisons stops and
-	 * produces true
+	 * produces <code>true</code>
 	 */
 	private HashMap<Integer, Integer> hashmap = new HashMap<Integer, Integer>();
 
@@ -49,7 +49,7 @@ public class Inspector {
 	 * Has there been a violation -- was there inexact comparison done when it
 	 * was not allowed?
 	 * 
-	 * @return true if inexact values have been involved in the last comparison
+	 * @return <code>true</code> if inexact values have been involved in the last comparison
 	 *         and the inexact comparison was not allowed
 	 */
 	protected boolean inexactViolation() {
@@ -99,7 +99,7 @@ public class Inspector {
 	 *            the type of the objects being compared
 	 * @param obj1
 	 * @param obj2
-	 * @return true if the two given object are the same
+	 * @return <code>true<code> if the two given object are the same
 	 */
 	public <T> boolean isSame(T obj1, T obj2) {
 		this.hashmap.clear();
@@ -113,7 +113,7 @@ public class Inspector {
 	 * 
 	 * @param tolerance
 	 *            the desired tolerance for the inexact tests
-	 * @return
+	 * @return <code>false</code> if tolerance is negative
 	 */
 	protected boolean inexactTest(double tolerance) {
 		INEXACT_COMPARED = false;
@@ -127,7 +127,7 @@ public class Inspector {
 	 * Set up the parameters for exact test: report failure if inexact
 	 * comparisons are made
 	 * 
-	 * @return true
+	 * @return <code>true<code>
 	 */
 	protected boolean exactTest() {
 		INEXACT_COMPARED = false;
@@ -142,7 +142,7 @@ public class Inspector {
 	 *            an <code>Iterable</code> object
 	 * @param obj2
 	 *            an <code>Iterable</code> object
-	 * @return true if the two given <code>Iterable</code>object are the same
+	 * @return <code>true<code> if the two given <code>Iterable</code>object are the same
 	 */
 	public <T> boolean isSameIterable(Iterable<T> obj1, Iterable<T> obj2) {
 		this.hashmap.clear();
@@ -158,7 +158,7 @@ public class Inspector {
 	 *            a <code>Set</code> object
 	 * @param obj2
 	 *            a <code>Set</code> object
-	 * @return true if the two given object represent the same set
+	 * @return <code>true<code> if the two given object represent the same set
 	 */
 	public <T> boolean isSameSet(Set<T> obj1, Set<T> obj2) {
 		this.hashmap.clear();
@@ -174,7 +174,7 @@ public class Inspector {
 	 *            a <code>Traversal</code> object
 	 * @param obj2
 	 *            a <code>Traversal</code> object
-	 * @return true if the two given object represent the same
+	 * @return <code>true<code> if the two given object represent the same
 	 *         <code>Traversal</code>
 	 */
 	public <T> boolean isSameTraversal(Traversal<T> obj1, Traversal<T> obj2) {
@@ -187,7 +187,7 @@ public class Inspector {
 	/* ------------ THE METHODS USED TO COMPARE TWO OBJECTS ------------- */
 	/**
 	 * <P>
-	 * Invoked by <CODE>{@link isSame isSame}</CODE> method after the hashmap
+	 * Invoked by <CODE>isSame</CODE> method after the hashmap
 	 * that records seen objects has been cleared.
 	 * </P>
 	 * 
@@ -238,7 +238,7 @@ public class Inspector {
 	 *            typically the actual value
 	 * @param obj2
 	 *            typically the expected value
-	 * @return true if the two given object are the same
+	 * @return <code>true<code> if the two given object are the same
 	 */
 	@SuppressWarnings("unchecked")
 	private <T> boolean isSamePrivate(T obj1, T obj2) {
@@ -465,7 +465,7 @@ public class Inspector {
 	 *            the first inexact number
 	 * @param d2
 	 *            the second inexact number
-	 * @return true is the two numbers are nearly the same
+	 * @return <code>true<code> is the two numbers are nearly the same
 	 */
 	protected boolean isSameDouble(double d1, double d2) {
 		if (d1 - d2 == 0.0)
@@ -494,7 +494,7 @@ public class Inspector {
 	 *            the first inexact number
 	 * @param f2
 	 *            the second inexact number
-	 * @return true is the two numbers are nearly the same
+	 * @return <code>true<code> is the two numbers are nearly the same
 	 */
 	protected boolean isSameFloat(float f1, float f2) {
 		if (f1 - f2 == 0.0)
@@ -522,7 +522,7 @@ public class Inspector {
 	 *            the first <code>Iterable</code> dataset
 	 * @param obj2
 	 *            the second <code>Iterable</code> dataset
-	 * @return true is the two datasets are extensionally equal
+	 * @return <code>true<code> is the two datasets are extensionally equal
 	 */
 	private <T> boolean isSameIterablePrivate(Iterable<T> obj1, Iterable<T> obj2) {
 		Iterator<T> it1 = obj1.iterator();
@@ -539,7 +539,7 @@ public class Inspector {
 	 *            the first <code>Traversal</code> dataset
 	 * @param obj2
 	 *            the second <code>Traversal</code> dataset
-	 * @return true is the two datasets are extensionally equal
+	 * @return <code>true<code> is the two datasets are extensionally equal
 	 */
 	private <T> boolean isSameTraversalPrivate(Traversal<T> obj1,
 			Traversal<T> obj2) {
@@ -557,7 +557,7 @@ public class Inspector {
 	 *            the first <code>Iterator</code>
 	 * @param it2
 	 *            the second <code>Iterator</code>
-	 * @return true is both datasets contained the same data elements (in the
+	 * @return <code>true</code> is both datasets contained the same data elements (in the
 	 *         same order)
 	 */
 	protected <T> boolean isSameData(Iterator<T> it1, Iterator<T> it2) {
@@ -576,15 +576,15 @@ public class Inspector {
 	}
 
 	/**
-	 * Determine whether two <code>Iterator</code>s generate the same data in
+	 * Determine whether two <code>Traversal</code>s generate the same data in
 	 * the same order.
 	 * 
-	 * @param it1
-	 *            the first <code>Iterator</code>
-	 * @param it2
-	 *            the second <code>Iterator</code>
-	 * @return true is both datasets contained the same data elements (in the
-	 *         same order)
+	 * @param tr1
+	 *            the first <code>Traversal</code>
+	 * @param tr2
+	 *            the second <code>Traversal</code>
+	 * @return <code>true</code> is both datasets contained the same data elements 
+	 *         (in the same order)
 	 */
 	protected <T> boolean isSameTraversalData(Traversal<T> tr1, Traversal<T> tr2) {
 		/** if the first dataset is empty, the second one has to be too */
@@ -609,7 +609,7 @@ public class Inspector {
 	 *            the first <code>Map</code> dataset
 	 * @param obj2
 	 *            the second <code>Map</code> dataset
-	 * @return true if the two maps are extensionally equal
+	 * @return <code>true</code> if the two maps are extensionally equal
 	 */
 	protected <K, V> boolean isSameMap(Map<K, V> obj1, Map<K, V> obj2) {
 		// make sure both maps have the same size keyset
@@ -640,8 +640,8 @@ public class Inspector {
 	 *            the first <code>Set</code> dataset
 	 * @param obj2
 	 *            the second <code>Set</code> dataset
-	 * @return true if the two sets contain the same elements, compared by using
-	 *         the Java <code>equals</code> method.
+	 * @return <code>true</code> if the two sets contain the same elements, compared by 
+	 *         using the Java <code>equals</code> method.
 	 */
 	protected <T> boolean isSameSetPrivate(Set<T> obj1, Set<T> obj2) {
 		// make sure both sets have the same size number of elements
@@ -682,7 +682,8 @@ public class Inspector {
 	 * 
 	 * @param name
 	 *            the name of the class in question
-	 * @return true if this is double, float, or Double or Float
+	 * @return <code>true</code> if this is <code>double</code>, 
+	 *         <code>float</code>, or <code>Double</code> or <code>Float</code>
 	 */
 	protected boolean isDouble(String name) {
 		return name.equals("double") || name.equals("java.lang.Double");
@@ -693,7 +694,7 @@ public class Inspector {
 	 * 
 	 * @param name
 	 *            the name of the class in question
-	 * @return true if this is double, float, or Double or Float
+	 * @return <code>true</code> if this is double, float, or Double or Float
 	 */
 	protected boolean isFloat(String name) {
 		return name.equals("float") || name.equals("java.lang.Float");
@@ -705,7 +706,7 @@ public class Inspector {
 	 * 
 	 * @param name
 	 *            the name of the class in question
-	 * @return true if this is a class that represents a wrapper class
+	 * @return <code>true</code> if this is a class that represents a wrapper class
 	 */
 	protected static boolean isWrapperClass(String name) {
 		return name.equals("java.lang.Integer")
@@ -724,7 +725,8 @@ public class Inspector {
 	 * Is this a name of one of our <code>Canvas</code> classes?
 	 * 
 	 * @param name the name of the class to consider
-	 * @return true if the given name is one of our Canvas classes
+	 * @return <code>true</code> if the given name is one of our 
+	 * <code>Canvas<code> classes
 	 */
 	protected static boolean isOurCanvas(String name) {
 		return name.equals("draw.Canvas") || name.equals("idraw.Canvas")
@@ -741,19 +743,22 @@ public class Inspector {
    * package?
    * 
    * @param name the name of the class to consider
-   * @return true if the given name is a class in the <code>javalib.tunes</code>
-   * package?
+   * @return <code>true</code> if the given name is a class in 
+   * the <code>javalib.tunes</code> package
    */
   protected static boolean isTunesPackage(String name) {
     return name.startsWith("javalib.tunes.");
   }
 
 	/**
-	 * If <code>obj</code> is an instance of one of the <code>IColor</code>s
+	 * If <code>obj1</code> is an instance of one of the <code>IColor</code>s
 	 * compare the objects by just checking that the class names are the same
 	 * 
-	 * @param obj
+	 * @param obj1
 	 *            the object that could be an <code>IColor</code>
+	 * @param obj2
+	 *            the object we are comparing with
+	 * @return <code>true</code> if the test succeeds
 	 */
 	protected <T> boolean checkIColors(T obj1, T obj2) {
 		/** Convert IColor-s from the colors teachpack to java.awt.Color */
@@ -771,7 +776,24 @@ public class Inspector {
 			return obj2.getClass().getName().equals("colors.Yellow");
 		return false;
 	}
-	
+
+	/**
+	 * If <code>name</code> is the name of one of the classes that 
+	 * extend the <code>WorldImage</code> class within the interim
+	 * implementation of the <em>World</em> library,
+	 * compare the objects by just checking that the class names are the same
+	 * 
+	 * <em>Note:</em> The new (<code>javalib</code> package) implementation supports 
+	 * the comparison of images that checks the relevant image parameters 
+	 * (size, color, pinhole location, etc.) It also moved the definition of the 
+	 * <em>WorldImage</em> class hierarchy into its own package, eliminating the 
+	 * code duplication.
+	 * 
+	 * @param name
+	 *            the class name that could be the name of the old <code>WorldImage</code> class
+	 * @return <code>true</code> if the the given name matches one of the class names in the old 
+	 * <code>WorldImage</code> hierarchy
+	 */
 	protected static <T> boolean isWorldImage(String name){
 		ArrayList<String> worldPackageNames = new ArrayList<String>(Arrays.asList(
 				"funworld", "impworld", "appletworld", 

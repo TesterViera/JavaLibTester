@@ -107,7 +107,7 @@ public class Tester {
    * 
    * @param f the instance of a class that defines all tests and the data
    *          for them
-   * @param full true if full test report is desired
+   * @param full <code>true</code> if full test report is desired
    */
   protected void runAnyTests(Object f, boolean full) {
     runAnyTests(f, full, false);
@@ -130,7 +130,7 @@ public class Tester {
    * @param f the instance of a class that defines all tests and the data
    *          for them
    * @param full true if full test report is desired
-   * @param printall true if <code>Examples</code> class data is to be printed
+   * @param printall <code>true</code> if <code>Examples</code> class data is to be printed
    */
   protected void runAnyTests(Object f, boolean full, boolean printall) {
     this.numberOfTests = 0; // number of tests run
@@ -217,7 +217,7 @@ public class Tester {
    * @param f   the class to be tested -- it defines the method
    *            <code>void tests(Tester t)</code> that invokes all test
    *            cases.
-   * @param full true if full test report is desired
+   * @param full <code>true</code> if full test report is desired
    */
   protected void runTests(IExamples f, boolean full, boolean printall) {
     this.numberOfTests = 0;
@@ -284,7 +284,7 @@ public class Tester {
    * 
    * @param obj1 the first object
    * @param obj2 the second object
-   * @return true if the two objects represent the same data
+   * @return <code>true</code> if the two objects represent the same data
    */
   public boolean same(Object obj1, Object obj2) {
     return this.inspector.isSame(obj1, obj2);
@@ -296,7 +296,7 @@ public class Tester {
   /**
    * Test nothing, just report success.
    * 
-   * @return always returns true
+   * @return always returns <code>true</code>
    */
   public boolean success() {
     return success("");
@@ -306,7 +306,7 @@ public class Tester {
    * Test nothing, just report success.
    * 
    * @param testname the name of the test
-   * @return always returns true
+   * @return always returns <code>true</code>
    */
   public boolean success(String testname) {
     return checkExpect(true, testname);
@@ -315,7 +315,7 @@ public class Tester {
   /**
    * Test nothing, just report failure.
    * 
-   * @return always returns false
+   * @return always returns <code>false</code>
    */
   public boolean fail() {
     return fail("");
@@ -325,7 +325,7 @@ public class Tester {
    * Test nothing, just report failure.
    * 
    * @param testname the name of the test
-   * @return always returns false
+   * @return always returns <code>false</code>
    */
   public boolean fail(String testname) {
     return checkExpect(false, testname);
@@ -335,6 +335,7 @@ public class Tester {
    * Test that only reports success or failure
    * 
    * @param result the test result
+   * @return <code>true</code> if the test succeeds
    */
   public boolean checkExpect(boolean result) {
     return checkExpect(result, "");
@@ -345,6 +346,7 @@ public class Tester {
    * 
    * @param testname the name of this test
    * @param result the test result
+   * @return <code>true</code> if the test succeeds
    */
   public boolean checkExpect(boolean result, String testname) {
   	
@@ -361,6 +363,7 @@ public class Tester {
    * Test that only reports success or failure
    * 
    * @param result the test result that should fail
+   * @return <code>true</code> if the test fails
    */
   public boolean checkFail(boolean result) {
     return checkFail(result, "");
@@ -370,6 +373,7 @@ public class Tester {
    * Test that only reports success or failure
    * 
    * @param result the test result that should fail
+   * @return <code>true</code> if the test fails
    */
   public boolean checkFail(boolean result, String testname) {
     return checkExpect(!result, "Failure expected: \n" + testname);
@@ -383,6 +387,7 @@ public class Tester {
    * @param <T> the type of the objects being compared
    * @param actual the computed value of the type T
    * @param expected the expected value of the type T
+   * @return <code>true</code> if the test succeeds
    */
   public <T> boolean checkExpect(T actual, T expected) {
     return checkExpect(actual, expected, "");
@@ -395,6 +400,7 @@ public class Tester {
    * @param actual the computed value of the type T
    * @param expected the expected value of the type T
    * @param testname the name of this test
+   * @return <code>true</code> if the test succeeds
    */
   public <T> boolean checkExpect(T actual, T expected, String testname) {
     this.testname = testname;
@@ -418,6 +424,7 @@ public class Tester {
    * @param actual the computed value of the type T
    * @param expected the expected value of the type T
    * @param tolerance the desired relative tolerance 
+   * @return <code>true</code> if the test succeeds
    */
   public <T> boolean checkInexact(T actual, T expected, double tolerance) {
     return checkInexact(actual, expected, tolerance, "");
@@ -435,6 +442,7 @@ public class Tester {
    * @param expected the expected value of the type T
    * @param tolerance the desired relative tolerance 
    * @param testname the name of this test
+   * @return <code>true</code> if the test succeeds
    */
   public <T> boolean checkInexact(T actual, T expected, double tolerance,
   		                            String testname) {
@@ -467,6 +475,7 @@ public class Tester {
    * 
    * @param actual the computed value of the type {@link Set Set}
    * @param expected the expected value of the type {@link Set Set}
+   * @return <code>true</code> if the test succeeds
    */
   public <T> boolean checkSet(Set<T> actual, Set<T> expected) {
     return checkSet(actual, expected, "");
@@ -480,6 +489,7 @@ public class Tester {
    * @param actual the computed value of the type {@link Set Set}
    * @param expected the expected value of the type {@link Set Set}
    * @param testname the name of this test
+   * @return <code>true</code> if the test succeeds
    */
   public <T> boolean checkSet(Set<T> actual, Set<T> expected, 
                                String testname) {
@@ -499,6 +509,7 @@ public class Tester {
    * 
    * @param actual the computed value of the type {@link Iterable Iterable}
    * @param expected the expected value of the type {@link Iterable Iterable}
+   * @return <code>true</code> if the test succeeds
    */
   public <T> boolean checkIterable(Iterable<T> actual, Iterable<T> expected) {
     return checkIterable(actual, expected, "");
@@ -512,6 +523,7 @@ public class Tester {
    * @param actual the computed value of the type {@link Iterable Iterable}
    * @param expected the expected value of the type {@link Iterable Iterable}
    * @param testname the name of this test
+   * @return <code>true</code> if the test succeeds
    */
   public <T> boolean checkIterable(Iterable<T> actual, Iterable<T> expected, 
                                String testname) {
@@ -533,6 +545,7 @@ public class Tester {
    * @param actual the computed value of the type {@link Iterable Iterable}
    * @param expected the expected value of the type {@link Iterable Iterable}
    * @param tolerance the desired relative tolerance 
+   * @return <code>true</code> if the test succeeds
    */
   public <T> boolean checkInexactIterable(Iterable<T> actual, 
   		                                    Iterable<T> expected, 
@@ -552,6 +565,7 @@ public class Tester {
    * @param expected the expected value of the type {@link Iterable Iterable}
    * @param tolerance the desired relative tolerance 
    * @param testname the name of this test
+   * @return <code>true</code> if the test succeeds
    */
   public <T> boolean checkInexactIterable(Iterable<T> actual, 
   		                                    Iterable<T> expected, 
@@ -574,6 +588,7 @@ public class Tester {
    * 
    * @param actual the computed value of the type {@link Traversal Traversal}
    * @param expected the expected value of the type {@link Traversal Traversal}
+   * @return <code>true</code> if the test succeeds
    */
   public <T> boolean checkTraversal(Traversal<T> actual, 
   		                              Traversal<T> expected) {
@@ -588,6 +603,7 @@ public class Tester {
    * @param actual the computed value of the type {@link Traversal Traversal}
    * @param expected the expected value of the type {@link Traversal Traversal}
    * @param testname the name of this test
+   * @return <code>true</code> if the test succeeds
    */
   public <T> boolean checkTraversal(Traversal<T> actual, Traversal<T> expected, 
                                 String testname) {
@@ -609,6 +625,7 @@ public class Tester {
    * @param actual the computed value of the type {@link Traversal Traversal}
    * @param expected the expected value of the type {@link Traversal Traversal}
    * @param tolerance the desired relative tolerance 
+   * @return <code>true</code> if the test succeeds
    */
   public <T> boolean checkInexactTraversal(Traversal<T> actual, 
   		                                    Traversal<T> expected, 
@@ -628,6 +645,7 @@ public class Tester {
    * @param expected the expected value of the type {@link Traversal Traversal}
    * @param tolerance the desired relative tolerance 
    * @param testname the name of this test
+   * @return <code>true</code> if the test succeeds
    */
   public <T> boolean checkInexactTraversal(Traversal<T> actual, 
   		                                     Traversal<T> expected,
@@ -653,6 +671,7 @@ public class Tester {
    * @param <T> the type of the objects being compared
    * @param actual the computed value of the type T
    * @param expected the expected value of the type T
+   * @return <code>true</code> if the test fails
    */
   public <T> boolean checkFail(T actual, T expected) {
     return this.checkFail(actual, expected, "");
@@ -667,6 +686,7 @@ public class Tester {
    * @param actual the computed value of the type T
    * @param expected the expected value of the type T
    * @param testname the name of this test
+   * @return <code>true</code> if the test fails
    */
   public <T> boolean checkFail(T actual, T expected, String testname) {
     this.testname = testname;
@@ -688,6 +708,7 @@ public class Tester {
    * @param <T> the type of the objects being compared
    * @param actual the computed value of the type T
    * @param expected the expected value of the type T
+   * @return <code>true</code> if the test fails
    */
   public <T> boolean checkInexactFail(T actual, T expected, double tolerance) {
     return this.checkInexactFail(actual, expected, tolerance, "");
@@ -702,6 +723,7 @@ public class Tester {
    * @param actual the computed value of the type T
    * @param expected the expected value of the type T
    * @param testname the name of this test
+   * @return <code>true</code> if the test fails
    */
   public <T> boolean checkInexactFail(T actual, T expected, double tolerance, 
   		                                String testname) {
@@ -745,6 +767,7 @@ public class Tester {
    * @param e An instance of the expected exception -- including the
    *          expected message
    * @param args An <em>Ellipsis</em> of arguments for the method
+   * @return <code>true</code> if the test succeeds
    */
   public <T> boolean checkException(Exception e, T object, String method,
                                     Object... args) {
@@ -763,6 +786,7 @@ public class Tester {
    * @param object The object that invokes the method to be tested
    * @param method The name of the method to test
    * @param args An <em>Ellipsis</em> of arguments for the method
+   * @return <code>true</code> if the test succeeds
    */
   public <T> boolean checkException(String testname, Exception e, T object,
                                     String method, Object... args) {
@@ -771,21 +795,22 @@ public class Tester {
   	return checkPrivateException(testname, e, object, method, args);
   }
   
-    /**
-     * <p>Test that verifies that when the given object invokes the given method
-     * with the given arguments, it throws the expected exception with the
-     * expected message.</p>
-     * <p>The invocation of this method allows us to correctly record the 
-     * stack trace for reporting errors before the test throws an exception.</p>
-     * 
-     * @param <T> The type of the object that invokes the given method
-     * @param testname The description of this test
-     * @param e An instance of the expected exception -- including the
-     *          expected message
-     * @param object The object that invokes the method to be tested
-     * @param method The name of the method to test
-     * @param args An <em>Ellipsis</em> of arguments for the method
-     */
+  /**
+   * <p>Test that verifies that when the given object invokes the given method
+   * with the given arguments, it throws the expected exception with the
+   * expected message.</p>
+   * <p>The invocation of this method allows us to correctly record the 
+   * stack trace for reporting errors before the test throws an exception.</p>
+   * 
+   * @param <T> The type of the object that invokes the given method
+   * @param testname The description of this test
+   * @param e An instance of the expected exception -- including the
+   *          expected message
+   * @param object The object that invokes the method to be tested
+   * @param method The name of the method to test
+   * @param args An <em>Ellipsis</em> of arguments for the method
+   * @return <code>true</code> if the test succeeds
+   */
     private <T> boolean checkPrivateException(String testname, 
     		                Exception e, T object, String method, Object... args) {
     this.testname = testname;
@@ -895,7 +920,7 @@ public class Tester {
             + "\n\n" + trace + "\n");
       }
     }
-  }
+    }
 
     /*---------------------- Exceptions tests for constructors --------------*/
 
@@ -908,10 +933,11 @@ public class Tester {
      *          expected message
      * @param className the name of the class whose constructor is tested
      * @param args An <em>Ellipsis</em> of arguments for the method
+     * @return <code>true</code> if the test succeeds
      */
     public <T> boolean checkConstructorException(Exception e, String className,
-                                      Object... args) {
-      return checkConstructorException("", e, className, args);
+    		Object... args) {
+    	return checkConstructorException("", e, className, args);
     }
 
     /**
@@ -924,9 +950,10 @@ public class Tester {
      *          expected message
      * @param className the name of the class whose constructor is tested
      * @param args An <em>Ellipsis</em> of arguments for the method
+     * @return <code>true</code> if the test succeeds
      */
     public <T> boolean checkConstructorException(String testname, Exception e,
-                                      String className, Object... args) {
+    		String className, Object... args) {
     	// this is needed to record the correct stack trace before the
     	// test throws an exception
     	return checkPrivateConstructorException(testname, e, className, args);
@@ -934,8 +961,8 @@ public class Tester {
     
       /**
        * <p>Test that verifies that when the constructor for the given class
-     * is invoked with the given arguments, 
-     * it throws the expected exception with the expected message.</p>
+       * is invoked with the given arguments, 
+       * it throws the expected exception with the expected message.</p>
        * <p>The invocation of this method allows us to correctly record the 
        * stack trace for reporting errors before the test throws an exception.</p>
        * 
@@ -944,6 +971,7 @@ public class Tester {
        *          expected message
        * @param className the name of the class whose constructor is tested
        * @param args An <em>Ellipsis</em> of arguments for the method
+       * @return <code>true</code> if the test succeeds
        */
       private <T> boolean checkPrivateConstructorException(String testname, 
       		                Exception e, String className, Object... args) {
@@ -1086,6 +1114,7 @@ public class Tester {
    * @param method The name of the method to test
    * @param args An array of arguments for the method - use Array of length 0
    *             if no arguments are needed
+   * @return <code>true</code> if the test succeeds
    */
   public <T> boolean checkMethod(Object expected, 
   		                           T object, String method, Object... args) {
@@ -1104,6 +1133,7 @@ public class Tester {
    * @param method The name of the method to test
    * @param args An array of arguments for the method - use Array of length 0
    *             if no arguments are needed
+   * @return <code>true</code> if the test succeeds
    */
   public <T> boolean checkMethod(String testname, Object expected, 
   		                           T object, String method, Object... args) {
@@ -1125,6 +1155,7 @@ public class Tester {
    * @param method The name of the method to test
    * @param args An array of arguments for the method - use Array of length 0
    *             if no arguments are needed
+   * @return <code>true</code> if the test succeeds
    */
   public <T> boolean checkInexactMethod(Object expected, double tolerance,
   		                           T object, String method, Object... args) {
@@ -1147,6 +1178,7 @@ public class Tester {
    * @param method The name of the method to test
    * @param args An array of arguments for the method - use Array of length 0
    *             if no arguments are needed
+   * @return <code>true</code> if the test succeeds
    */
   public <T> boolean checkInexactMethod(
   		                    String testname, Object expected, double tolerance,
@@ -1169,6 +1201,7 @@ public class Tester {
    * @param method The name of the method to test
    * @param args An array of arguments for the method - use Array of length 0
    *             if no arguments are needed
+   * @return <code>true</code> if the test succeeds
    */
   private <T> boolean checkPrivateMethod(String testname, Object expected, 
       T object, String method, Object[] args, boolean inexact) {
@@ -1269,6 +1302,7 @@ public class Tester {
    * @param <T> The type of the objects being compared
    * @param actual The computed value of the type T
    * @param expected An <em>Ellipsis</em> of the expected values of the type T
+   * @return <code>true</code> if the test succeeds
    */
   public <T> boolean checkOneOf(T actual, T... expected) {
     return checkOneOf("", actual, expected);
@@ -1288,6 +1322,7 @@ public class Tester {
    * @param testname The name of this test
    * @param actual The computed value of the type T
    * @param expected An <em>Ellipsis</em> of the expected values of the type T
+   * @return <code>true</code> if the test succeeds
    */
   public <T> boolean checkOneOf(String testname, T actual, T... expected) {
   	
@@ -1310,6 +1345,7 @@ public class Tester {
    * @param <T> The type of the objects being compared
    * @param actual The computed value of the type T
    * @param expected An <em>Ellipsis</em> of the expected values of the type T
+   * @return <code>true</code> if the test succeeds
    */
   public <T> boolean checkInexactOneOf(double tolerance, 
   		                                 T actual, T... expected) {
@@ -1325,6 +1361,7 @@ public class Tester {
    * @param testname The name of this test
    * @param actual The computed value of the type T
    * @param expected An <em>Ellipsis</em> of the expected values of the type T
+   * @return <code>true</code> if the test succeeds
    */
   public <T> boolean checkInexactOneOf(String testname, double tolerance, 
   		                                 T actual, T... expected) {
@@ -1356,6 +1393,7 @@ public class Tester {
    * @param <T> the type of the objects being compared
    * @param actual the computed value of the type T
    * @param expected the expected values of the type T
+   * @return <code>true</code> if the test succeeds
    */
   public <T> boolean checkNoneOf(T actual, T... expected) {
     return checkNoneOf(actual, expected, "");
@@ -1371,6 +1409,7 @@ public class Tester {
    * @param <T> the type of the objects being compared
    * @param actual the computed value of the type T
    * @param expected the expected values of the type T
+   * @return <code>true</code> if the test succeeds
    */
   public <T> boolean checkNoneOf(String testname, T actual, T... expected) {
  	
@@ -1398,6 +1437,7 @@ public class Tester {
    * @param <T> the type of the objects being compared
    * @param actual the computed value of the type T
    * @param expected the expected values of the type T
+   * @return <code>true</code> if the test succeeds
    */
   public <T> boolean checkInexactNoneOf(double tolerance, 
   		                                  T actual, T... expected) {
@@ -1414,6 +1454,7 @@ public class Tester {
    * @param <T> the type of the objects being compared
    * @param actual the computed value of the type T
    * @param expected the expected values of the type T
+   * @return <code>true</code> if the test succeeds
    */
   public <T> boolean checkInexactNoneOf(String testname, double tolerance, 
   		                                  T actual, T... expected) { 
@@ -1443,9 +1484,10 @@ public class Tester {
    * any kind) is the range between low (inclusive) and high (exclusive)
    * values. Allows for comparison of mixed numeric types.
    * 
-   * @param actual the computed value of the type Number
-   * @param low the lower limit of the type Number (inclusive) for this range
-   * @param high the upper limit of the type Number (exclusive) for this range
+   * @param actual the computed value of the type <code>Number</code>
+   * @param low the lower limit of the type <code>Number</code> (inclusive) for this range
+   * @param high the upper limit of the type <code>Number</code> (exclusive) for this range
+   * @return <code>true</code> if the test succeeds
    */
   public <T> boolean checkNumRange(Number actual, Number low, Number high) {
     return checkNumRange(actual, low, high, "");
@@ -1456,9 +1498,10 @@ public class Tester {
    * any kind) is the range between low (inclusive) and high (exclusive)
    * values. Allows for comparison of mixed numeric types.
    * 
-   * @param actual the computed value of the type Number
-   * @param low the lower limit of the type Number (inclusive) for this range
-   * @param high the upper limit of the type Number (exclusive) for this range
+   * @param actual the computed value of the type <code>Number</code>
+   * @param low the lower limit of the type <code>Number</code> (inclusive) for this range
+   * @param high the upper limit of the type <code>Number</code> (exclusive) for this range
+   * @return <code>true</code> if the test succeeds
    */
   public <T> boolean checkNumRange(Number actual, Number low, Number high,
       String testname) {
@@ -1470,11 +1513,12 @@ public class Tester {
    * is the range between low and high values. User must specify whether the
    * low and high bounds are inclusive or exclusive.
    * 
-   * @param actual the computed value of the type Number
-   * @param low the lower limit of the type Number (inclusive) for this range
-   * @param high the upper limit of the type Number (exclusive) for this range
+   * @param actual the computed value of the type <code>Number</code>
+   * @param low the lower limit of the type <code>Number</code> (inclusive) for this range
+   * @param high the upper limit of the type <code>Number</code> (exclusive) for this range
    * @param lowIncl is the low limit inclusive for this range?
    * @param highIncl is the upper limit inclusive for this range?
+   * @return <code>true</code> if the test succeeds
    */
   public <T> boolean checkNumRange(Number actual, Number low, Number high,
       boolean lowIncl, boolean highIncl) {
@@ -1486,11 +1530,12 @@ public class Tester {
    * is the range between low and high values. User must specify whether the
    * low and high bounds are inclusive or exclusive.
    * 
-   * @param actual the computed value of the type Number
-   * @param low the lower limit of the type Number (inclusive) for this range
-   * @param high the upper limit of the type Number (exclusive) for this range
+   * @param actual the computed value of the type <code>Number</code>
+   * @param low the lower limit of the type <code>Number</code> (inclusive) for this range
+   * @param high the upper limit of the type <code>Number</code> (exclusive) for this range
    * @param lowIncl is the low limit inclusive for this range?
    * @param highIncl is the upper limit inclusive for this range?
+   * @return <code>true</code> if the test succeeds
    */
   public <T> boolean checkNumRange(Number actual, Number low, Number high,
       boolean lowIncl, boolean highIncl, String testname) {
@@ -1534,6 +1579,7 @@ public class Tester {
    * @param actual the computed value of the type T
    * @param low the lower limit of the type T (inclusive) for this range
    * @param high the upper limit of the type T (exclusive) for this range
+   * @return <code>true</code> if the test succeeds
    */
   public <T> boolean checkRange(Comparable<T> actual, T low, T high) {
     return checkRange(actual, low, high, "");
@@ -1548,6 +1594,7 @@ public class Tester {
    * @param low the lower limit of the type T (inclusive) for this range
    * @param high the upper limit of the type T (exclusive) for this range
    * @param testname the name of this test
+   * @return <code>true</code> if the test succeeds
    */
   public <T> boolean checkRange(Comparable<T> actual, T low, T high,
       String testname) {
@@ -1565,6 +1612,7 @@ public class Tester {
    * @param high the upper limit of the type T for this range
    * @param lowIncl is the low limit inclusive for this range?
    * @param highIncl is the upper limit inclusive for this range?
+   * @return <code>true</code> if the test succeeds
    */
   public <T> boolean checkRange(Comparable<T> actual, T low, T high,
       boolean lowIncl, boolean highIncl) {
@@ -1583,6 +1631,7 @@ public class Tester {
    * @param lowIncl is the low limit inclusive for this range?
    * @param highIncl is the upper limit inclusive for this range?
    * @param testname the name of this test
+   * @return <code>true</code> if the test succeeds
    */
   public <T> boolean checkRange(Comparable<T> actual, T low, T high,
       boolean lowIncl, boolean highIncl, String testname) {
@@ -1629,6 +1678,7 @@ public class Tester {
    * @param low the lower limit of the type T (inclusive) for this range
    * @param high the upper limit of the type T (exclusive) for this range
    * @param testname the name of this test
+   * @return <code>true</code> if the test succeeds
    */
 
   public <T> boolean checkRange(T actual, T low, T high, Comparator<T> comp,
@@ -1644,6 +1694,7 @@ public class Tester {
    * @param actual the computed value of the type T
    * @param low the lower limit of the type T (inclusive) for this range
    * @param high the upper limit of the type T (exclusive) for this range
+   * @return <code>true</code> if the test succeeds
    */
   public <T> boolean checkRange(T actual, T low, T high, Comparator<T> comp) {
     return checkRange(actual, low, high, true, false, comp, "");
@@ -1660,6 +1711,7 @@ public class Tester {
    * @param lowIncl is the low limit inclusive for this range?
    * @param highIncl is the upper limit inclusive for this range?
    * @param comp The <code>Comparator</code> used to compare the values
+   * @return <code>true</code> if the test succeeds
    */
   public <T> boolean checkRange(T actual, T low, T high, boolean lowIncl,
       boolean highIncl, Comparator<T> comp) {
@@ -1678,6 +1730,7 @@ public class Tester {
    * @param highIncl is the upper limit inclusive for this range?
    * @param comp The <code>Comparator</code> used to compare the values
    * @param testname the name of this test
+   * @return <code>true</code> if the test succeeds
    */
   public <T> boolean checkRange(T actual, T low, T high, boolean lowIncl,
       boolean highIncl, Comparator<T> comp, String testname) {
@@ -1729,7 +1782,7 @@ public class Tester {
    * @param equiv the function object that implements the 
    * <CODE>{@link Equivalence Equivalence}</CODE> comparison
    * 
-   * @return true if the two objects are equivalent
+   * @return <code>true</code> if the two objects are equivalent
    */
   public <T> boolean checkEquivalent(T obj1, T obj2, 
       Equivalence<T> equiv) {
@@ -1747,7 +1800,7 @@ public class Tester {
    * <CODE>{@link Equivalence Equivalence}</CODE> comparison
    * @param testname the <code>String</code> that describes this test
    * 
-   * @return true if the two objects are equivalent
+   * @return <code>true</code> if the two objects are equivalent
    */
   public <T> boolean checkEquivalent(T obj1, T obj2, 
       Equivalence<T> equiv, String testname) {
@@ -1889,7 +1942,7 @@ public class Tester {
    *   that represent the input parameter list
    * @param parDefined <CODE>Array</CODE> of <CODE>Class</CODE instances
    *   that represent the parameter list for a method with matching name
-   * @return true if the parameter lists represent the same classes allowing
+   * @return <code>true</code> if the parameter lists represent the same classes allowing
    *         for primitive types to match their wrapper classes.
    */
   private boolean matchParams(Class<?>[] parInput, Class<?>[] parDefined) {
@@ -1915,7 +1968,7 @@ public class Tester {
    * <p>Match one pair of arguments.</p>
    * @param parInput the class of the provided argument
    * @param parDefined the class of the method parameter
-   * @return true if the provided argument can be assigned to the method parameter
+   * @return <code>true</code> if the provided argument can be assigned to the method parameter
    */
   private boolean matchPair(Class<?> parInput, Class<?> parDefined){
 	  
@@ -1969,7 +2022,7 @@ public class Tester {
    * 
    * @param in The name of the primitive or wrapper type to match
    * @param def The name of the primitive or wrapper class to match
-   * @return true if the two types are compatible
+   * @return <code>true</code> if the two types are compatible
    */
   private boolean isWrapperMatch(String in, String def) {
     if (def.equals("java.lang.Integer") && in.equals("int"))
@@ -2032,7 +2085,7 @@ public class Tester {
    * in the <code>checkInexact</code> comparison.
    * 
    * @param in The name of the type to verify
-   * @return true if the type represents an exact data type.
+   * @return <code>true</code> if the type represents an exact data type.
    */
   private boolean isExactType(String in) {
     return 
@@ -2054,7 +2107,7 @@ public class Tester {
    * Combine side by side the actual and expected values.
    * @param <T> the type of data that is to be shown
    * @param actual the actual value
-   * @param expectedthe expected value
+   * @param expected the expected value
    * @return a <code>String</code> with two values
    * side-by-side, with a marker for the first diff.
    */
@@ -2119,12 +2172,13 @@ public class Tester {
   /*--------------------------------------------------------------------*/
 
   /**
-   * General contractor to report test results
+   * General contractor to report test results - invokes the success or
+   * the error reporter; invokes teh stack trace generator if the test failed
    * 
    * @param success Did the test succeed?
    * @param testname The name of this test
-   * @param actual The computed value of the result
-   * @param expected The expected value of the result
+   * @param result The <code>String</code> that represents the value of the result
+   * @return <code>true</code> if we are reporting success
    */
   private boolean report(boolean success, String testname, String result) {
    	
@@ -2145,6 +2199,7 @@ public class Tester {
    * @param actual The computed value of the result
    * @param low The low value (inclusive)of the range
    * @param high The high value (exclusive) of the range
+   * @return <code>true</code> if we are reporting success
    */
   private boolean report(boolean success, String testname, Object actual,
       Object low, Object high) {
@@ -2163,6 +2218,7 @@ public class Tester {
    * 
    * @param testname The name of the failed test
    * @param result The resulting message of the test
+   * @return <code>false</code> 
    */
   private boolean reportErrors(String testname, String result) {
 
@@ -2180,6 +2236,7 @@ public class Tester {
    * @param actual The computed value of the test
    * @param low The low (inclusive) value of the range
    * @param high The high (exclusive) value of the range
+   * @return <code>false</code> 
    */
   private boolean reportErrors(String testname, Object actual, Object low,
                                Object high) {
@@ -2246,8 +2303,9 @@ public class Tester {
    * Add a test to the list of successful tests in the case when no actual 
    * and expected values are to be reported.
    * 
-   * @param testname The name of the failed test
+   * @param testname The name of the successful test
    * @param result The resulting message of the test
+   * @return <code>true</code> 
   */
   private boolean reportSuccess(String testname, String result) {
 
@@ -2259,12 +2317,13 @@ public class Tester {
   }
 
   /**
-   * Add a test to the list of failed tests
+   * Add a test to the list of successful tests
    * 
-   * @param testname The name of the failed range test
+   * @param testname The name of the successful range test
    * @param actual The computed value of the test
    * @param low The low (inclusive) value of the range
    * @param high The high (exclusive) value of the range
+   * @return <code>true</code> 
    */
   private boolean reportSuccess(String testname, Object actual, 
   		                          Object low, Object high) {
@@ -2300,6 +2359,7 @@ public class Tester {
    * Add the given test successful test result to the full report
    * 
    * @param testResult The successful test result
+   * @return <code>true</code> 
    */
   private boolean addSuccess(String testResult) {
     // update the count of all tests
@@ -2313,6 +2373,7 @@ public class Tester {
    * error report
    * 
    * @param testResult The failed test result
+   * @return <code>false</code> 
    */
   private boolean addError(String testResult) {
     // update the count of all tests
@@ -2328,6 +2389,7 @@ public class Tester {
   /**
    * Produce a <code>String</code> describing the number of tests that were
    * run and that failed.
+   * @return the desired <code>String</code>
    */
   private String testCount() {
     String tCount = "";

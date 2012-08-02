@@ -49,7 +49,7 @@ public class Utils {
      * package on the local file system.
      * 
      * @param packageName
-     * @return
+     * @return all classes in the given package
      */
     public static Set<Class> getClassesInPackage(String packageName) {
 	Set<Class> classes = new HashSet<Class>();
