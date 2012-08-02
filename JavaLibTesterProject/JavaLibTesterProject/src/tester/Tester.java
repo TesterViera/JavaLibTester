@@ -23,12 +23,12 @@ import java.io.*;
  * 
  * <P>Displays the data even if no tests are present.</P>
  * 
- * @author Viera K. Proulx, Weston Jossey, Shayne Caswell
+ * @author Viera K. Proulx, Weston Jossey, Shayne Caswell, Sachin Venugopalan
  * @since 21 March 2008, 11 June 2008, 24 June 2008, 16 October 2008, 11
  *        November 2008, 23 November 2008, 12 December 2008, 20 January 2009,
  *        18 May 2009, 19 October 2009, 10 November 2009, 16 November 2009, 
  *        5 February 2010, 15 March 2010, 12 May 2010, 5 October 2010,
- *        18 February 2011, 5 July 2011, 12 January 2012
+ *        18 February 2011, 5 July 2011, 12 January 2012, 17 June 2012
  */
 public class Tester {
   // private static final Logger logger = Logger.getLogger(Tester.class);
