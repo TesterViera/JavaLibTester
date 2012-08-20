@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>ccs.neu.edu</groupId>
-  <artifactId>libtester</artifactId>
+  <artifactId>tester</artifactId>
   <version>1.5.1</version>
   <packaging>jar</packaging>
 
-  <name>libtester</name>
+  <name>tester</name>
   <url>http://maven.apache.org</url>
 
   <properties>
