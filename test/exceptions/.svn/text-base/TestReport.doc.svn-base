@@ -1,0 +1,390 @@
+Show all data defined in the ExamplesConstructorExceptions class:
+
+
+---------------------------------------------------
+Invoke tester.runReport(this, true, true):
+Print all data, all test results
+Tester Prima v.1.4.1 - 5 October 2010
+----------------------------------
+exceptions.ExamplesConstructorExceptions:
+---------------
+
+ new exceptions.ExamplesConstructorExceptions:1(
+  this.MSG_INVALID_YEAR_IN_DATE =  "Invalid year in Date"
+  this.MSG_INVALID_MONTH_IN_DATE =  "Invalid month in Date"
+  this.MSG_INVALID_DAY_IN_DATE =  "Invalid day in Date")
+---------------
+
+Ran 10 tests.
+2 tests failed.
+
+Full test results: 
+-------------------
+
+Success in the test number 1
+Should be success: no constructor exception thrown
+: success 
+
+
+Success in the test number 2
+Should be success: constructor exception is caught
+: success 
+
+
+Success in the test number 3
+Should be success: invalid month for IMonth2Number
+
+ correct exception: 
+ class: java.lang.IllegalArgumentException
+ correct message: Invalid month in Date
+
+ after invoking the constructor for the class exceptions.Date
+
+Success in the test number 4
+Should be success: invalid month for IMonth2Number
+
+ correct exception: 
+ class: java.lang.IllegalArgumentException
+ correct message: Invalid month in Date
+
+ after invoking the constructor for the class exceptions.Date
+
+Success in the test number 5
+Should be success: year beyond the allowed range
+
+ correct exception: 
+ class: java.lang.IllegalArgumentException
+ correct message: Invalid year in Date
+
+ after invoking the constructor for the class exceptions.Date
+
+Success in the test number 6
+Should be success: invalid month
+
+ correct exception: 
+ class: java.lang.IllegalArgumentException
+ correct message: Invalid month in Date
+
+ after invoking the constructor for the class exceptions.Date
+
+Success in the test number 7
+Should be success: invalid day
+
+ correct exception: 
+ class: java.lang.IllegalArgumentException
+ correct message: Invalid day in Date
+
+ after invoking the constructor for the class exceptions.Date
+
+Success in the test number 8
+Should be success: invalid day - 2
+
+ correct exception: 
+ class: java.lang.IllegalArgumentException
+ correct message: Invalid day in Date
+
+ after invoking the constructor for the class exceptions.Date
+
+Error in test number 9
+The test should fail: Correct params supplied
+tester.ErrorReport: Error trace:
+	at exceptions.ExamplesConstructorExceptions.testConstructorException7(ExamplesConstructorExceptions.java:302)
+	at exceptions.ExamplesExceptions.main(ExamplesExceptions.java:41)
+
+ constructor invocation for the class exceptions.Date did not throw any exception 
+  result: exceptions.Date: 
+ new exceptions.Date:1(
+  this.year = 2000
+  this.month = 2
+  this.day = 12
+  this.MSG_INVALID_YEAR_IN_DATE =  "Invalid year in Date"
+  this.MSG_INVALID_MONTH_IN_DATE =  "Invalid month in Date"
+  this.MSG_INVALID_DAY_IN_DATE =  "Invalid day in Date")
+  expected exception was: 
+    class: java.lang.IllegalArgumentException
+    message: Invalid month in Date
+
+Error in test number 10
+The test should fail: we supplied a wrong exception class
+ correct exception: 
+ class: java.lang.IllegalArgumentException
+ incorrect message: 
+
+ message produced: Invalid month in Date
+ message expected: Invalid day in Date
+ after invoking the constructor for the class exceptions.Date
+
+tester.ErrorReport: Error trace:
+	at exceptions.ExamplesConstructorExceptions.testConstructorException8(ExamplesConstructorExceptions.java:326)
+	at exceptions.ExamplesExceptions.main(ExamplesExceptions.java:41)
+
+
+
+--- END OF FULL TEST RESULTS ---
+
+---------------------------------------------------
+
+---------------------------------------------------
+
+---------------------------------------------------
+Invoke tester.runReport(this, false, false, true):
+Print no data, all test results, no warnings
+Tester Prima v.1.4.1 - 5 October 2010
+----------------------------------
+
+Ran 10 tests.
+2 tests failed.
+
+Failed test results: 
+--------------
+
+Error in test number 9
+The test should fail: Correct params supplied
+tester.ErrorReport: Error trace:
+	at exceptions.ExamplesConstructorExceptions.testConstructorException7(ExamplesConstructorExceptions.java:302)
+	at exceptions.ExamplesExceptions.main(ExamplesExceptions.java:49)
+
+ constructor invocation for the class exceptions.Date did not throw any exception 
+  result: exceptions.Date: 
+ new exceptions.Date:1(
+  this.year = 2000
+  this.month = 2
+  this.day = 12
+  this.MSG_INVALID_YEAR_IN_DATE =  "Invalid year in Date"
+  this.MSG_INVALID_MONTH_IN_DATE =  "Invalid month in Date"
+  this.MSG_INVALID_DAY_IN_DATE =  "Invalid day in Date")
+  expected exception was: 
+    class: java.lang.IllegalArgumentException
+    message: Invalid month in Date
+
+Error in test number 10
+The test should fail: we supplied a wrong exception class
+ correct exception: 
+ class: java.lang.IllegalArgumentException
+ incorrect message: 
+
+ message produced: Invalid month in Date
+ message expected: Invalid day in Date
+ after invoking the constructor for the class exceptions.Date
+
+tester.ErrorReport: Error trace:
+	at exceptions.ExamplesConstructorExceptions.testConstructorException8(ExamplesConstructorExceptions.java:326)
+	at exceptions.ExamplesExceptions.main(ExamplesExceptions.java:49)
+
+
+
+--- END OF TEST RESULTS ---
+Show all data defined in the ExamplesMethodExceptions class:
+
+
+---------------------------------------------------
+Invoke tester.runReport(this, true, true):
+Print all data, all test results
+Tester Prima v.1.4.1 - 5 October 2010
+----------------------------------
+exceptions.ExamplesMethodExceptions:
+---------------
+
+ new exceptions.ExamplesMethodExceptions:1()
+---------------
+new MTListTr().getFirsttt() 
+The test should fail: we supplied a wrong method name
+No method with the name getFirsttt found
+
+
+Ran 6 tests.
+4 tests failed.
+
+Full test results: 
+-------------------
+
+Success in the test number 1
+new MTListTr().getFirst() threw exception: 
+Cannot access the first element of an empty data set
+: success 
+
+
+Error in test number 2
+new MTListTr().isEmpty() 
+The test should fail: the method fails to throw an exception
+tester.ErrorReport: Error trace:
+	at exceptions.ExamplesMethodExceptions.testExceptions2(ExamplesMethodExceptions.java:77)
+	at exceptions.ExamplesExceptions.main(ExamplesExceptions.java:60)
+
+ invocation did not throw any exception 
+  method name: isEmpty
+  object class: exceptions.MTListTr
+  result: java.lang.Boolean: true
+  expected exception was: 
+    class: java.lang.UnsupportedOperationException
+    message: Cannot access the first element of an empty data set
+
+Success in the test number 3
+new MTListTr().getFirst() 
+Should be success: throws correct exception with the correct message
+
+ correct exception: 
+ class: java.lang.UnsupportedOperationException
+ correct message: Cannot access the first element of an empty data set
+    after invoking the method getFirst
+    by an object in the class: exceptions.MTListTr
+    object value was: 
+
+ new exceptions.MTListTr:1()
+
+Error in test number 4
+new MTListTr().getFirst() 
+The test should fail: we supplied a wrong message
+ correct exception: 
+ class: java.lang.UnsupportedOperationException
+ incorrect message: 
+
+ message produced: Cannot advance to the rest of an empty data set
+ message expected: Cannot access the first element of an empty data set
+    after invoking the method getRest
+    by an object in the class: exceptions.MTListTr
+    object value was: 
+
+ new exceptions.MTListTr:1()
+
+tester.ErrorReport: Error trace:
+	at exceptions.ExamplesMethodExceptions.testExceptions4(ExamplesMethodExceptions.java:132)
+	at exceptions.ExamplesExceptions.main(ExamplesExceptions.java:60)
+
+
+
+Error in test number 5
+new MTListTr().getFirst() 
+The test should fail: we supplied a wrong exception class
+ incorrect exception was thrown: 
+ exception thrown:   java.lang.UnsupportedOperationException
+ exception expected: java.lang.IllegalArgumentException
+    with the message: Cannot access the first element of an empty data set
+    after invoking the method getFirst
+    by an object in the class: exceptions.MTListTr
+    object value was: 
+
+ new exceptions.MTListTr:1()
+
+tester.ErrorReport: Error trace:
+	at exceptions.ExamplesMethodExceptions.testExceptions5(ExamplesMethodExceptions.java:161)
+	at exceptions.ExamplesExceptions.main(ExamplesExceptions.java:60)
+
+
+
+Error in test number 6
+new MTListTr().getFirsttt() 
+The test should fail: we supplied a wrong method name
+ incorrect exception was thrown: 
+ exception thrown:   java.lang.NoSuchMethodException
+ exception expected: java.lang.IllegalArgumentException
+    with the message: Cannot access the first element of an empty data set
+    after invoking the method getFirsttt
+    by an object in the class: exceptions.MTListTr
+    object value was: 
+
+ new exceptions.MTListTr:1()
+
+tester.ErrorReport: Error trace:
+	at exceptions.ExamplesMethodExceptions.testExceptions6(ExamplesMethodExceptions.java:189)
+	at exceptions.ExamplesExceptions.main(ExamplesExceptions.java:60)
+
+
+
+--- END OF FULL TEST RESULTS ---
+
+---------------------------------------------------
+
+---------------------------------------------------
+
+---------------------------------------------------
+Invoke tester.runReport(this, false, false, true):
+Print no data, all test results, no warnings
+Tester Prima v.1.4.1 - 5 October 2010
+----------------------------------
+new MTListTr().getFirsttt() 
+The test should fail: we supplied a wrong method name
+No method with the name getFirsttt found
+
+
+Ran 6 tests.
+4 tests failed.
+
+Failed test results: 
+--------------
+
+Error in test number 2
+new MTListTr().isEmpty() 
+The test should fail: the method fails to throw an exception
+tester.ErrorReport: Error trace:
+	at exceptions.ExamplesMethodExceptions.testExceptions2(ExamplesMethodExceptions.java:77)
+	at exceptions.ExamplesExceptions.main(ExamplesExceptions.java:68)
+
+ invocation did not throw any exception 
+  method name: isEmpty
+  object class: exceptions.MTListTr
+  result: java.lang.Boolean: true
+  expected exception was: 
+    class: java.lang.UnsupportedOperationException
+    message: Cannot access the first element of an empty data set
+
+Error in test number 4
+new MTListTr().getFirst() 
+The test should fail: we supplied a wrong message
+ correct exception: 
+ class: java.lang.UnsupportedOperationException
+ incorrect message: 
+
+ message produced: Cannot advance to the rest of an empty data set
+ message expected: Cannot access the first element of an empty data set
+    after invoking the method getRest
+    by an object in the class: exceptions.MTListTr
+    object value was: 
+
+ new exceptions.MTListTr:1()
+
+tester.ErrorReport: Error trace:
+	at exceptions.ExamplesMethodExceptions.testExceptions4(ExamplesMethodExceptions.java:132)
+	at exceptions.ExamplesExceptions.main(ExamplesExceptions.java:68)
+
+
+
+Error in test number 5
+new MTListTr().getFirst() 
+The test should fail: we supplied a wrong exception class
+ incorrect exception was thrown: 
+ exception thrown:   java.lang.UnsupportedOperationException
+ exception expected: java.lang.IllegalArgumentException
+    with the message: Cannot access the first element of an empty data set
+    after invoking the method getFirst
+    by an object in the class: exceptions.MTListTr
+    object value was: 
+
+ new exceptions.MTListTr:1()
+
+tester.ErrorReport: Error trace:
+	at exceptions.ExamplesMethodExceptions.testExceptions5(ExamplesMethodExceptions.java:161)
+	at exceptions.ExamplesExceptions.main(ExamplesExceptions.java:68)
+
+
+
+Error in test number 6
+new MTListTr().getFirsttt() 
+The test should fail: we supplied a wrong method name
+ incorrect exception was thrown: 
+ exception thrown:   java.lang.NoSuchMethodException
+ exception expected: java.lang.IllegalArgumentException
+    with the message: Cannot access the first element of an empty data set
+    after invoking the method getFirsttt
+    by an object in the class: exceptions.MTListTr
+    object value was: 
+
+ new exceptions.MTListTr:1()
+
+tester.ErrorReport: Error trace:
+	at exceptions.ExamplesMethodExceptions.testExceptions6(ExamplesMethodExceptions.java:189)
+	at exceptions.ExamplesExceptions.main(ExamplesExceptions.java:68)
+
+
+
+--- END OF TEST RESULTS ---

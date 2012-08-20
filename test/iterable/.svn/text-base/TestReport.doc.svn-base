@@ -1,0 +1,295 @@
+Show all data defined in the ExamplesIterables class:
+
+
+---------------------------------------------------
+Invoke tester.runReport(this, true, true):
+Print all data, all test results
+Tester Prima v.1.4.1 - 5 October 2010
+----------------------------------
+iterable.ExamplesIterables:
+---------------
+
+ new iterable.ExamplesIterables:1(
+  this.cpt1 = 
+   new iterable.CartPtDouble:2(
+    this.x = 3.0
+    this.y = 4.0)
+  this.cpt2 = 
+   new iterable.CartPtDouble:3(
+    this.x = 7.0
+    this.y = 7.0)
+  this.cpt2a = 
+   new iterable.CartPtDouble:4(
+    this.x = 7.0
+    this.y = 6.9995)
+  this.cpt3 = 
+   new iterable.CartPtDouble:5(
+    this.x = 15.0
+    this.y = 8.0)
+  this.list1 = 
+   new java.util.Arrays$ArrayList:6(){
+    Iterable[0] iterable.CartPtDouble:2,
+    Iterable[1] iterable.CartPtDouble:3,
+    Iterable[2] iterable.CartPtDouble:5}
+  this.list2 = 
+   new java.util.Arrays$ArrayList:7(){
+    Iterable[0] iterable.CartPtDouble:2,
+    Iterable[1] iterable.CartPtDouble:4,
+    Iterable[2] iterable.CartPtDouble:5}
+  this.list3 = 
+   new java.util.Arrays$ArrayList:8(){
+    Iterable[0] iterable.CartPtDouble:2,
+    Iterable[1] iterable.CartPtDouble:5}
+  this.list4 = java.util.Arrays$ArrayList:8)
+---------------
+
+Ran 7 tests.
+4 tests failed.
+Issued 4 warnings of inexact comparison.
+
+Full test results: 
+-------------------
+
+Success in the test number 1
+Success: same lists
+actual:                                 expected:
+Iterable[0]                             Iterable[0] 
+ new iterable.CartPtDouble:1(            new iterable.CartPtDouble:1(
+  this.x = 3.0                            this.x = 3.0
+  this.y = 4.0),                          this.y = 4.0),
+Iterable[1]                             Iterable[1] 
+ new iterable.CartPtDouble:2(            new iterable.CartPtDouble:2(
+  this.x = 15.0                           this.x = 15.0
+  this.y = 8.0)                           this.y = 8.0)
+
+
+
+Error in test number 2
+Should fail: not the same lists
+tester.ErrorReport: Error trace:
+	at iterable.ExamplesIterables.testIterables(ExamplesIterables.java:49)
+	at iterable.ExamplesIterables.main(ExamplesIterables.java:99)
+The comparison involved inexact numbers with relative tolerance 0.0010
+actual:                                 expected:
+Iterable[0]                             Iterable[0] 
+ new iterable.CartPtDouble:1(            new iterable.CartPtDouble:1(
+  this.x = 3.0                            this.x = 3.0
+  this.y = 4.0),                          this.y = 4.0),
+Iterable[1]                             Iterable[1] 
+ new iterable.CartPtDouble:2(            new iterable.CartPtDouble:2(
+  this.x = 7.0..........................  this.x = 15.0
+  this.y = 7.0),                          this.y = 8.0)
+Iterable[2] 
+ new iterable.CartPtDouble:3(
+  this.x = 15.0
+  this.y = 8.0)
+
+
+
+Error in test number 3
+Should fail: should be checkInexactIterable
+tester.ErrorReport: Error trace:
+	at iterable.ExamplesIterables.testIterables(ExamplesIterables.java:54)
+	at iterable.ExamplesIterables.main(ExamplesIterables.java:99)
+The comparison involved inexact numbers with relative tolerance 0.0010
+actual:                                 expected:
+Iterable[0]                             Iterable[0] 
+ new iterable.CartPtDouble:1(            new iterable.CartPtDouble:1(
+  this.x = 3.0                            this.x = 3.0
+  this.y = 4.0),                          this.y = 4.0),
+Iterable[1]                             Iterable[1] 
+ new iterable.CartPtDouble:2(            new iterable.CartPtDouble:2(
+  this.x = 7.0                            this.x = 7.0
+  this.y = 7.0),........................  this.y = 6.9995),
+Iterable[2]                             Iterable[2] 
+ new iterable.CartPtDouble:3(            new iterable.CartPtDouble:3(
+  this.x = 15.0                           this.x = 15.0
+  this.y = 8.0)                           this.y = 8.0)
+
+
+
+Success in the test number 4
+Success: Test Inexact Iterable
+The comparison involved inexact numbers with relative tolerance 0.01
+actual:                                 expected:
+Iterable[0]                             Iterable[0] 
+ new iterable.CartPtDouble:1(            new iterable.CartPtDouble:1(
+  this.x = 3.0                            this.x = 3.0
+  this.y = 4.0),                          this.y = 4.0),
+Iterable[1]                             Iterable[1] 
+ new iterable.CartPtDouble:2(            new iterable.CartPtDouble:2(
+  this.x = 7.0                            this.x = 7.0
+  this.y = 7.0),........................  this.y = 6.9995),
+Iterable[2]                             Iterable[2] 
+ new iterable.CartPtDouble:3(            new iterable.CartPtDouble:3(
+  this.x = 15.0                           this.x = 15.0
+  this.y = 8.0)                           this.y = 8.0)
+
+
+
+Success in the test number 5
+Success: same lists
+actual:                                 expected:
+Iterable[0]                             Iterable[0] 
+ new iterable.CartPtDouble:1(            new iterable.CartPtDouble:1(
+  this.x = 3.0                            this.x = 3.0
+  this.y = 4.0),                          this.y = 4.0),
+Iterable[1]                             Iterable[1] 
+ new iterable.CartPtDouble:2(            new iterable.CartPtDouble:2(
+  this.x = 15.0                           this.x = 15.0
+  this.y = 8.0)                           this.y = 8.0)
+
+
+
+Error in test number 6
+Should fail: tolerance < 0
+Provided tolerance value was < 0
+tester.ErrorReport: Error trace:
+	at iterable.ExamplesIterables.testIterables(ExamplesIterables.java:71)
+	at iterable.ExamplesIterables.main(ExamplesIterables.java:99)
+actual:                                 expected:
+Iterable[0]                             Iterable[0] 
+ new iterable.CartPtDouble:1(            new iterable.CartPtDouble:1(
+  this.x = 3.0                            this.x = 3.0
+  this.y = 4.0),                          this.y = 4.0),
+Iterable[1]                             Iterable[1] 
+ new iterable.CartPtDouble:2(            new iterable.CartPtDouble:2(
+  this.x = 7.0                            this.x = 7.0
+  this.y = 7.0),........................  this.y = 6.9995),
+Iterable[2]                             Iterable[2] 
+ new iterable.CartPtDouble:3(            new iterable.CartPtDouble:3(
+  this.x = 15.0                           this.x = 15.0
+  this.y = 8.0)                           this.y = 8.0)
+
+
+
+Error in test number 7
+Should fail: not the same lists
+tester.ErrorReport: Error trace:
+	at iterable.ExamplesIterables.testIterables(ExamplesIterables.java:77)
+	at iterable.ExamplesIterables.main(ExamplesIterables.java:99)
+The comparison involved inexact numbers with relative tolerance 0.01
+actual:                                 expected:
+Iterable[0]                             Iterable[0] 
+ new iterable.CartPtDouble:1(            new iterable.CartPtDouble:1(
+  this.x = 3.0                            this.x = 3.0
+  this.y = 4.0),                          this.y = 4.0),
+Iterable[1]                             Iterable[1] 
+ new iterable.CartPtDouble:2(            new iterable.CartPtDouble:2(
+  this.x = 7.0..........................  this.x = 15.0
+  this.y = 7.0),                          this.y = 8.0)
+Iterable[2] 
+ new iterable.CartPtDouble:3(
+  this.x = 15.0
+  this.y = 8.0)
+
+
+
+--- END OF FULL TEST RESULTS ---
+
+---------------------------------------------------
+
+---------------------------------------------------
+
+---------------------------------------------------
+Invoke tester.runReport(this, false, false, true):
+Print no data, all test results, no warnings
+Tester Prima v.1.4.1 - 5 October 2010
+----------------------------------
+
+Ran 7 tests.
+4 tests failed.
+Issued 4 warnings of inexact comparison.
+
+Failed test results: 
+--------------
+
+Error in test number 2
+Should fail: not the same lists
+tester.ErrorReport: Error trace:
+	at iterable.ExamplesIterables.testIterables(ExamplesIterables.java:49)
+	at iterable.ExamplesIterables.main(ExamplesIterables.java:107)
+The comparison involved inexact numbers with relative tolerance 0.0010
+actual:                                 expected:
+Iterable[0]                             Iterable[0] 
+ new iterable.CartPtDouble:1(            new iterable.CartPtDouble:1(
+  this.x = 3.0                            this.x = 3.0
+  this.y = 4.0),                          this.y = 4.0),
+Iterable[1]                             Iterable[1] 
+ new iterable.CartPtDouble:2(            new iterable.CartPtDouble:2(
+  this.x = 7.0..........................  this.x = 15.0
+  this.y = 7.0),                          this.y = 8.0)
+Iterable[2] 
+ new iterable.CartPtDouble:3(
+  this.x = 15.0
+  this.y = 8.0)
+
+
+
+Error in test number 3
+Should fail: should be checkInexactIterable
+tester.ErrorReport: Error trace:
+	at iterable.ExamplesIterables.testIterables(ExamplesIterables.java:54)
+	at iterable.ExamplesIterables.main(ExamplesIterables.java:107)
+The comparison involved inexact numbers with relative tolerance 0.0010
+actual:                                 expected:
+Iterable[0]                             Iterable[0] 
+ new iterable.CartPtDouble:1(            new iterable.CartPtDouble:1(
+  this.x = 3.0                            this.x = 3.0
+  this.y = 4.0),                          this.y = 4.0),
+Iterable[1]                             Iterable[1] 
+ new iterable.CartPtDouble:2(            new iterable.CartPtDouble:2(
+  this.x = 7.0                            this.x = 7.0
+  this.y = 7.0),........................  this.y = 6.9995),
+Iterable[2]                             Iterable[2] 
+ new iterable.CartPtDouble:3(            new iterable.CartPtDouble:3(
+  this.x = 15.0                           this.x = 15.0
+  this.y = 8.0)                           this.y = 8.0)
+
+
+
+Error in test number 6
+Should fail: tolerance < 0
+Provided tolerance value was < 0
+tester.ErrorReport: Error trace:
+	at iterable.ExamplesIterables.testIterables(ExamplesIterables.java:71)
+	at iterable.ExamplesIterables.main(ExamplesIterables.java:107)
+actual:                                 expected:
+Iterable[0]                             Iterable[0] 
+ new iterable.CartPtDouble:1(            new iterable.CartPtDouble:1(
+  this.x = 3.0                            this.x = 3.0
+  this.y = 4.0),                          this.y = 4.0),
+Iterable[1]                             Iterable[1] 
+ new iterable.CartPtDouble:2(            new iterable.CartPtDouble:2(
+  this.x = 7.0                            this.x = 7.0
+  this.y = 7.0),........................  this.y = 6.9995),
+Iterable[2]                             Iterable[2] 
+ new iterable.CartPtDouble:3(            new iterable.CartPtDouble:3(
+  this.x = 15.0                           this.x = 15.0
+  this.y = 8.0)                           this.y = 8.0)
+
+
+
+Error in test number 7
+Should fail: not the same lists
+tester.ErrorReport: Error trace:
+	at iterable.ExamplesIterables.testIterables(ExamplesIterables.java:77)
+	at iterable.ExamplesIterables.main(ExamplesIterables.java:107)
+The comparison involved inexact numbers with relative tolerance 0.01
+actual:                                 expected:
+Iterable[0]                             Iterable[0] 
+ new iterable.CartPtDouble:1(            new iterable.CartPtDouble:1(
+  this.x = 3.0                            this.x = 3.0
+  this.y = 4.0),                          this.y = 4.0),
+Iterable[1]                             Iterable[1] 
+ new iterable.CartPtDouble:2(            new iterable.CartPtDouble:2(
+  this.x = 7.0..........................  this.x = 15.0
+  this.y = 7.0),                          this.y = 8.0)
+Iterable[2] 
+ new iterable.CartPtDouble:3(
+  this.x = 15.0
+  this.y = 8.0)
+
+
+
+--- END OF TEST RESULTS ---

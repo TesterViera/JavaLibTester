@@ -1,0 +1,446 @@
+Show all data defined in the ExamplesMethods class:
+
+
+---------------------------------------------------
+Invoke tester.runReport(this, true, true):
+Print all data, all test results
+Tester Prima v.1.4.1 - 5 October 2010
+----------------------------------
+methods.ExamplesMethods:
+---------------
+
+ new methods.ExamplesMethods:1(
+  this.song1 = 
+   new methods.Song:2(
+    this.title =  "title1"
+    this.time = 4)
+  this.song2 = 
+   new methods.Song:3(
+    this.title =  "title2"
+    this.time = 2)
+  this.song1a = 
+   new methods.Song:4(
+    this.title =  "title1"
+    this.time = 4)
+  this.pt = 
+   new methods.CartPtDouble:5(
+    this.x = 3.0
+    this.y = 4.0))
+---------------
+
+Ran 13 tests.
+6 tests failed.
+Issued 4 warnings of inexact comparison.
+
+Full test results: 
+-------------------
+
+Success in the test number 1
+Success: Check if you get the shorter song
+
+ new methods.Song:1(
+  this.title =  "title1"
+  this.time = 4)
+ invoked method shorter in the class methods.Song
+ with arguments (
+ new methods.Song:1(
+  this.title =  "title2"
+  this.time = 2))
+
+actual:                                 expected:
+ new methods.Song:1(                     new methods.Song:1(
+  this.title =  "title2"                  this.title =  "title2"
+  this.time = 2)                          this.time = 2)
+
+
+
+Success in the test number 2
+Success: Check if you get the shorter song
+
+ new methods.Song:1(
+  this.title =  "title2"
+  this.time = 2)
+ invoked method shorter in the class methods.Song
+ with arguments (
+ new methods.Song:1(
+  this.title =  "title1"
+  this.time = 4))
+
+actual:                                 expected:
+ new methods.Song:1(                     new methods.Song:1(
+  this.title =  "title2"                  this.title =  "title2"
+  this.time = 2)                          this.time = 2)
+
+
+
+Error in test number 3
+Should fail: Check if you get the shorter song
+
+ new methods.Song:1(
+  this.title =  "title1"
+  this.time = 4)
+ invoked method shorter in the class methods.Song
+ with arguments (
+ new methods.Song:1(
+  this.title =  "title2"
+  this.time = 2))
+
+tester.ErrorReport: Error trace:
+	at methods.ExamplesMethods.testMethod(ExamplesMethods.java:46)
+	at methods.ExamplesMethods.main(ExamplesMethods.java:151)
+actual:                                 expected:
+ new methods.Song:1(                     new methods.Song:1(
+  this.title =  "title2"................  this.title =  "title1"
+  this.time = 2)                          this.time = 4)
+
+
+
+Error in test number 4
+Should fail: Check if you get the shorter song
+
+ new methods.Song:1(
+  this.title =  "title2"
+  this.time = 2)
+ invoked method shorter in the class methods.Song
+ with arguments (
+ new methods.Song:1(
+  this.title =  "title1"
+  this.time = 4))
+
+tester.ErrorReport: Error trace:
+	at methods.ExamplesMethods.testMethod(ExamplesMethods.java:54)
+	at methods.ExamplesMethods.main(ExamplesMethods.java:151)
+actual:                                 expected:
+ new methods.Song:1(                     new methods.Song:1(
+  this.title =  "title2"................  this.title =  "title1"
+  this.time = 2)                          this.time = 4)
+
+
+
+Success in the test number 5
+Success: Check if the total playing time is 10
+
+ new methods.Song:1(
+  this.title =  "title1"
+  this.time = 4)
+ invoked method tenMinutesTotal in the class methods.Song
+ with arguments (
+ new methods.Song:1(
+  this.title =  "title1"
+  this.time = 4),
+
+ new methods.Song:1(
+  this.title =  "title2"
+  this.time = 2))
+
+actual:                                 expected:
+true                                    true
+
+
+
+Success in the test number 6
+Success: Check if the total playing time is 10
+
+ new methods.Song:1(
+  this.title =  "title1"
+  this.time = 4)
+ invoked method tenMinutesTotal in the class methods.Song
+ with arguments (
+ new methods.Song:1(
+  this.title =  "title1"
+  this.time = 4),
+
+ new methods.Song:1(
+  this.title =  "title1"
+  this.time = 4))
+
+actual:                                 expected:
+false                                   false
+
+
+
+Error in test number 7
+Should fail: Check if the total playing time is 10
+
+ new methods.Song:1(
+  this.title =  "title1"
+  this.time = 4)
+ invoked method tenMinutesTotal in the class methods.Song
+ with arguments (
+ new methods.Song:1(
+  this.title =  "title1"
+  this.time = 4),
+
+ new methods.Song:1(
+  this.title =  "title2"
+  this.time = 2))
+
+tester.ErrorReport: Error trace:
+	at methods.ExamplesMethods.testMethod(ExamplesMethods.java:79)
+	at methods.ExamplesMethods.main(ExamplesMethods.java:151)
+actual:                                 expected:
+true....................................false
+
+
+
+Error in test number 8
+Should fail: Check if the total playing time is 10
+
+ new methods.Song:1(
+  this.title =  "title1"
+  this.time = 4)
+ invoked method tenMinutesTotal in the class methods.Song
+ with arguments (
+ new methods.Song:1(
+  this.title =  "title1"
+  this.time = 4),
+
+ new methods.Song:1(
+  this.title =  "title1"
+  this.time = 4))
+
+tester.ErrorReport: Error trace:
+	at methods.ExamplesMethods.testMethod(ExamplesMethods.java:87)
+	at methods.ExamplesMethods.main(ExamplesMethods.java:151)
+actual:                                 expected:
+false...................................true
+
+
+
+Success in the test number 9
+Success: Exact check
+
+ new methods.CartPtDouble:1(
+  this.x = 3.0
+  this.y = 4.0)
+ invoked method distTo0 in the class methods.CartPtDouble
+ with arguments ()
+
+actual:                                 expected:
+5.0                                     5.0
+
+
+
+Success in the test number 10
+Success: Inexact check
+
+ new methods.CartPtDouble:1(
+  this.x = 3.0
+  this.y = 4.0)
+ invoked method distTo0 in the class methods.CartPtDouble
+ with arguments ()
+
+The comparison involved inexact numbers with relative tolerance 0.0010
+actual:                                 expected:
+5.0.....................................4.998
+
+
+
+Error in test number 11
+Should fail: Inexact check
+
+ new methods.CartPtDouble:1(
+  this.x = 3.0
+  this.y = 4.0)
+ invoked method distTo0 in the class methods.CartPtDouble
+ with arguments ()
+
+tester.ErrorReport: Error trace:
+	at methods.ExamplesMethods.testInexactMethod(ExamplesMethods.java:112)
+	at methods.ExamplesMethods.main(ExamplesMethods.java:151)
+The comparison involved inexact numbers with relative tolerance 1.0E-4
+actual:                                 expected:
+5.0.....................................4.998
+
+
+
+Success in the test number 12
+Success: Inexact check
+
+ new methods.CartPtDouble:1(
+  this.x = 3.0
+  this.y = 4.0)
+ invoked method distTo in the class methods.CartPtDouble
+ with arguments (
+ new methods.CartPtDouble:1(
+  this.x = 7.0
+  this.y = 7.0))
+
+The comparison involved inexact numbers with relative tolerance 0.0010
+actual:                                 expected:
+5.0.....................................4.998
+
+
+
+Error in test number 13
+Should fail: Inexact check
+
+ new methods.CartPtDouble:1(
+  this.x = 3.0
+  this.y = 4.0)
+ invoked method distTo in the class methods.CartPtDouble
+ with arguments (
+ new methods.CartPtDouble:1(
+  this.x = 7.0
+  this.y = 7.0))
+
+tester.ErrorReport: Error trace:
+	at methods.ExamplesMethods.testInexactMethod(ExamplesMethods.java:128)
+	at methods.ExamplesMethods.main(ExamplesMethods.java:151)
+The comparison involved inexact numbers with relative tolerance 1.0E-4
+actual:                                 expected:
+5.0.....................................4.998
+
+
+
+--- END OF FULL TEST RESULTS ---
+
+---------------------------------------------------
+
+---------------------------------------------------
+
+---------------------------------------------------
+Invoke tester.runReport(this, false, false, true):
+Print no data, all test results, no warnings
+Tester Prima v.1.4.1 - 5 October 2010
+----------------------------------
+
+Ran 13 tests.
+6 tests failed.
+Issued 4 warnings of inexact comparison.
+
+Failed test results: 
+--------------
+
+Error in test number 3
+Should fail: Check if you get the shorter song
+
+ new methods.Song:1(
+  this.title =  "title1"
+  this.time = 4)
+ invoked method shorter in the class methods.Song
+ with arguments (
+ new methods.Song:1(
+  this.title =  "title2"
+  this.time = 2))
+
+tester.ErrorReport: Error trace:
+	at methods.ExamplesMethods.testMethod(ExamplesMethods.java:46)
+	at methods.ExamplesMethods.main(ExamplesMethods.java:159)
+actual:                                 expected:
+ new methods.Song:1(                     new methods.Song:1(
+  this.title =  "title2"................  this.title =  "title1"
+  this.time = 2)                          this.time = 4)
+
+
+
+Error in test number 4
+Should fail: Check if you get the shorter song
+
+ new methods.Song:1(
+  this.title =  "title2"
+  this.time = 2)
+ invoked method shorter in the class methods.Song
+ with arguments (
+ new methods.Song:1(
+  this.title =  "title1"
+  this.time = 4))
+
+tester.ErrorReport: Error trace:
+	at methods.ExamplesMethods.testMethod(ExamplesMethods.java:54)
+	at methods.ExamplesMethods.main(ExamplesMethods.java:159)
+actual:                                 expected:
+ new methods.Song:1(                     new methods.Song:1(
+  this.title =  "title2"................  this.title =  "title1"
+  this.time = 2)                          this.time = 4)
+
+
+
+Error in test number 7
+Should fail: Check if the total playing time is 10
+
+ new methods.Song:1(
+  this.title =  "title1"
+  this.time = 4)
+ invoked method tenMinutesTotal in the class methods.Song
+ with arguments (
+ new methods.Song:1(
+  this.title =  "title1"
+  this.time = 4),
+
+ new methods.Song:1(
+  this.title =  "title2"
+  this.time = 2))
+
+tester.ErrorReport: Error trace:
+	at methods.ExamplesMethods.testMethod(ExamplesMethods.java:79)
+	at methods.ExamplesMethods.main(ExamplesMethods.java:159)
+actual:                                 expected:
+true....................................false
+
+
+
+Error in test number 8
+Should fail: Check if the total playing time is 10
+
+ new methods.Song:1(
+  this.title =  "title1"
+  this.time = 4)
+ invoked method tenMinutesTotal in the class methods.Song
+ with arguments (
+ new methods.Song:1(
+  this.title =  "title1"
+  this.time = 4),
+
+ new methods.Song:1(
+  this.title =  "title1"
+  this.time = 4))
+
+tester.ErrorReport: Error trace:
+	at methods.ExamplesMethods.testMethod(ExamplesMethods.java:87)
+	at methods.ExamplesMethods.main(ExamplesMethods.java:159)
+actual:                                 expected:
+false...................................true
+
+
+
+Error in test number 11
+Should fail: Inexact check
+
+ new methods.CartPtDouble:1(
+  this.x = 3.0
+  this.y = 4.0)
+ invoked method distTo0 in the class methods.CartPtDouble
+ with arguments ()
+
+tester.ErrorReport: Error trace:
+	at methods.ExamplesMethods.testInexactMethod(ExamplesMethods.java:112)
+	at methods.ExamplesMethods.main(ExamplesMethods.java:159)
+The comparison involved inexact numbers with relative tolerance 1.0E-4
+actual:                                 expected:
+5.0.....................................4.998
+
+
+
+Error in test number 13
+Should fail: Inexact check
+
+ new methods.CartPtDouble:1(
+  this.x = 3.0
+  this.y = 4.0)
+ invoked method distTo in the class methods.CartPtDouble
+ with arguments (
+ new methods.CartPtDouble:1(
+  this.x = 7.0
+  this.y = 7.0))
+
+tester.ErrorReport: Error trace:
+	at methods.ExamplesMethods.testInexactMethod(ExamplesMethods.java:128)
+	at methods.ExamplesMethods.main(ExamplesMethods.java:159)
+The comparison involved inexact numbers with relative tolerance 1.0E-4
+actual:                                 expected:
+5.0.....................................4.998
+
+
+
+--- END OF TEST RESULTS ---

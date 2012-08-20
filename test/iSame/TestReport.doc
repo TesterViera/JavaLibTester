@@ -1,0 +1,141 @@
+Show all data defined in the ExamplesISame class:
+
+
+---------------------------------------------------
+Invoke tester.runReport(this, true, true):
+Print all data, all test results
+Tester Prima v.1.4.1 - 5 October 2010
+----------------------------------
+iSame.ExamplesISame:
+---------------
+
+ new iSame.ExamplesISame:1(
+  this.sk = 
+   new iSame.Author:2(
+    this.firstName =  "Steven"
+    this.lastName =  "King")
+  this.dk = 
+   new iSame.Author:3(
+    this.firstName =  "Dan"
+    this.lastName =  "King")
+  this.db = 
+   new iSame.Author:4(
+    this.firstName =  "Dan"
+    this.lastName =  "Brown")
+  this.book1 = 
+   new iSame.Book:5(
+    this.title =  "title1"
+    this.author = iSame.Author:2
+    this.year = 2000)
+  this.book2 = 
+   new iSame.Book:6(
+    this.title =  "title2"
+    this.author = iSame.Author:4
+    this.year = 2000)
+  this.book3 = 
+   new iSame.Book:7(
+    this.title =  "title1"
+    this.author = iSame.Author:4
+    this.year = 2000)
+  this.book4 = 
+   new iSame.Book:8(
+    this.title =  "title1"
+    this.author = iSame.Author:3
+    this.year = 2000)
+  this.book5 = 
+   new iSame.Book:9(
+    this.title =  "title2"
+    this.author = iSame.Author:4
+    this.year = 2000))
+---------------
+
+Ran 5 tests.
+All tests passed.
+
+Full test results: 
+-------------------
+
+Success in the test number 1
+Success: same author last names
+actual:                                 expected:
+ new iSame.Book:1(                       new iSame.Book:1(
+  this.title =  "title1"                  this.title =  "title1"
+  this.author =                           this.author = 
+   new iSame.Author:2(                     new iSame.Author:2(
+    this.firstName =  "Steven"..........    this.firstName =  "Dan"
+    this.lastName =  "King")                this.lastName =  "King")
+  this.year = 2000)                       this.year = 2000)
+
+
+
+Success in the test number 2
+Success: same author first names and last names
+actual:                                 expected:
+ new iSame.Book:1(                       new iSame.Book:1(
+  this.title =  "title2"                  this.title =  "title2"
+  this.author =                           this.author = 
+   new iSame.Author:2(                     new iSame.Author:2(
+    this.firstName =  "Dan"                 this.firstName =  "Dan"
+    this.lastName =  "Brown")               this.lastName =  "Brown")
+  this.year = 2000)                       this.year = 2000)
+
+
+
+Success in the test number 3
+Failure expected: 
+Test to fail: different books, authors
+actual:                                 expected:
+ new iSame.Book:1(                       new iSame.Book:1(
+  this.title =  "title1"................  this.title =  "title2"
+  this.author =                           this.author = 
+   new iSame.Author:2(                     new iSame.Author:2(
+    this.firstName =  "Steven"              this.firstName =  "Dan"
+    this.lastName =  "King")                this.lastName =  "Brown")
+  this.year = 2000)                       this.year = 2000)
+
+
+
+Success in the test number 4
+Failure expected: 
+Test to fail: different author last names
+actual:                                 expected:
+ new iSame.Book:1(                       new iSame.Book:1(
+  this.title =  "title1"                  this.title =  "title1"
+  this.author =                           this.author = 
+   new iSame.Author:2(                     new iSame.Author:2(
+    this.firstName =  "Dan"                 this.firstName =  "Dan"
+    this.lastName =  "Brown")...........    this.lastName =  "King")
+  this.year = 2000)                       this.year = 2000)
+
+
+
+Success in the test number 5
+Failure expected: 
+Test to fail: different titles
+actual:                                 expected:
+ new iSame.Book:1(                       new iSame.Book:1(
+  this.title =  "title2"................  this.title =  "title1"
+  this.author =                           this.author = 
+   new iSame.Author:2(                     new iSame.Author:2(
+    this.firstName =  "Dan"                 this.firstName =  "Dan"
+    this.lastName =  "Brown")               this.lastName =  "Brown")
+  this.year = 2000)                       this.year = 2000)
+
+
+
+--- END OF FULL TEST RESULTS ---
+
+---------------------------------------------------
+
+---------------------------------------------------
+
+---------------------------------------------------
+Invoke tester.runReport(this, false, false, true):
+Print no data, all test results, no warnings
+Tester Prima v.1.4.1 - 5 October 2010
+----------------------------------
+
+Ran 5 tests.
+All tests passed.
+
+--- END OF TEST RESULTS ---

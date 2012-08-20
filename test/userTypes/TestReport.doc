@@ -1,0 +1,291 @@
+Show all data defined in the ExamplesUserTypes class:
+
+
+---------------------------------------------------
+Invoke tester.runReport(this, true, true):
+Print all data, all test results
+Tester Prima v.1.4.1 - 5 October 2010
+----------------------------------
+userTypes.ExamplesUserTypes:
+---------------
+
+ new userTypes.ExamplesUserTypes:1(
+  this.js = 
+   new userTypes.Author:2(
+    this.name =  "John Steinbeck"
+    this.age = 66)
+  this.jkr = 
+   new userTypes.Author:3(
+    this.name =  "J K Rowling"
+    this.age = 45)
+  this.tp = 
+   new userTypes.Book:4(
+    this.title =  "The Pearl"
+    this.author = userTypes.Author:2
+    this.price = 0.0F)
+  this.eoe = 
+   new userTypes.Book:5(
+    this.title =  "East of Eden"
+    this.author = userTypes.Author:2
+    this.price = 0.0F)
+  this.hp = 
+   new userTypes.Book:6(
+    this.title =  "Harry Potter"
+    this.author = userTypes.Author:3
+    this.price = 100.5F)
+  this.omam = 
+   new userTypes.Book:7(
+    this.title =  "Of Mice and Men"
+    this.author = userTypes.Author:2
+    this.price = 75.25F))
+---------------
+
+Ran 17 tests.
+All tests passed.
+Issued 4 warnings of inexact comparison.
+
+Full test results: 
+-------------------
+
+Success in the test number 1
+Success - t.checkExpect(js, new Author(John Steinbeck, 66))
+actual:                                 expected:
+ new userTypes.Author:1(                 new userTypes.Author:1(
+  this.name =  "John Steinbeck"           this.name =  "John Steinbeck"
+  this.age = 66)                          this.age = 66)
+
+
+
+Success in the test number 2
+Failure expected: 
+Test to fail - t.checkFail(jkr, new Author(J K Rowling, 44))
+actual:                                 expected:
+ new userTypes.Author:1(                 new userTypes.Author:1(
+  this.name =  "J K Rowling"              this.name =  "J K Rowling"
+  this.age = 45)........................  this.age = 44)
+
+
+
+Success in the test number 3
+Failure expected: 
+Test to fail - t.checkFail(jkr, js)
+actual:                                 expected:
+ new userTypes.Author:1(                 new userTypes.Author:1(
+  this.name =  "J K Rowling"............  this.name =  "John Steinbeck"
+  this.age = 45)                          this.age = 66)
+
+
+
+Success in the test number 4
+Success - t.checkExpect(tp, new Book (The Pearl, js))
+actual:                                 expected:
+ new userTypes.Book:1(                   new userTypes.Book:1(
+  this.title =  "The Pearl"               this.title =  "The Pearl"
+  this.author =                           this.author = 
+   new userTypes.Author:2(                 new userTypes.Author:2(
+    this.name =  "John Steinbeck"           this.name =  "John Steinbeck"
+    this.age = 66)                          this.age = 66)
+  this.price = 0.0F)                      this.price = 0.0F)
+
+
+
+Success in the test number 5
+Success - t.checkExpect(tp, new Book (The Pearl, new Author(John Steinbeck, 66)))
+actual:                                 expected:
+ new userTypes.Book:1(                   new userTypes.Book:1(
+  this.title =  "The Pearl"               this.title =  "The Pearl"
+  this.author =                           this.author = 
+   new userTypes.Author:2(                 new userTypes.Author:2(
+    this.name =  "John Steinbeck"           this.name =  "John Steinbeck"
+    this.age = 66)                          this.age = 66)
+  this.price = 0.0F)                      this.price = 0.0F)
+
+
+
+Success in the test number 6
+Failure expected: 
+Test to fail - t.checkFail(tp, new Book (The Pearl, jkr))
+actual:                                 expected:
+ new userTypes.Book:1(                   new userTypes.Book:1(
+  this.title =  "The Pearl"               this.title =  "The Pearl"
+  this.author =                           this.author = 
+   new userTypes.Author:2(                 new userTypes.Author:2(
+    this.name =  "John Steinbeck".......    this.name =  "J K Rowling"
+    this.age = 66)                          this.age = 45)
+  this.price = 0.0F)                      this.price = 0.0F)
+
+
+
+Success in the test number 7
+Failure expected: 
+Test to fail - t.checkFail(tp, new Book (Harry Potter, js))
+actual:                                 expected:
+ new userTypes.Book:1(                   new userTypes.Book:1(
+  this.title =  "The Pearl".............  this.title =  "Harry Potter"
+  this.author =                           this.author = 
+   new userTypes.Author:2(                 new userTypes.Author:2(
+    this.name =  "John Steinbeck"           this.name =  "John Steinbeck"
+    this.age = 66)                          this.age = 66)
+  this.price = 0.0F)                      this.price = 0.0F)
+
+
+
+Success in the test number 8
+Failure expected: 
+Test to fail - t.checkFail(tp, new Book (The Pearl, new Author(John Steinbeck, 65)))
+actual:                                 expected:
+ new userTypes.Book:1(                   new userTypes.Book:1(
+  this.title =  "The Pearl"               this.title =  "The Pearl"
+  this.author =                           this.author = 
+   new userTypes.Author:2(                 new userTypes.Author:2(
+    this.name =  "John Steinbeck"           this.name =  "John Steinbeck"
+    this.age = 66)......................    this.age = 65)
+  this.price = 0.0F)                      this.price = 0.0F)
+
+
+
+Success in the test number 9
+Failure expected: 
+Test to fail - t.checkFail(tp, eoe)
+actual:                                 expected:
+ new userTypes.Book:1(                   new userTypes.Book:1(
+  this.title =  "The Pearl".............  this.title =  "East of Eden"
+  this.author =                           this.author = 
+   new userTypes.Author:2(                 new userTypes.Author:2(
+    this.name =  "John Steinbeck"           this.name =  "John Steinbeck"
+    this.age = 66)                          this.age = 66)
+  this.price = 0.0F)                      this.price = 0.0F)
+
+
+
+Success in the test number 10
+Success - t.checkInexact(hp, new Book(Harry Potter, jkr, 100.0f), 0.01)
+The comparison involved inexact numbers with relative tolerance 0.01
+actual:                                 expected:
+ new userTypes.Book:1(                   new userTypes.Book:1(
+  this.title =  "Harry Potter"            this.title =  "Harry Potter"
+  this.author =                           this.author = 
+   new userTypes.Author:2(                 new userTypes.Author:2(
+    this.name =  "J K Rowling"              this.name =  "J K Rowling"
+    this.age = 45)                          this.age = 45)
+  this.price = 100.5F)..................  this.price = 100.0F)
+
+
+
+Success in the test number 11
+Success - t.checkInexact(hp, new Book (Harry Potter, new Author(J K Rowling, 45), 100.50f), 0.01)
+actual:                                 expected:
+ new userTypes.Book:1(                   new userTypes.Book:1(
+  this.title =  "Harry Potter"            this.title =  "Harry Potter"
+  this.author =                           this.author = 
+   new userTypes.Author:2(                 new userTypes.Author:2(
+    this.name =  "J K Rowling"              this.name =  "J K Rowling"
+    this.age = 45)                          this.age = 45)
+  this.price = 100.5F)                    this.price = 100.5F)
+
+
+
+Success in the test number 12
+Failure expected: 
+Test to fail - t.checkInexactFail(hp, new Book (Harry Potter, js), 0.01)
+actual:                                 expected:
+ new userTypes.Book:1(                   new userTypes.Book:1(
+  this.title =  "Harry Potter"            this.title =  "Harry Potter"
+  this.author =                           this.author = 
+   new userTypes.Author:2(                 new userTypes.Author:2(
+    this.name =  "J K Rowling"..........    this.name =  "John Steinbeck"
+    this.age = 45)                          this.age = 66)
+  this.price = 100.5F)                    this.price = 0.0F)
+
+
+
+Success in the test number 13
+Failure expected: 
+Test to fail - t.checkInexactFail(hp, new Book (Harry Potter, jkr), 0.01)
+The comparison involved inexact numbers with relative tolerance 0.01
+actual:                                 expected:
+ new userTypes.Book:1(                   new userTypes.Book:1(
+  this.title =  "Harry Potter"            this.title =  "Harry Potter"
+  this.author =                           this.author = 
+   new userTypes.Author:2(                 new userTypes.Author:2(
+    this.name =  "J K Rowling"              this.name =  "J K Rowling"
+    this.age = 45)                          this.age = 45)
+  this.price = 100.5F)..................  this.price = 0.0F)
+
+
+
+Success in the test number 14
+Failure expected: 
+Test to fail - t.checkInexactFail(hp, new Book (Harry Potter, new Author(J K Rowling, 45), 100.49f), 0.0000001)
+The comparison involved inexact numbers with relative tolerance 1.0E-7
+actual:                                 expected:
+ new userTypes.Book:1(                   new userTypes.Book:1(
+  this.title =  "Harry Potter"            this.title =  "Harry Potter"
+  this.author =                           this.author = 
+   new userTypes.Author:2(                 new userTypes.Author:2(
+    this.name =  "J K Rowling"              this.name =  "J K Rowling"
+    this.age = 45)                          this.age = 45)
+  this.price = 100.5F)..................  this.price = 100.49F)
+
+
+
+Success in the test number 15
+Failure expected: 
+Test to fail - t.checkInexactFail(hp, new Book (Harry Potter, new Author(J K Rowling, 45), 0.0f), 1)
+The comparison involved inexact numbers with relative tolerance 1.0
+actual:                                 expected:
+ new userTypes.Book:1(                   new userTypes.Book:1(
+  this.title =  "Harry Potter"            this.title =  "Harry Potter"
+  this.author =                           this.author = 
+   new userTypes.Author:2(                 new userTypes.Author:2(
+    this.name =  "J K Rowling"              this.name =  "J K Rowling"
+    this.age = 45)                          this.age = 45)
+  this.price = 100.5F)..................  this.price = 0.0F)
+
+
+
+Success in the test number 16
+Failure expected: 
+Test to fail - t.checkInexactFail(hp, new Book (Harry Potter, new Author(J K Rowling, 44), 100.50f), 0.01)
+actual:                                 expected:
+ new userTypes.Book:1(                   new userTypes.Book:1(
+  this.title =  "Harry Potter"            this.title =  "Harry Potter"
+  this.author =                           this.author = 
+   new userTypes.Author:2(                 new userTypes.Author:2(
+    this.name =  "J K Rowling"              this.name =  "J K Rowling"
+    this.age = 45)......................    this.age = 44)
+  this.price = 100.5F)                    this.price = 100.5F)
+
+
+
+Success in the test number 17
+Failure expected: 
+Test to fail - t.checkInexactFail(hp, omam, 0.5)
+actual:                                 expected:
+ new userTypes.Book:1(                   new userTypes.Book:1(
+  this.title =  "Harry Potter"..........  this.title =  "Of Mice and Men"
+  this.author =                           this.author = 
+   new userTypes.Author:2(                 new userTypes.Author:2(
+    this.name =  "J K Rowling"              this.name =  "John Steinbeck"
+    this.age = 45)                          this.age = 66)
+  this.price = 100.5F)                    this.price = 75.25F)
+
+
+
+--- END OF FULL TEST RESULTS ---
+
+---------------------------------------------------
+
+---------------------------------------------------
+
+---------------------------------------------------
+Invoke tester.runReport(this, false, false, true):
+Print no data, all test results, no warnings
+Tester Prima v.1.4.1 - 5 October 2010
+----------------------------------
+
+Ran 17 tests.
+All tests passed.
+Issued 4 warnings of inexact comparison.
+
+--- END OF TEST RESULTS ---

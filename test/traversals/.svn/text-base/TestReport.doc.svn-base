@@ -1,0 +1,551 @@
+Show all data defined in the ExamplesTraversals class:
+
+
+---------------------------------------------------
+Invoke tester.runReport(this, true, true):
+Print all data, all test results
+Tester Prima v.1.4.1 - 5 October 2010
+----------------------------------
+traversals.ExamplesTraversals:
+---------------
+
+ new traversals.ExamplesTraversals:1(
+  this.song1 = 
+   new traversals.Song:2(
+    this.title =  "title1"
+    this.time = 4)
+  this.song2 = 
+   new traversals.Song:3(
+    this.title =  "title2"
+    this.time = 2)
+  this.song3 = 
+   new traversals.Song:4(
+    this.title =  "title3"
+    this.time = 3)
+  this.song1a = 
+   new traversals.Song:5(
+    this.title =  "title1"
+    this.time = 4)
+  this.songlistTr1 = 
+   new traversals.ConsListTr:6(
+    this.first = traversals.Song:2
+    this.rest = 
+     new traversals.ConsListTr:7(
+      this.first = traversals.Song:3
+      this.rest = 
+       new traversals.ConsListTr:8(
+        this.first = traversals.Song:4
+        this.rest = 
+         new traversals.MTListTr:9())))
+  this.songlistTr2 = 
+   new traversals.ConsListTr:10(
+    this.first = traversals.Song:2
+    this.rest = 
+     new traversals.ConsListTr:11(
+      this.first = traversals.Song:3
+      this.rest = 
+       new traversals.ConsListTr:12(
+        this.first = traversals.Song:4
+        this.rest = 
+         new traversals.MTListTr:13())))
+  this.songlistTr1a = 
+   new traversals.ConsListTr:14(
+    this.first = traversals.Song:5
+    this.rest = 
+     new traversals.ConsListTr:15(
+      this.first = traversals.Song:3
+      this.rest = 
+       new traversals.ConsListTr:16(
+        this.first = traversals.Song:4
+        this.rest = 
+         new traversals.MTListTr:17())))
+  this.songlistTr3 = 
+   new traversals.ConsListTr:18(
+    this.first = traversals.Song:2
+    this.rest = 
+     new traversals.ConsListTr:19(
+      this.first = traversals.Song:3
+      this.rest = 
+       new traversals.MTListTr:20()))
+  this.songlistTr4 = 
+   new traversals.ConsListTr:21(
+    this.first = traversals.Song:2
+    this.rest = 
+     new traversals.ConsListTr:22(
+      this.first = traversals.Song:4
+      this.rest = 
+       new traversals.ConsListTr:23(
+        this.first = traversals.Song:3
+        this.rest = 
+         new traversals.MTListTr:24())))
+  this.doubleListTr1 = 
+   new traversals.ConsListTr:25(
+    this.first = 1.0
+    this.rest = 
+     new traversals.ConsListTr:26(
+      this.first = 10.0
+      this.rest = 
+       new traversals.ConsListTr:27(
+        this.first = 100.0
+        this.rest = 
+         new traversals.MTListTr:28())))
+  this.doubleListTr2 = 
+   new traversals.ConsListTr:29(
+    this.first = 1.0
+    this.rest = 
+     new traversals.ConsListTr:30(
+      this.first = 10.0
+      this.rest = 
+       new traversals.ConsListTr:31(
+        this.first = 99.5
+        this.rest = 
+         new traversals.MTListTr:32()))))
+---------------
+
+Ran 12 tests.
+7 tests failed.
+Issued 4 warnings of inexact comparison.
+
+Full test results: 
+-------------------
+
+Success in the test number 1
+Success: same Traversal-s of songs - shown as lists
+actual:                                 expected:
+ new traversals.ConsListTr:1(            new traversals.ConsListTr:1(
+  this.first =                            this.first = 
+   new traversals.Song:2(                  new traversals.Song:2(
+    this.title =  "title1"                  this.title =  "title1"
+    this.time = 4)                          this.time = 4)
+  this.rest =                             this.rest = 
+   new traversals.ConsListTr:3(            new traversals.ConsListTr:3(
+    this.first =                            this.first = 
+     new traversals.Song:4(                  new traversals.Song:4(
+      this.title =  "title2"                  this.title =  "title2"
+      this.time = 2)                          this.time = 2)
+    this.rest =                             this.rest = 
+     new traversals.ConsListTr:5(            new traversals.ConsListTr:5(
+      this.first =                            this.first = 
+       new traversals.Song:6(                  new traversals.Song:6(
+        this.title =  "title3"                  this.title =  "title3"
+        this.time = 3)                          this.time = 3)
+      this.rest =                             this.rest = 
+       new traversals.MTListTr:7())))          new traversals.MTListTr:7())))
+
+
+
+Success in the test number 2
+Success: same Traversal-s of songs - shown as Traversal-s
+actual:                                 expected:
+Traversal[0]                            Traversal[0] 
+ new traversals.Song:1(                  new traversals.Song:1(
+  this.title =  "title1"                  this.title =  "title1"
+  this.time = 4),                         this.time = 4),
+Traversal[1]                            Traversal[1] 
+ new traversals.Song:2(                  new traversals.Song:2(
+  this.title =  "title2"                  this.title =  "title2"
+  this.time = 2),                         this.time = 2),
+Traversal[2]                            Traversal[2] 
+ new traversals.Song:3(                  new traversals.Song:3(
+  this.title =  "title3"                  this.title =  "title3"
+  this.time = 3)                          this.time = 3)
+
+
+
+Success in the test number 3
+Success: same Traversal-s of songs (different instance of the same data) - shown as Traversal-s
+actual:                                 expected:
+Traversal[0]                            Traversal[0] 
+ new traversals.Song:1(                  new traversals.Song:1(
+  this.title =  "title1"                  this.title =  "title1"
+  this.time = 4),                         this.time = 4),
+Traversal[1]                            Traversal[1] 
+ new traversals.Song:2(                  new traversals.Song:2(
+  this.title =  "title2"                  this.title =  "title2"
+  this.time = 2),                         this.time = 2),
+Traversal[2]                            Traversal[2] 
+ new traversals.Song:3(                  new traversals.Song:3(
+  this.title =  "title3"                  this.title =  "title3"
+  this.time = 3)                          this.time = 3)
+
+
+
+Error in test number 4
+Should fail: different Traversal-s of songs - first list is shorter
+tester.ErrorReport: Error trace:
+	at traversals.ExamplesTraversals.testArraysFail(ExamplesTraversals.java:135)
+	at traversals.ExamplesTraversals.main(ExamplesTraversals.java:287)
+actual:                                 expected:
+Traversal[0]                            Traversal[0] 
+ new traversals.Song:1(                  new traversals.Song:1(
+  this.title =  "title1"                  this.title =  "title1"
+  this.time = 4),                         this.time = 4),
+Traversal[1]                            Traversal[1] 
+ new traversals.Song:2(                  new traversals.Song:2(
+  this.title =  "title2"                  this.title =  "title2"
+  this.time = 2)........................  this.time = 2),
+                                        Traversal[2] 
+                                         new traversals.Song:3(
+                                          this.title =  "title3"
+                                          this.time = 3)
+
+
+
+Error in test number 5
+Should fail: different Traversal-s of songs - second list is shorter
+tester.ErrorReport: Error trace:
+	at traversals.ExamplesTraversals.testArraysFail(ExamplesTraversals.java:140)
+	at traversals.ExamplesTraversals.main(ExamplesTraversals.java:287)
+actual:                                 expected:
+Traversal[0]                            Traversal[0] 
+ new traversals.Song:1(                  new traversals.Song:1(
+  this.title =  "title1"                  this.title =  "title1"
+  this.time = 4),                         this.time = 4),
+Traversal[1]                            Traversal[1] 
+ new traversals.Song:2(                  new traversals.Song:2(
+  this.title =  "title2"                  this.title =  "title2"
+  this.time = 2),.......................  this.time = 2)
+Traversal[2] 
+ new traversals.Song:3(
+  this.title =  "title3"
+  this.time = 3)
+
+
+
+Error in test number 6
+Should fail: different Traversal-s of songs - different order of data
+tester.ErrorReport: Error trace:
+	at traversals.ExamplesTraversals.testArraysFail(ExamplesTraversals.java:145)
+	at traversals.ExamplesTraversals.main(ExamplesTraversals.java:287)
+actual:                                 expected:
+Traversal[0]                            Traversal[0] 
+ new traversals.Song:1(                  new traversals.Song:1(
+  this.title =  "title1"                  this.title =  "title1"
+  this.time = 4),                         this.time = 4),
+Traversal[1]                            Traversal[1] 
+ new traversals.Song:2(                  new traversals.Song:2(
+  this.title =  "title2"................  this.title =  "title3"
+  this.time = 2),                         this.time = 3),
+Traversal[2]                            Traversal[2] 
+ new traversals.Song:3(                  new traversals.Song:3(
+  this.title =  "title3"                  this.title =  "title2"
+  this.time = 3)                          this.time = 2)
+
+
+
+Success in the test number 7
+Success: same Traversal-s of binary search tree - shown as Traversal-s
+actual:                                 expected:
+Traversal[0] 4,                         Traversal[0] 4,
+Traversal[1] 7,                         Traversal[1] 7,
+Traversal[2] 9                          Traversal[2] 9
+
+
+
+Error in test number 8
+Should fail: same Traversal-s of binary search tree - checkExpect doesn't work
+tester.ErrorReport: Error trace:
+	at traversals.ExamplesTraversals.testBinarySearchTrees(ExamplesTraversals.java:201)
+	at traversals.ExamplesTraversals.main(ExamplesTraversals.java:287)
+actual:                                 expected:
+ new traversals.BinarySearchTreeTr:1(    new traversals.BinarySearchTreeTr:1(
+  this.leftBranch =                       this.leftBranch = 
+
+--  actual  :    new traversals.BinarySearchTreeTr:2(          
+
+--  expected:    new traversals.BinarySearchTreeTr:2(
+
+    this.leftBranch = ..................    this.leftBranch = null
+
+--  actual  :      new traversals.BinarySearchTreeTr:3(          
+
+--  expected:     this.node = null
+
+      this.leftBranch = null                this.rightBranch = null)
+      this.node = null                    this.node = 4
+      this.rightBranch = null)            this.rightBranch = 
+    this.node = 4                          new traversals.BinarySearchTreeTr:3(
+    this.rightBranch =                      this.leftBranch = 
+
+--  actual  :      new traversals.BinarySearchTreeTr:4(          
+
+--  expected:      new traversals.BinarySearchTreeTr:4(
+
+      this.leftBranch = null                  this.leftBranch = 
+      this.node = null                         new traversals.BinarySearchTreeTr:5(
+      this.rightBranch = null))                 this.leftBranch = null
+  this.node = 7                                 this.node = null
+  this.rightBranch =                            this.rightBranch = null)
+
+--  actual  :    new traversals.BinarySearchTreeTr:5(          
+
+--  expected:       this.node = 7
+
+    this.leftBranch =                         this.rightBranch = 
+
+--  actual  :      new traversals.BinarySearchTreeTr:6(          
+
+--  expected:        new traversals.BinarySearchTreeTr:6(
+
+      this.leftBranch = null                    this.leftBranch = null
+      this.node = null                          this.node = null
+      this.rightBranch = null)                  this.rightBranch = null))
+    this.node = 9                           this.node = 9
+    this.rightBranch =                      this.rightBranch = 
+
+--  actual  :      new traversals.BinarySearchTreeTr:7(          
+
+--  expected:      new traversals.BinarySearchTreeTr:7(
+
+      this.leftBranch = null                  this.leftBranch = null
+      this.node = null                        this.node = null
+      this.rightBranch = null)))              this.rightBranch = null)))
+
+
+
+Error in test number 9
+Should fail: not exactly equivalent Traversal-s of Double - shown as lists
+tester.ErrorReport: Error trace:
+	at traversals.ExamplesTraversals.testCheckInexactTraversal(ExamplesTraversals.java:249)
+	at traversals.ExamplesTraversals.main(ExamplesTraversals.java:287)
+The comparison involved inexact numbers with relative tolerance 0.0010
+actual:                                 expected:
+ new traversals.ConsListTr:1(            new traversals.ConsListTr:1(
+  this.first = 1.0                        this.first = 1.0
+  this.rest =                             this.rest = 
+   new traversals.ConsListTr:2(            new traversals.ConsListTr:2(
+    this.first = 10.0                       this.first = 10.0
+    this.rest =                             this.rest = 
+     new traversals.ConsListTr:3(            new traversals.ConsListTr:3(
+      this.first = 100.0................      this.first = 99.5
+      this.rest =                             this.rest = 
+       new traversals.MTListTr:4())))          new traversals.MTListTr:4())))
+
+
+
+Error in test number 10
+Should fail: not exactly equivalent Traversal-s of Double - shown as Traversal-s
+tester.ErrorReport: Error trace:
+	at traversals.ExamplesTraversals.testCheckInexactTraversal(ExamplesTraversals.java:254)
+	at traversals.ExamplesTraversals.main(ExamplesTraversals.java:287)
+The comparison involved inexact numbers with relative tolerance 0.0010
+actual:                                 expected:
+Traversal[0] 1.0,                       Traversal[0] 1.0,
+Traversal[1] 10.0,                      Traversal[1] 10.0,
+Traversal[2] 100.0......................Traversal[2] 99.5
+
+
+
+Error in test number 11
+Should fail: not exactly equivalent Traversal-s of Double - the tolerance is too tight
+tester.ErrorReport: Error trace:
+	at traversals.ExamplesTraversals.testCheckInexactTraversal(ExamplesTraversals.java:259)
+	at traversals.ExamplesTraversals.main(ExamplesTraversals.java:287)
+The comparison involved inexact numbers with relative tolerance 0.0010
+actual:                                 expected:
+Traversal[0] 1.0,                       Traversal[0] 1.0,
+Traversal[1] 10.0,                      Traversal[1] 10.0,
+Traversal[2] 100.0......................Traversal[2] 99.5
+
+
+
+Success in the test number 12
+Success: not exactly equivalent Traversal-s of Double - the tolerance is loose enough
+The comparison involved inexact numbers with relative tolerance 0.01
+actual:                                 expected:
+Traversal[0] 1.0,                       Traversal[0] 1.0,
+Traversal[1] 10.0,                      Traversal[1] 10.0,
+Traversal[2] 100.0......................Traversal[2] 99.5
+
+
+
+--- END OF FULL TEST RESULTS ---
+
+---------------------------------------------------
+
+---------------------------------------------------
+
+---------------------------------------------------
+Invoke tester.runReport(this, false, false, true):
+Print no data, all test results, no warnings
+Tester Prima v.1.4.1 - 5 October 2010
+----------------------------------
+
+Ran 12 tests.
+7 tests failed.
+Issued 4 warnings of inexact comparison.
+
+Failed test results: 
+--------------
+
+Error in test number 4
+Should fail: different Traversal-s of songs - first list is shorter
+tester.ErrorReport: Error trace:
+	at traversals.ExamplesTraversals.testArraysFail(ExamplesTraversals.java:135)
+	at traversals.ExamplesTraversals.main(ExamplesTraversals.java:295)
+actual:                                 expected:
+Traversal[0]                            Traversal[0] 
+ new traversals.Song:1(                  new traversals.Song:1(
+  this.title =  "title1"                  this.title =  "title1"
+  this.time = 4),                         this.time = 4),
+Traversal[1]                            Traversal[1] 
+ new traversals.Song:2(                  new traversals.Song:2(
+  this.title =  "title2"                  this.title =  "title2"
+  this.time = 2)........................  this.time = 2),
+                                        Traversal[2] 
+                                         new traversals.Song:3(
+                                          this.title =  "title3"
+                                          this.time = 3)
+
+
+
+Error in test number 5
+Should fail: different Traversal-s of songs - second list is shorter
+tester.ErrorReport: Error trace:
+	at traversals.ExamplesTraversals.testArraysFail(ExamplesTraversals.java:140)
+	at traversals.ExamplesTraversals.main(ExamplesTraversals.java:295)
+actual:                                 expected:
+Traversal[0]                            Traversal[0] 
+ new traversals.Song:1(                  new traversals.Song:1(
+  this.title =  "title1"                  this.title =  "title1"
+  this.time = 4),                         this.time = 4),
+Traversal[1]                            Traversal[1] 
+ new traversals.Song:2(                  new traversals.Song:2(
+  this.title =  "title2"                  this.title =  "title2"
+  this.time = 2),.......................  this.time = 2)
+Traversal[2] 
+ new traversals.Song:3(
+  this.title =  "title3"
+  this.time = 3)
+
+
+
+Error in test number 6
+Should fail: different Traversal-s of songs - different order of data
+tester.ErrorReport: Error trace:
+	at traversals.ExamplesTraversals.testArraysFail(ExamplesTraversals.java:145)
+	at traversals.ExamplesTraversals.main(ExamplesTraversals.java:295)
+actual:                                 expected:
+Traversal[0]                            Traversal[0] 
+ new traversals.Song:1(                  new traversals.Song:1(
+  this.title =  "title1"                  this.title =  "title1"
+  this.time = 4),                         this.time = 4),
+Traversal[1]                            Traversal[1] 
+ new traversals.Song:2(                  new traversals.Song:2(
+  this.title =  "title2"................  this.title =  "title3"
+  this.time = 2),                         this.time = 3),
+Traversal[2]                            Traversal[2] 
+ new traversals.Song:3(                  new traversals.Song:3(
+  this.title =  "title3"                  this.title =  "title2"
+  this.time = 3)                          this.time = 2)
+
+
+
+Error in test number 8
+Should fail: same Traversal-s of binary search tree - checkExpect doesn't work
+tester.ErrorReport: Error trace:
+	at traversals.ExamplesTraversals.testBinarySearchTrees(ExamplesTraversals.java:201)
+	at traversals.ExamplesTraversals.main(ExamplesTraversals.java:295)
+actual:                                 expected:
+ new traversals.BinarySearchTreeTr:1(    new traversals.BinarySearchTreeTr:1(
+  this.leftBranch =                       this.leftBranch = 
+
+--  actual  :    new traversals.BinarySearchTreeTr:2(          
+
+--  expected:    new traversals.BinarySearchTreeTr:2(
+
+    this.leftBranch = ..................    this.leftBranch = null
+
+--  actual  :      new traversals.BinarySearchTreeTr:3(          
+
+--  expected:     this.node = null
+
+      this.leftBranch = null                this.rightBranch = null)
+      this.node = null                    this.node = 4
+      this.rightBranch = null)            this.rightBranch = 
+    this.node = 4                          new traversals.BinarySearchTreeTr:3(
+    this.rightBranch =                      this.leftBranch = 
+
+--  actual  :      new traversals.BinarySearchTreeTr:4(          
+
+--  expected:      new traversals.BinarySearchTreeTr:4(
+
+      this.leftBranch = null                  this.leftBranch = 
+      this.node = null                         new traversals.BinarySearchTreeTr:5(
+      this.rightBranch = null))                 this.leftBranch = null
+  this.node = 7                                 this.node = null
+  this.rightBranch =                            this.rightBranch = null)
+
+--  actual  :    new traversals.BinarySearchTreeTr:5(          
+
+--  expected:       this.node = 7
+
+    this.leftBranch =                         this.rightBranch = 
+
+--  actual  :      new traversals.BinarySearchTreeTr:6(          
+
+--  expected:        new traversals.BinarySearchTreeTr:6(
+
+      this.leftBranch = null                    this.leftBranch = null
+      this.node = null                          this.node = null
+      this.rightBranch = null)                  this.rightBranch = null))
+    this.node = 9                           this.node = 9
+    this.rightBranch =                      this.rightBranch = 
+
+--  actual  :      new traversals.BinarySearchTreeTr:7(          
+
+--  expected:      new traversals.BinarySearchTreeTr:7(
+
+      this.leftBranch = null                  this.leftBranch = null
+      this.node = null                        this.node = null
+      this.rightBranch = null)))              this.rightBranch = null)))
+
+
+
+Error in test number 9
+Should fail: not exactly equivalent Traversal-s of Double - shown as lists
+tester.ErrorReport: Error trace:
+	at traversals.ExamplesTraversals.testCheckInexactTraversal(ExamplesTraversals.java:249)
+	at traversals.ExamplesTraversals.main(ExamplesTraversals.java:295)
+The comparison involved inexact numbers with relative tolerance 0.0010
+actual:                                 expected:
+ new traversals.ConsListTr:1(            new traversals.ConsListTr:1(
+  this.first = 1.0                        this.first = 1.0
+  this.rest =                             this.rest = 
+   new traversals.ConsListTr:2(            new traversals.ConsListTr:2(
+    this.first = 10.0                       this.first = 10.0
+    this.rest =                             this.rest = 
+     new traversals.ConsListTr:3(            new traversals.ConsListTr:3(
+      this.first = 100.0................      this.first = 99.5
+      this.rest =                             this.rest = 
+       new traversals.MTListTr:4())))          new traversals.MTListTr:4())))
+
+
+
+Error in test number 10
+Should fail: not exactly equivalent Traversal-s of Double - shown as Traversal-s
+tester.ErrorReport: Error trace:
+	at traversals.ExamplesTraversals.testCheckInexactTraversal(ExamplesTraversals.java:254)
+	at traversals.ExamplesTraversals.main(ExamplesTraversals.java:295)
+The comparison involved inexact numbers with relative tolerance 0.0010
+actual:                                 expected:
+Traversal[0] 1.0,                       Traversal[0] 1.0,
+Traversal[1] 10.0,                      Traversal[1] 10.0,
+Traversal[2] 100.0......................Traversal[2] 99.5
+
+
+
+Error in test number 11
+Should fail: not exactly equivalent Traversal-s of Double - the tolerance is too tight
+tester.ErrorReport: Error trace:
+	at traversals.ExamplesTraversals.testCheckInexactTraversal(ExamplesTraversals.java:259)
+	at traversals.ExamplesTraversals.main(ExamplesTraversals.java:295)
+The comparison involved inexact numbers with relative tolerance 0.0010
+actual:                                 expected:
+Traversal[0] 1.0,                       Traversal[0] 1.0,
+Traversal[1] 10.0,                      Traversal[1] 10.0,
+Traversal[2] 100.0......................Traversal[2] 99.5
+
+
+
+--- END OF TEST RESULTS ---
