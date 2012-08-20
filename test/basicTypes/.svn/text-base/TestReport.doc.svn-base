@@ -1,0 +1,1535 @@
+Show all data defined in the ExamplesBasicTypes class:
+
+
+---------------------------------------------------
+Invoke tester.runReport(this, true, true):
+Print all data, all test results
+Tester Prima v.1.4.1 - 5 October 2010
+----------------------------------
+basicTypes.ExamplesBasicTypes:
+---------------
+
+ new basicTypes.ExamplesBasicTypes:1(
+  this.int1 = 1
+  this.int2 = 2
+  this.short1 = 1S
+  this.short2 = 2S
+  this.short1a = 1S
+  this.long1 = 1L
+  this.long2 = 2L
+  this.long1a = 1L
+  this.byte1 = 1
+  this.byte2 = 2
+  this.byte1a = 1
+  this.bool1 = true
+  this.bool2 = false
+  this.bool1a = true
+  this.charA = A
+  this.charB = B
+  this.wint1 = 1
+  this.wint2 = 2
+  this.wshort1 = 1S
+  this.wshort2 = 2S
+  this.wlong1 = 12345678901L
+  this.wlong2 = 12345678902L
+  this.wbyte1 = 1
+  this.wbyte2 = 2
+  this.wbool1 = true
+  this.wbool2 = false
+  this.wbool1a = true
+  this.wcharA = A
+  this.wcharB = B
+  this.bigint1 = 12345678901BigInteger
+  this.bigint1a = 12345678901BigInteger
+  this.bigint2 = 12345678902BigInteger
+  this.bigdec1 = 1234567890.12345678901BigDecimal
+  this.bigdec1a = 1234567890.12345678901BigDecimal
+  this.bigdec2 = 1234567890.12345678902BigDecimal
+  this.pt1 = 
+   new basicTypes.CartPt:2(
+    this.x = 4.0
+    this.y = 3.0)
+  this.pt1a = 
+   new basicTypes.CartPt:3(
+    this.x = 4.0
+    this.y = 3.0)
+  this.pt2 = 
+   new basicTypes.CartPt:4(
+    this.x = 100.001
+    this.y = 0.0)
+  this.pt1D = 
+   new basicTypes.CartPtD:5(
+    this.x = 4.0
+    this.y = 3.0)
+  this.pt2D = 
+   new basicTypes.CartPtD:6(
+    this.x = 100.001
+    this.y = 0.0)
+  this.pt1F = 
+   new basicTypes.CartPtF:7(
+    this.x = 4.0F
+    this.y = 3.0F)
+  this.pt2F = 
+   new basicTypes.CartPtF:8(
+    this.x = 100.001F
+    this.y = 0.0F)
+  this.pt1float = 
+   new basicTypes.CartPtfloat:9(
+    this.x = 4.0F
+    this.y = 3.0F)
+  this.pt2float = 
+   new basicTypes.CartPtfloat:10(
+    this.x = 100.001F
+    this.y = 0.0F))
+---------------
+
+Ran 122 tests.
+39 tests failed.
+Issued 10 warnings of inexact comparison.
+
+Full test results: 
+-------------------
+
+Success in the test number 1
+Success: primitive - int same - different
+actual:                                 expected:
+false                                   false
+
+
+
+Success in the test number 2
+Success: primitive - int same - same
+actual:                                 expected:
+true                                    true
+
+
+
+Success in the test number 3
+Success: primitive - int - check
+actual:                                 expected:
+10                                      10
+
+
+
+Success in the test number 4
+Success: primitive - short - different
+actual:                                 expected:
+false                                   false
+
+
+
+Success in the test number 5
+Success: primitive - short - same
+actual:                                 expected:
+true                                    true
+
+
+
+Success in the test number 6
+Success: primitive - short - check
+actual:                                 expected:
+1S                                      1S
+
+
+
+Success in the test number 7
+Success: primitive - long - different
+actual:                                 expected:
+false                                   false
+
+
+
+Success in the test number 8
+Success: primitive - long - same
+actual:                                 expected:
+true                                    true
+
+
+
+Success in the test number 9
+Success: primitive - long - check
+actual:                                 expected:
+1L                                      1L
+
+
+
+Success in the test number 10
+Success: primitive - byte - different
+actual:                                 expected:
+false                                   false
+
+
+
+Success in the test number 11
+Success: primitive - byte - same
+actual:                                 expected:
+true                                    true
+
+
+
+Success in the test number 12
+Success: primitive - byte - check
+actual:                                 expected:
+1                                       1
+
+
+
+Success in the test number 13
+Success: primitive - boolean - different
+actual:                                 expected:
+false                                   false
+
+
+
+Success in the test number 14
+Success: primitive - boolean - same
+actual:                                 expected:
+true                                    true
+
+
+
+Success in the test number 15
+Success: primitive - boolean - check
+actual:                                 expected:
+true                                    true
+
+
+
+Success in the test number 16
+Success: primitive - char - different
+actual:                                 expected:
+false                                   false
+
+
+
+Success in the test number 17
+Success: primitive - char - same
+actual:                                 expected:
+true                                    true
+
+
+
+Success in the test number 18
+Success: primitive - char - check
+actual:                                 expected:
+A                                       A
+
+
+
+Success in the test number 19
+Failure expected: 
+Test to fail: primitive - char - different
+actual:                                 expected:
+A.......................................B
+
+
+
+Success in the range test number 20
+Success: [3 <= 3 < 5)
+actual:   3
+low:      3
+high:     5
+
+Success in the range test number 21
+Success: [3 <= 4 < 5)
+actual:   4
+low:      3
+high:     5
+
+Error in range test number 22
+Fails: [3 <= -2 < 5)
+Actual value is not within the [low high) range.
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testPrimitiveRange(ExamplesBasicTypes.java:115)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:572)
+
+actual:    -2
+low:       3
+high:      5
+
+Error in range test number 23
+Fails: [3 <= 5 < 5)
+Actual value is not within the [low high) range.
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testPrimitiveRange(ExamplesBasicTypes.java:116)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:572)
+
+actual:    5
+low:       3
+high:      5
+
+Error in range test number 24
+Fails: [3 <= 8 < 5)
+Actual value is not within the [low high) range.
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testPrimitiveRange(ExamplesBasicTypes.java:117)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:572)
+
+actual:    8
+low:       3
+high:      5
+
+Success in the range test number 25
+Success: short: [3 <= 3 < 5)
+actual:   3S
+low:      3S
+high:     5S
+
+Success in the range test number 26
+Success: short: [3 <= 4 < 5)
+actual:   4S
+low:      3S
+high:     5S
+
+Error in range test number 27
+Fails: short: [3 <= -2 < 5)
+Actual value is not within the [low high) range.
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testPrimitiveRange(ExamplesBasicTypes.java:130)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:572)
+
+actual:    -2S
+low:       3S
+high:      5S
+
+Error in range test number 28
+Fails: short: [3 <= 5 < 5)
+Actual value is not within the [low high) range.
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testPrimitiveRange(ExamplesBasicTypes.java:131)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:572)
+
+actual:    5S
+low:       3S
+high:      5S
+
+Error in range test number 29
+Fails: short: [3 <= 8 < 5)
+Actual value is not within the [low high) range.
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testPrimitiveRange(ExamplesBasicTypes.java:132)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:572)
+
+actual:    8S
+low:       3S
+high:      5S
+
+Success in the range test number 30
+Success: long: [3 <= 3 < 5)
+actual:   3L
+low:      3L
+high:     5L
+
+Success in the range test number 31
+Success: long: [3 <= 4 < 5)
+actual:   4L
+low:      3L
+high:     5L
+
+Error in range test number 32
+Fails: long: [3 <= -2 < 5)
+Actual value is not within the [low high) range.
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testPrimitiveRange(ExamplesBasicTypes.java:145)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:572)
+
+actual:    -2L
+low:       3L
+high:      5L
+
+Error in range test number 33
+Fails: long: [3 <= 5 < 5)
+Actual value is not within the [low high) range.
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testPrimitiveRange(ExamplesBasicTypes.java:146)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:572)
+
+actual:    5L
+low:       3L
+high:      5L
+
+Error in range test number 34
+Fails: long: [3 <= 8 < 5)
+Actual value is not within the [low high) range.
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testPrimitiveRange(ExamplesBasicTypes.java:147)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:572)
+
+actual:    8L
+low:       3L
+high:      5L
+
+Success in the range test number 35
+Success: byte: [3 <= 3 < 5)
+actual:   3
+low:      3
+high:     5
+
+Success in the range test number 36
+Success: byte: [3 <= 4 < 5)
+actual:   4
+low:      3
+high:     5
+
+Error in range test number 37
+Fails: byte: [3 <= -2 < 5)
+Actual value is not within the [low high) range.
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testPrimitiveRange(ExamplesBasicTypes.java:160)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:572)
+
+actual:    -2
+low:       3
+high:      5
+
+Error in range test number 38
+Fails: byte: [3 <= 5 < 5)
+Actual value is not within the [low high) range.
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testPrimitiveRange(ExamplesBasicTypes.java:161)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:572)
+
+actual:    5
+low:       3
+high:      5
+
+Error in range test number 39
+Fails: byte: [3 <= 8 < 5)
+Actual value is not within the [low high) range.
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testPrimitiveRange(ExamplesBasicTypes.java:162)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:572)
+
+actual:    8
+low:       3
+high:      5
+
+Success in the range test number 40
+Success: boolean: [false <= false < true)
+actual:   false
+low:      false
+high:     true
+
+Error in range test number 41
+Fails: boolean: [false <= true < true)
+Actual value is not within the [low high) range.
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testPrimitiveRange(ExamplesBasicTypes.java:171)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:572)
+
+actual:    true
+low:       false
+high:      true
+
+Success in the range test number 42
+Success: char: [p <= p < r)
+actual:   p
+low:      p
+high:     r
+
+Success in the range test number 43
+Success: char: [p <= q < r)
+actual:   q
+low:      p
+high:     r
+
+Error in range test number 44
+Fails: char: [p <= m < r)
+Actual value is not within the [low high) range.
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testPrimitiveRange(ExamplesBasicTypes.java:186)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:572)
+
+actual:    m
+low:       p
+high:      r
+
+Error in range test number 45
+Fails: char: [p <= r < r)
+Actual value is not within the [low high) range.
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testPrimitiveRange(ExamplesBasicTypes.java:187)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:572)
+
+actual:    r
+low:       p
+high:      r
+
+Error in range test number 46
+Fails: char: [p <= s < r)
+Actual value is not within the [low high) range.
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testPrimitiveRange(ExamplesBasicTypes.java:188)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:572)
+
+actual:    s
+low:       p
+high:      r
+
+Success in the range test number 47
+Success: float: [3.0 <= 3.0 < 5.0)
+actual:   3.0F
+low:      3.0F
+high:     5.0F
+
+Success in the range test number 48
+Success: float: [3.0 <= 4.0 < 5.0)
+actual:   4.0F
+low:      3.0F
+high:     5.0F
+
+Error in range test number 49
+Fails: float: [3.0 <= -2.0 < 5.0)
+Actual value is not within the [low high) range.
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testPrimitiveRange(ExamplesBasicTypes.java:201)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:572)
+
+actual:    -2.0F
+low:       3.0F
+high:      5.0F
+
+Error in range test number 50
+Fails: float: [3.0 <= 5.0 < 5.0)
+Actual value is not within the [low high) range.
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testPrimitiveRange(ExamplesBasicTypes.java:202)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:572)
+
+actual:    5.0F
+low:       3.0F
+high:      5.0F
+
+Error in range test number 51
+Fails: float: [3.0 <= 8.0 < 5.0)
+Actual value is not within the [low high) range.
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testPrimitiveRange(ExamplesBasicTypes.java:203)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:572)
+
+actual:    8.0F
+low:       3.0F
+high:      5.0F
+
+Success in the range test number 52
+Success: double: [3.0 <= 3.0 < 5.0)
+actual:   3.0
+low:      3.0
+high:     5.0
+
+Success in the range test number 53
+Success: double: [3.0 <= 4.0 < 5.0)
+actual:   4.0
+low:      3.0
+high:     5.0
+
+Error in range test number 54
+Fails: double: [3.0 <= -2.0 < 5.0)
+Actual value is not within the [low high) range.
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testPrimitiveRange(ExamplesBasicTypes.java:216)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:572)
+
+actual:    -2.0
+low:       3.0
+high:      5.0
+
+Error in range test number 55
+Fails: double: [3.0 <= 5.0 < 5.0)
+Actual value is not within the [low high) range.
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testPrimitiveRange(ExamplesBasicTypes.java:217)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:572)
+
+actual:    5.0
+low:       3.0
+high:      5.0
+
+Error in range test number 56
+Fails: double: [3.0 <= 8.0 < 5.0)
+Actual value is not within the [low high) range.
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testPrimitiveRange(ExamplesBasicTypes.java:218)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:572)
+
+actual:    8.0
+low:       3.0
+high:      5.0
+
+Success in the range test number 57
+Success: String: [abc <= abc < cde)
+actual:    "abc"
+low:       "abc"
+high:      "cde"
+
+Success in the range test number 58
+Success: String: [abc <= bcd < cde)
+actual:    "bcd"
+low:       "abc"
+high:      "cde"
+
+Error in range test number 59
+Fails String: [abc <= aaa < cde)
+Actual value is not within the [low high) range.
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testPrimitiveRange(ExamplesBasicTypes.java:233)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:572)
+
+actual:     "aaa"
+low:        "abc"
+high:       "cde"
+
+Error in range test number 60
+Fails String: [abc <= cde < cde)
+Actual value is not within the [low high) range.
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testPrimitiveRange(ExamplesBasicTypes.java:234)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:572)
+
+actual:     "cde"
+low:        "abc"
+high:       "cde"
+
+Error in range test number 61
+Fails String: [abc <= def < cde)
+Actual value is not within the [low high) range.
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testPrimitiveRange(ExamplesBasicTypes.java:235)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:572)
+
+actual:     "def"
+low:        "abc"
+high:       "cde"
+
+Success in the test number 62
+Success: int - Integer - same
+actual:                                 expected:
+1                                       1
+
+
+
+Success in the test number 63
+Success: wrapper - Integer - different
+actual:                                 expected:
+false                                   false
+
+
+
+Success in the test number 64
+Success: wrapper - Integer - same
+actual:                                 expected:
+true                                    true
+
+
+
+Success in the test number 65
+Success: wrapper - Integer - check
+actual:                                 expected:
+1                                       1
+
+
+
+Success in the test number 66
+Success: wrapper - Short - different
+actual:                                 expected:
+false                                   false
+
+
+
+Success in the test number 67
+Success: wrapper - Short - same
+actual:                                 expected:
+true                                    true
+
+
+
+Success in the test number 68
+Success: wrapper - Short - check
+actual:                                 expected:
+1S                                      1S
+
+
+
+Success in the test number 69
+Success: wrapper - Long - different
+actual:                                 expected:
+false                                   false
+
+
+
+Success in the test number 70
+Success: wrapper - Long - same
+actual:                                 expected:
+true                                    true
+
+
+
+Success in the test number 71
+Success: wrapper - Long - check
+actual:                                 expected:
+12345678901L                            12345678901L
+
+
+
+Success in the test number 72
+Success: wrapper - Byte - different
+actual:                                 expected:
+false                                   false
+
+
+
+Success in the test number 73
+Success: wrapper - Byte - same
+actual:                                 expected:
+true                                    true
+
+
+
+Success in the test number 74
+Success: wrapper - Byte - same
+actual:                                 expected:
+1                                       1
+
+
+
+Success in the test number 75
+Success: wrapper - Boolean - different
+actual:                                 expected:
+false                                   false
+
+
+
+Success in the test number 76
+Success: wrapper - Boolean - same
+actual:                                 expected:
+true                                    true
+
+
+
+Success in the test number 77
+Success: wrapper - Boolean - check
+actual:                                 expected:
+true                                    true
+
+
+
+Success in the test number 78
+wrapper - Character - different
+actual:                                 expected:
+false                                   false
+
+
+
+Success in the test number 79
+wrapper - Character - same
+actual:                                 expected:
+true                                    true
+
+
+
+Success in the test number 80
+wrapper - Character - check
+actual:                                 expected:
+A                                       A
+
+
+
+Success in the test number 81
+Failure expected: 
+Test to fail: wrapper - Character - different
+actual:                                 expected:
+A.......................................B
+
+
+
+Success in the test number 82
+Success: big integer - different
+actual:                                 expected:
+false                                   false
+
+
+
+Success in the test number 83
+Success: big integer - same
+actual:                                 expected:
+true                                    true
+
+
+
+Success in the test number 84
+Success: big integer - check
+actual:                                 expected:
+12345678901BigInteger                   12345678901BigInteger
+
+
+
+Success in the test number 85
+Success: big decimal - different
+actual:                                 expected:
+false                                   false
+
+
+
+Success in the test number 86
+Success: big decimal - same
+actual:                                 expected:
+true                                    true
+
+
+
+Success in the test number 87
+Success: big decimal - same
+actual:                                 expected:
+1234567890.12345678901BigDecimal        1234567890.12345678901BigDecimal
+
+
+
+Success in the range test number 88
+Success: BigInteger: [1 <= 1 < 3)
+actual:   12345678901BigInteger
+low:      12345678901BigInteger
+high:     12345678903BigInteger
+
+Success in the range test number 89
+Success: BigInteger: [1 <= 2 < 3)
+actual:   12345678902BigInteger
+low:      12345678901BigInteger
+high:     12345678903BigInteger
+
+Error in range test number 90
+Fails: BigInteger: [1 <= 0 < 3)
+Actual value is not within the [low high) range.
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testBigNumbersRange(ExamplesBasicTypes.java:358)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:572)
+
+actual:    12345678890BigInteger
+low:       12345678901BigInteger
+high:      12345678903BigInteger
+
+Error in range test number 91
+Fails: BigInteger: [1 <= 3 < 3)
+Actual value is not within the [low high) range.
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testBigNumbersRange(ExamplesBasicTypes.java:359)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:572)
+
+actual:    12345678903BigInteger
+low:       12345678901BigInteger
+high:      12345678903BigInteger
+
+Error in range test number 92
+Fails: BigInteger: [1 <= 4 < 3)
+Actual value is not within the [low high) range.
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testBigNumbersRange(ExamplesBasicTypes.java:360)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:572)
+
+actual:    12345678904BigInteger
+low:       12345678901BigInteger
+high:      12345678903BigInteger
+
+Success in the range test number 93
+Success: BigDecimal: [1 <= 1 < 3)
+actual:   1234567890.12345678901BigDecimal
+low:      1234567890.12345678901BigDecimal
+high:     1234567890.12345678903BigDecimal
+
+Success in the range test number 94
+Success: BigDecimal: [1 <= 2 < 3)
+actual:   1234567890.12345678902BigDecimal
+low:      1234567890.12345678901BigDecimal
+high:     1234567890.12345678903BigDecimal
+
+Error in range test number 95
+Fails: BigDecimal: [1 <= 0 < 3)
+Actual value is not within the [low high) range.
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testBigNumbersRange(ExamplesBasicTypes.java:373)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:572)
+
+actual:    1234567890.12345678900BigDecimal
+low:       1234567890.12345678901BigDecimal
+high:      1234567890.12345678903BigDecimal
+
+Error in range test number 96
+Fails: BigDecimal: [1 <= 3 < 3)
+Actual value is not within the [low high) range.
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testBigNumbersRange(ExamplesBasicTypes.java:374)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:572)
+
+actual:    1234567890.12345678903BigDecimal
+low:       1234567890.12345678901BigDecimal
+high:      1234567890.12345678903BigDecimal
+
+Error in range test number 97
+Fails: BigDecimal: [1 <= 4 < 3)
+Actual value is not within the [low high) range.
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testBigNumbersRange(ExamplesBasicTypes.java:375)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:572)
+
+actual:    1234567890.12345678904BigDecimal
+low:       1234567890.12345678901BigDecimal
+high:      1234567890.12345678903BigDecimal
+
+Success in the test number 98
+Success: Distance to 0 - double - test1 success- same doubles: 
+actual:                                 expected:
+5.0                                     5.0
+
+
+
+Error in test number 99
+Fails: Distance to 0 - double - test2 fail - not inexact: 
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testDoubles(ExamplesBasicTypes.java:407)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:572)
+The comparison involved inexact numbers with relative tolerance 0.0010
+actual:                                 expected:
+100.001.................................100.0
+
+
+
+Success in the test number 100
+Success: Distance to 0 - double - test3 - OK: 
+actual:                                 expected:
+5.0                                     5.0
+
+
+
+Success in the test number 101
+Success: Distance to 0 - double - test4 - OK: 
+The comparison involved inexact numbers with relative tolerance 0.0010
+actual:                                 expected:
+100.001.................................100.0
+
+
+
+Success in the test number 102
+Success: Compare CartPt-s
+actual:                                 expected:
+ new basicTypes.CartPt:1(                new basicTypes.CartPt:1(
+  this.x = 4.0                            this.x = 4.0
+  this.y = 3.0)                           this.y = 3.0)
+
+
+
+Error in test number 103
+Fails: Compare CartPt-s: fail
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testDoubleFields(ExamplesBasicTypes.java:422)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:572)
+The comparison involved inexact numbers with relative tolerance 0.0010
+actual:                                 expected:
+ new basicTypes.CartPt:1(                new basicTypes.CartPt:1(
+  this.x = 4.0..........................  this.x = 100.001
+  this.y = 3.0)                           this.y = 0.0)
+
+
+
+Error in test number 104
+Fails: Distance to 0 - double - low tolerance: 
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testTolerance1(ExamplesBasicTypes.java:434)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:572)
+The comparison involved inexact numbers with relative tolerance 1.0E-7
+actual:                                 expected:
+100.001.................................100.0
+
+
+
+Success in the test number 105
+Success: Distance to 0 - Double - test1: 
+actual:                                 expected:
+5.0                                     5.0
+
+
+
+Success in the test number 106
+Success: Distance to 0 - Double - test2: 
+The comparison involved inexact numbers with relative tolerance 0.01
+actual:                                 expected:
+100.001.................................100.0
+
+
+
+Error in test number 107
+Fails: Distance to 0 - Double - low tolerance: 
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testTolerance3(ExamplesBasicTypes.java:469)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:572)
+The comparison involved inexact numbers with relative tolerance 1.0E-7
+actual:                                 expected:
+100.001.................................100.0
+
+
+
+Success in the test number 108
+Success: Distance to 0 - float - test1: 
+actual:                                 expected:
+5.0                                     5.0
+
+
+
+Success in the test number 109
+Success: Distance to 0 - float - test2: 
+The comparison involved inexact numbers with relative tolerance 0.01
+actual:                                 expected:
+100.00100097155278......................100.0
+
+
+
+Error in test number 110
+Fails: Distance to 0 - float - low tolerance: 
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testTolerance5(ExamplesBasicTypes.java:501)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:572)
+The comparison involved inexact numbers with relative tolerance 1.0E-7
+actual:                                 expected:
+100.00100097155278......................100.0
+
+
+
+Success in the test number 111
+Success: Distance to 0 - Float - test1: 
+actual:                                 expected:
+5.0                                     5.0
+
+
+
+Success in the test number 112
+Success: Distance to 0 - Float - test2: 
+The comparison involved inexact numbers with relative tolerance 0.01
+actual:                                 expected:
+100.00100097155278......................100.0
+
+
+
+Error in test number 113
+Fails: Distance to 0 - Float - low tolerance: 
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testTolerance7(ExamplesBasicTypes.java:533)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:572)
+The comparison involved inexact numbers with relative tolerance 1.0E-7
+actual:                                 expected:
+100.00100097155278......................100.0
+
+
+
+Success in the range test number 114
+Success: Num range: lower bound double and int
+actual:   1.0
+low:      1
+high:     2.0
+
+Success in the range test number 115
+Success: Num range: lower bound double and int
+actual:   1
+low:      1.0
+high:     2.0
+
+Success in the range test number 116
+Success: Num range: lower bound int and int
+actual:   1
+low:      1
+high:     2.0
+
+Success in the range test number 117
+Success: Num range: lower bound double and int
+actual:   1.0
+low:      1.0
+high:     2.0
+
+Error in range test number 118
+Fails: Num range: lower bound double and int
+Actual value is not within the [low high) range.
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testNumRange(ExamplesBasicTypes.java:551)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:572)
+
+actual:    1.0
+low:       2
+high:      2.0
+
+Error in range test number 119
+Fails: Num range: lower bound double and int
+Actual value is not within the [low high) range.
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testNumRange(ExamplesBasicTypes.java:552)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:572)
+
+actual:    1
+low:       2.0
+high:      2.0
+
+Success in the range test number 120
+Success: Num range: lower bound double and Long
+actual:   1.0
+low:      1L
+high:     2.0
+
+Success in the range test number 121
+Success: Num range: lower bound double and short
+actual:   1.0
+low:      1S
+high:     2.0
+
+Success in the range test number 122
+Success: Num range: lower bound double and float
+actual:   1.0
+low:      1.0F
+high:     2.0
+
+--- END OF FULL TEST RESULTS ---
+
+---------------------------------------------------
+
+---------------------------------------------------
+
+---------------------------------------------------
+Invoke tester.runReport(this, false, false, true):
+Print no data, all test results, no warnings
+Tester Prima v.1.4.1 - 5 October 2010
+----------------------------------
+
+Ran 122 tests.
+39 tests failed.
+Issued 10 warnings of inexact comparison.
+
+Failed test results: 
+--------------
+
+Error in range test number 22
+Fails: [3 <= -2 < 5)
+Actual value is not within the [low high) range.
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testPrimitiveRange(ExamplesBasicTypes.java:115)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:580)
+
+actual:    -2
+low:       3
+high:      5
+
+Error in range test number 23
+Fails: [3 <= 5 < 5)
+Actual value is not within the [low high) range.
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testPrimitiveRange(ExamplesBasicTypes.java:116)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:580)
+
+actual:    5
+low:       3
+high:      5
+
+Error in range test number 24
+Fails: [3 <= 8 < 5)
+Actual value is not within the [low high) range.
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testPrimitiveRange(ExamplesBasicTypes.java:117)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:580)
+
+actual:    8
+low:       3
+high:      5
+
+Error in range test number 27
+Fails: short: [3 <= -2 < 5)
+Actual value is not within the [low high) range.
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testPrimitiveRange(ExamplesBasicTypes.java:130)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:580)
+
+actual:    -2S
+low:       3S
+high:      5S
+
+Error in range test number 28
+Fails: short: [3 <= 5 < 5)
+Actual value is not within the [low high) range.
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testPrimitiveRange(ExamplesBasicTypes.java:131)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:580)
+
+actual:    5S
+low:       3S
+high:      5S
+
+Error in range test number 29
+Fails: short: [3 <= 8 < 5)
+Actual value is not within the [low high) range.
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testPrimitiveRange(ExamplesBasicTypes.java:132)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:580)
+
+actual:    8S
+low:       3S
+high:      5S
+
+Error in range test number 32
+Fails: long: [3 <= -2 < 5)
+Actual value is not within the [low high) range.
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testPrimitiveRange(ExamplesBasicTypes.java:145)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:580)
+
+actual:    -2L
+low:       3L
+high:      5L
+
+Error in range test number 33
+Fails: long: [3 <= 5 < 5)
+Actual value is not within the [low high) range.
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testPrimitiveRange(ExamplesBasicTypes.java:146)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:580)
+
+actual:    5L
+low:       3L
+high:      5L
+
+Error in range test number 34
+Fails: long: [3 <= 8 < 5)
+Actual value is not within the [low high) range.
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testPrimitiveRange(ExamplesBasicTypes.java:147)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:580)
+
+actual:    8L
+low:       3L
+high:      5L
+
+Error in range test number 37
+Fails: byte: [3 <= -2 < 5)
+Actual value is not within the [low high) range.
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testPrimitiveRange(ExamplesBasicTypes.java:160)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:580)
+
+actual:    -2
+low:       3
+high:      5
+
+Error in range test number 38
+Fails: byte: [3 <= 5 < 5)
+Actual value is not within the [low high) range.
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testPrimitiveRange(ExamplesBasicTypes.java:161)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:580)
+
+actual:    5
+low:       3
+high:      5
+
+Error in range test number 39
+Fails: byte: [3 <= 8 < 5)
+Actual value is not within the [low high) range.
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testPrimitiveRange(ExamplesBasicTypes.java:162)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:580)
+
+actual:    8
+low:       3
+high:      5
+
+Error in range test number 41
+Fails: boolean: [false <= true < true)
+Actual value is not within the [low high) range.
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testPrimitiveRange(ExamplesBasicTypes.java:171)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:580)
+
+actual:    true
+low:       false
+high:      true
+
+Error in range test number 44
+Fails: char: [p <= m < r)
+Actual value is not within the [low high) range.
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testPrimitiveRange(ExamplesBasicTypes.java:186)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:580)
+
+actual:    m
+low:       p
+high:      r
+
+Error in range test number 45
+Fails: char: [p <= r < r)
+Actual value is not within the [low high) range.
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testPrimitiveRange(ExamplesBasicTypes.java:187)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:580)
+
+actual:    r
+low:       p
+high:      r
+
+Error in range test number 46
+Fails: char: [p <= s < r)
+Actual value is not within the [low high) range.
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testPrimitiveRange(ExamplesBasicTypes.java:188)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:580)
+
+actual:    s
+low:       p
+high:      r
+
+Error in range test number 49
+Fails: float: [3.0 <= -2.0 < 5.0)
+Actual value is not within the [low high) range.
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testPrimitiveRange(ExamplesBasicTypes.java:201)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:580)
+
+actual:    -2.0F
+low:       3.0F
+high:      5.0F
+
+Error in range test number 50
+Fails: float: [3.0 <= 5.0 < 5.0)
+Actual value is not within the [low high) range.
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testPrimitiveRange(ExamplesBasicTypes.java:202)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:580)
+
+actual:    5.0F
+low:       3.0F
+high:      5.0F
+
+Error in range test number 51
+Fails: float: [3.0 <= 8.0 < 5.0)
+Actual value is not within the [low high) range.
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testPrimitiveRange(ExamplesBasicTypes.java:203)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:580)
+
+actual:    8.0F
+low:       3.0F
+high:      5.0F
+
+Error in range test number 54
+Fails: double: [3.0 <= -2.0 < 5.0)
+Actual value is not within the [low high) range.
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testPrimitiveRange(ExamplesBasicTypes.java:216)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:580)
+
+actual:    -2.0
+low:       3.0
+high:      5.0
+
+Error in range test number 55
+Fails: double: [3.0 <= 5.0 < 5.0)
+Actual value is not within the [low high) range.
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testPrimitiveRange(ExamplesBasicTypes.java:217)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:580)
+
+actual:    5.0
+low:       3.0
+high:      5.0
+
+Error in range test number 56
+Fails: double: [3.0 <= 8.0 < 5.0)
+Actual value is not within the [low high) range.
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testPrimitiveRange(ExamplesBasicTypes.java:218)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:580)
+
+actual:    8.0
+low:       3.0
+high:      5.0
+
+Error in range test number 59
+Fails String: [abc <= aaa < cde)
+Actual value is not within the [low high) range.
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testPrimitiveRange(ExamplesBasicTypes.java:233)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:580)
+
+actual:     "aaa"
+low:        "abc"
+high:       "cde"
+
+Error in range test number 60
+Fails String: [abc <= cde < cde)
+Actual value is not within the [low high) range.
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testPrimitiveRange(ExamplesBasicTypes.java:234)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:580)
+
+actual:     "cde"
+low:        "abc"
+high:       "cde"
+
+Error in range test number 61
+Fails String: [abc <= def < cde)
+Actual value is not within the [low high) range.
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testPrimitiveRange(ExamplesBasicTypes.java:235)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:580)
+
+actual:     "def"
+low:        "abc"
+high:       "cde"
+
+Error in range test number 90
+Fails: BigInteger: [1 <= 0 < 3)
+Actual value is not within the [low high) range.
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testBigNumbersRange(ExamplesBasicTypes.java:358)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:580)
+
+actual:    12345678890BigInteger
+low:       12345678901BigInteger
+high:      12345678903BigInteger
+
+Error in range test number 91
+Fails: BigInteger: [1 <= 3 < 3)
+Actual value is not within the [low high) range.
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testBigNumbersRange(ExamplesBasicTypes.java:359)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:580)
+
+actual:    12345678903BigInteger
+low:       12345678901BigInteger
+high:      12345678903BigInteger
+
+Error in range test number 92
+Fails: BigInteger: [1 <= 4 < 3)
+Actual value is not within the [low high) range.
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testBigNumbersRange(ExamplesBasicTypes.java:360)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:580)
+
+actual:    12345678904BigInteger
+low:       12345678901BigInteger
+high:      12345678903BigInteger
+
+Error in range test number 95
+Fails: BigDecimal: [1 <= 0 < 3)
+Actual value is not within the [low high) range.
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testBigNumbersRange(ExamplesBasicTypes.java:373)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:580)
+
+actual:    1234567890.12345678900BigDecimal
+low:       1234567890.12345678901BigDecimal
+high:      1234567890.12345678903BigDecimal
+
+Error in range test number 96
+Fails: BigDecimal: [1 <= 3 < 3)
+Actual value is not within the [low high) range.
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testBigNumbersRange(ExamplesBasicTypes.java:374)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:580)
+
+actual:    1234567890.12345678903BigDecimal
+low:       1234567890.12345678901BigDecimal
+high:      1234567890.12345678903BigDecimal
+
+Error in range test number 97
+Fails: BigDecimal: [1 <= 4 < 3)
+Actual value is not within the [low high) range.
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testBigNumbersRange(ExamplesBasicTypes.java:375)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:580)
+
+actual:    1234567890.12345678904BigDecimal
+low:       1234567890.12345678901BigDecimal
+high:      1234567890.12345678903BigDecimal
+
+Error in test number 99
+Fails: Distance to 0 - double - test2 fail - not inexact: 
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testDoubles(ExamplesBasicTypes.java:407)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:580)
+The comparison involved inexact numbers with relative tolerance 0.0010
+actual:                                 expected:
+100.001.................................100.0
+
+
+
+Error in test number 103
+Fails: Compare CartPt-s: fail
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testDoubleFields(ExamplesBasicTypes.java:422)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:580)
+The comparison involved inexact numbers with relative tolerance 0.0010
+actual:                                 expected:
+ new basicTypes.CartPt:1(                new basicTypes.CartPt:1(
+  this.x = 4.0..........................  this.x = 100.001
+  this.y = 3.0)                           this.y = 0.0)
+
+
+
+Error in test number 104
+Fails: Distance to 0 - double - low tolerance: 
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testTolerance1(ExamplesBasicTypes.java:434)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:580)
+The comparison involved inexact numbers with relative tolerance 1.0E-7
+actual:                                 expected:
+100.001.................................100.0
+
+
+
+Error in test number 107
+Fails: Distance to 0 - Double - low tolerance: 
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testTolerance3(ExamplesBasicTypes.java:469)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:580)
+The comparison involved inexact numbers with relative tolerance 1.0E-7
+actual:                                 expected:
+100.001.................................100.0
+
+
+
+Error in test number 110
+Fails: Distance to 0 - float - low tolerance: 
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testTolerance5(ExamplesBasicTypes.java:501)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:580)
+The comparison involved inexact numbers with relative tolerance 1.0E-7
+actual:                                 expected:
+100.00100097155278......................100.0
+
+
+
+Error in test number 113
+Fails: Distance to 0 - Float - low tolerance: 
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testTolerance7(ExamplesBasicTypes.java:533)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:580)
+The comparison involved inexact numbers with relative tolerance 1.0E-7
+actual:                                 expected:
+100.00100097155278......................100.0
+
+
+
+Error in range test number 118
+Fails: Num range: lower bound double and int
+Actual value is not within the [low high) range.
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testNumRange(ExamplesBasicTypes.java:551)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:580)
+
+actual:    1.0
+low:       2
+high:      2.0
+
+Error in range test number 119
+Fails: Num range: lower bound double and int
+Actual value is not within the [low high) range.
+tester.ErrorReport: Error trace:
+	at basicTypes.ExamplesBasicTypes.testNumRange(ExamplesBasicTypes.java:552)
+	at basicTypes.ExamplesBasicTypes.main(ExamplesBasicTypes.java:580)
+
+actual:    1
+low:       2.0
+high:      2.0
+
+--- END OF TEST RESULTS ---

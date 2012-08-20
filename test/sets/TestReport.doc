@@ -1,0 +1,421 @@
+Show all data defined in the ExamplesSets class:
+
+
+---------------------------------------------------
+Invoke tester.runReport(this, true, true):
+Print all data, all test results
+Tester Prima v.1.4.1 - 5 October 2010
+----------------------------------
+sets.ExamplesSets:
+---------------
+
+ new sets.ExamplesSets:1(
+  this.song1 = 
+   new sets.Song:2(
+    this.title =  "title1"
+    this.time = 4)
+  this.song1a = 
+   new sets.Song:3(
+    this.title =  "title1"
+    this.time = 4)
+  this.song1b = 
+   new sets.Song:4(
+    this.title =  "title1"
+    this.time = 2)
+  this.song2 = 
+   new sets.Song:5(
+    this.title =  "title2"
+    this.time = 2)
+  this.song2a = 
+   new sets.Song:6(
+    this.title =  "title2"
+    this.time = 2)
+  this.song2b = 
+   new sets.Song:7(
+    this.title =  "title2"
+    this.time = 4)
+  this.song3 = 
+   new sets.Song:8(
+    this.title =  "title3"
+    this.time = 2)
+  this.song4 = sets.Song:8
+  this.songSet1a = 
+   new java.util.HashSet:9(){
+    Iterable[0] sets.Song:3,
+    Iterable[1] sets.Song:5,
+    Iterable[2] sets.Song:8}
+  this.songSet1b = java.util.HashSet:9
+  this.songSet1c = 
+   new java.util.HashSet:10(){
+    Iterable[0] sets.Song:2,
+    Iterable[1] sets.Song:5,
+    Iterable[2] sets.Song:8}
+  this.songSet1d = java.util.HashSet:10
+  this.songSet2a = java.util.HashSet:8
+  this.songSet2b = java.util.HashSet:8
+  this.songSet3a = java.util.HashSet:2
+  this.songSet3b = java.util.HashSet:3
+  this.songSet4a = java.util.TreeSet:3
+  this.songSet4b = java.util.TreeSet:3
+  this.songSet4c = java.util.TreeSet:2
+  this.songSet5a = java.util.TreeSet:8
+  this.songSet5b = java.util.TreeSet:8)
+---------------
+Mismatch for [sets.Song@62f72617, sets.Song@4fe5e2c3, sets.Song@7d8a992f] and [sets.Song@164f1d0d, sets.Song@4fe5e2c3, sets.Song@7d8a992f]
+Mismatch for [sets.Song@164f1d0d] and [sets.Song@62f72617]
+Mismatch for [sets.Song@164f1d0d] and [sets.Song@7d8a992f]
+Mismatch for [sets.Song@62f72617] and [sets.Song@7d8a992f]
+Mismatch for [sets.Song@62f72617] and [sets.Song@164f1d0d]
+Mismatch for [sets.Song@62f72617] and [sets.Song@164f1d0d]
+
+Ran 16 tests.
+7 tests failed.
+
+Full test results: 
+-------------------
+
+Success in the test number 1
+Success: HashSet same lists differently ordered
+actual:                                 expected:
+Iterable[0]                             Iterable[0] 
+ new sets.Song:1(                        new sets.Song:1(
+  this.title =  "title1"                  this.title =  "title1"
+  this.time = 4),                         this.time = 4),
+Iterable[1]                             Iterable[1] 
+ new sets.Song:2(                        new sets.Song:2(
+  this.title =  "title2"                  this.title =  "title2"
+  this.time = 2),                         this.time = 2),
+Iterable[2]                             Iterable[2] 
+ new sets.Song:3(                        new sets.Song:3(
+  this.title =  "title3"                  this.title =  "title3"
+  this.time = 2)                          this.time = 2)
+
+
+
+Success in the test number 2
+Success: HashSet same lists
+actual:                                 expected:
+Iterable[0]                             Iterable[0] 
+ new sets.Song:1(                        new sets.Song:1(
+  this.title =  "title3"                  this.title =  "title3"
+  this.time = 2)                          this.time = 2)
+
+
+
+Success in the test number 3
+Success: HashSet same lists
+actual:                                 expected:
+Iterable[0]                             Iterable[0] 
+ new sets.Song:1(                        new sets.Song:1(
+  this.title =  "title1"                  this.title =  "title1"
+  this.time = 4)                          this.time = 4)
+
+
+
+Success in the test number 4
+Success: HashSet similar lists
+actual:                                 expected:
+Iterable[0]                             Iterable[0] 
+ new sets.Song:1(                        new sets.Song:1(
+  this.title =  "title1"                  this.title =  "title1"
+  this.time = 4),                         this.time = 4),
+Iterable[1]                             Iterable[1] 
+ new sets.Song:2(                        new sets.Song:2(
+  this.title =  "title2"                  this.title =  "title2"
+  this.time = 2),                         this.time = 2),
+Iterable[2]                             Iterable[2] 
+ new sets.Song:3(                        new sets.Song:3(
+  this.title =  "title3"                  this.title =  "title3"
+  this.time = 2)                          this.time = 2)
+
+
+
+Success in the test number 5
+Success: TreeSet same lists
+actual:                                 expected:
+Iterable[0]                             Iterable[0] 
+ new sets.Song:1(                        new sets.Song:1(
+  this.title =  "title1"                  this.title =  "title1"
+  this.time = 4)                          this.time = 4)
+
+
+
+Success in the test number 6
+Success: TreeSet same lists
+actual:                                 expected:
+Iterable[0]                             Iterable[0] 
+ new sets.Song:1(                        new sets.Song:1(
+  this.title =  "title3"                  this.title =  "title3"
+  this.time = 2)                          this.time = 2)
+
+
+
+Success in the test number 7
+Success: TreeSet same lists
+actual:                                 expected:
+Iterable[0]                             Iterable[0] 
+ new sets.Song:1(                        new sets.Song:1(
+  this.title =  "title1"                  this.title =  "title1"
+  this.time = 4)                          this.time = 4)
+
+
+
+Success in the test number 8
+Success: Comparing HashSet and TreeSet
+actual:                                 expected:
+Iterable[0]                             Iterable[0] 
+ new sets.Song:1(                        new sets.Song:1(
+  this.title =  "title3"                  this.title =  "title3"
+  this.time = 2)                          this.time = 2)
+
+
+
+Success in the test number 9
+Success: Comparing HashSet and TreeSet
+actual:                                 expected:
+Iterable[0]                             Iterable[0] 
+ new sets.Song:1(                        new sets.Song:1(
+  this.title =  "title3"                  this.title =  "title3"
+  this.time = 2)                          this.time = 2)
+
+
+
+Error in test number 10
+Should fail: HashSet similar elements but different lists
+tester.ErrorReport: Error trace:
+	at sets.ExamplesSets.testSets(ExamplesSets.java:77)
+	at sets.ExamplesSets.main(ExamplesSets.java:103)
+actual:                                 expected:
+Iterable[0]                             Iterable[0] 
+ new sets.Song:1(                        new sets.Song:1(
+  this.title =  "title1"                  this.title =  "title1"
+  this.time = 4),                         this.time = 4),
+Iterable[1]                             Iterable[1] 
+ new sets.Song:2(                        new sets.Song:2(
+  this.title =  "title2"                  this.title =  "title2"
+  this.time = 2),                         this.time = 2),
+Iterable[2]                             Iterable[2] 
+ new sets.Song:3(                        new sets.Song:3(
+  this.title =  "title3"                  this.title =  "title3"
+  this.time = 2)                          this.time = 2)
+
+
+
+Error in test number 11
+Should fail: HashSet similar elements but different lists
+tester.ErrorReport: Error trace:
+	at sets.ExamplesSets.testSets(ExamplesSets.java:78)
+	at sets.ExamplesSets.main(ExamplesSets.java:103)
+actual:                                 expected:
+Iterable[0]                             Iterable[0] 
+ new sets.Song:1(                        new sets.Song:1(
+  this.title =  "title1"                  this.title =  "title1"
+  this.time = 4)                          this.time = 4)
+
+
+
+Error in test number 12
+Should fail: HashSet different lists
+tester.ErrorReport: Error trace:
+	at sets.ExamplesSets.testSets(ExamplesSets.java:79)
+	at sets.ExamplesSets.main(ExamplesSets.java:103)
+actual:                                 expected:
+Iterable[0]                             Iterable[0] 
+ new sets.Song:1(                        new sets.Song:1(
+  this.title =  "title1"................  this.title =  "title3"
+  this.time = 4)                          this.time = 2)
+
+
+
+Error in test number 13
+Should fail: TreeSet different lists
+tester.ErrorReport: Error trace:
+	at sets.ExamplesSets.testSets(ExamplesSets.java:81)
+	at sets.ExamplesSets.main(ExamplesSets.java:103)
+actual:                                 expected:
+Iterable[0]                             Iterable[0] 
+ new sets.Song:1(                        new sets.Song:1(
+  this.title =  "title1"................  this.title =  "title3"
+  this.time = 4)                          this.time = 2)
+
+
+
+Error in test number 14
+Should fail: TreeSet similar elements but different lists
+tester.ErrorReport: Error trace:
+	at sets.ExamplesSets.testSets(ExamplesSets.java:82)
+	at sets.ExamplesSets.main(ExamplesSets.java:103)
+actual:                                 expected:
+Iterable[0]                             Iterable[0] 
+ new sets.Song:1(                        new sets.Song:1(
+  this.title =  "title1"                  this.title =  "title1"
+  this.time = 4)                          this.time = 4)
+
+
+
+Error in test number 15
+Should fail: Comparing different TreeSet and Hashet lists
+tester.ErrorReport: Error trace:
+	at sets.ExamplesSets.testSets(ExamplesSets.java:84)
+	at sets.ExamplesSets.main(ExamplesSets.java:103)
+actual:                                 expected:
+Iterable[0]                             Iterable[0] 
+ new sets.Song:1(                        new sets.Song:1(
+  this.title =  "title1"                  this.title =  "title1"
+  this.time = 4)                          this.time = 4)
+
+
+
+Error in test number 16
+Should fail: Comparing different TreeSet and Hashet lists
+tester.ErrorReport: Error trace:
+	at sets.ExamplesSets.testSets(ExamplesSets.java:85)
+	at sets.ExamplesSets.main(ExamplesSets.java:103)
+actual:                                 expected:
+Iterable[0]                             Iterable[0] 
+ new sets.Song:1(                        new sets.Song:1(
+  this.title =  "title1"................  this.title =  "title3"
+  this.time = 4),                         this.time = 2)
+Iterable[1] 
+ new sets.Song:2(
+  this.title =  "title2"
+  this.time = 2),
+Iterable[2] 
+ new sets.Song:3(
+  this.title =  "title3"
+  this.time = 2)
+
+
+
+--- END OF FULL TEST RESULTS ---
+
+---------------------------------------------------
+
+---------------------------------------------------
+
+---------------------------------------------------
+Invoke tester.runReport(this, false, false, true):
+Print no data, all test results, no warnings
+Tester Prima v.1.4.1 - 5 October 2010
+----------------------------------
+Mismatch for [sets.Song@62f72617, sets.Song@4fe5e2c3, sets.Song@7d8a992f] and [sets.Song@164f1d0d, sets.Song@4fe5e2c3, sets.Song@7d8a992f]
+Mismatch for [sets.Song@164f1d0d] and [sets.Song@62f72617]
+Mismatch for [sets.Song@164f1d0d] and [sets.Song@7d8a992f]
+Mismatch for [sets.Song@62f72617] and [sets.Song@7d8a992f]
+Mismatch for [sets.Song@62f72617] and [sets.Song@164f1d0d]
+Mismatch for [sets.Song@62f72617] and [sets.Song@164f1d0d]
+
+Ran 16 tests.
+7 tests failed.
+
+Failed test results: 
+--------------
+
+Error in test number 10
+Should fail: HashSet similar elements but different lists
+tester.ErrorReport: Error trace:
+	at sets.ExamplesSets.testSets(ExamplesSets.java:77)
+	at sets.ExamplesSets.main(ExamplesSets.java:111)
+actual:                                 expected:
+Iterable[0]                             Iterable[0] 
+ new sets.Song:1(                        new sets.Song:1(
+  this.title =  "title1"                  this.title =  "title1"
+  this.time = 4),                         this.time = 4),
+Iterable[1]                             Iterable[1] 
+ new sets.Song:2(                        new sets.Song:2(
+  this.title =  "title2"                  this.title =  "title2"
+  this.time = 2),                         this.time = 2),
+Iterable[2]                             Iterable[2] 
+ new sets.Song:3(                        new sets.Song:3(
+  this.title =  "title3"                  this.title =  "title3"
+  this.time = 2)                          this.time = 2)
+
+
+
+Error in test number 11
+Should fail: HashSet similar elements but different lists
+tester.ErrorReport: Error trace:
+	at sets.ExamplesSets.testSets(ExamplesSets.java:78)
+	at sets.ExamplesSets.main(ExamplesSets.java:111)
+actual:                                 expected:
+Iterable[0]                             Iterable[0] 
+ new sets.Song:1(                        new sets.Song:1(
+  this.title =  "title1"                  this.title =  "title1"
+  this.time = 4)                          this.time = 4)
+
+
+
+Error in test number 12
+Should fail: HashSet different lists
+tester.ErrorReport: Error trace:
+	at sets.ExamplesSets.testSets(ExamplesSets.java:79)
+	at sets.ExamplesSets.main(ExamplesSets.java:111)
+actual:                                 expected:
+Iterable[0]                             Iterable[0] 
+ new sets.Song:1(                        new sets.Song:1(
+  this.title =  "title1"................  this.title =  "title3"
+  this.time = 4)                          this.time = 2)
+
+
+
+Error in test number 13
+Should fail: TreeSet different lists
+tester.ErrorReport: Error trace:
+	at sets.ExamplesSets.testSets(ExamplesSets.java:81)
+	at sets.ExamplesSets.main(ExamplesSets.java:111)
+actual:                                 expected:
+Iterable[0]                             Iterable[0] 
+ new sets.Song:1(                        new sets.Song:1(
+  this.title =  "title1"................  this.title =  "title3"
+  this.time = 4)                          this.time = 2)
+
+
+
+Error in test number 14
+Should fail: TreeSet similar elements but different lists
+tester.ErrorReport: Error trace:
+	at sets.ExamplesSets.testSets(ExamplesSets.java:82)
+	at sets.ExamplesSets.main(ExamplesSets.java:111)
+actual:                                 expected:
+Iterable[0]                             Iterable[0] 
+ new sets.Song:1(                        new sets.Song:1(
+  this.title =  "title1"                  this.title =  "title1"
+  this.time = 4)                          this.time = 4)
+
+
+
+Error in test number 15
+Should fail: Comparing different TreeSet and Hashet lists
+tester.ErrorReport: Error trace:
+	at sets.ExamplesSets.testSets(ExamplesSets.java:84)
+	at sets.ExamplesSets.main(ExamplesSets.java:111)
+actual:                                 expected:
+Iterable[0]                             Iterable[0] 
+ new sets.Song:1(                        new sets.Song:1(
+  this.title =  "title1"                  this.title =  "title1"
+  this.time = 4)                          this.time = 4)
+
+
+
+Error in test number 16
+Should fail: Comparing different TreeSet and Hashet lists
+tester.ErrorReport: Error trace:
+	at sets.ExamplesSets.testSets(ExamplesSets.java:85)
+	at sets.ExamplesSets.main(ExamplesSets.java:111)
+actual:                                 expected:
+Iterable[0]                             Iterable[0] 
+ new sets.Song:1(                        new sets.Song:1(
+  this.title =  "title1"................  this.title =  "title3"
+  this.time = 4),                         this.time = 2)
+Iterable[1] 
+ new sets.Song:2(
+  this.title =  "title2"
+  this.time = 2),
+Iterable[2] 
+ new sets.Song:3(
+  this.title =  "title3"
+  this.time = 2)
+
+
+
+--- END OF TEST RESULTS ---

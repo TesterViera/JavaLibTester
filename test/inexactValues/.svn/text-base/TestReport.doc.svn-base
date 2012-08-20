@@ -1,0 +1,972 @@
+Show all data defined in the ExamplesInexact class:
+
+
+---------------------------------------------------
+Invoke tester.runReport(this, true, true):
+Print all data, all test results
+Tester Prima v.1.4.1 - 5 October 2010
+----------------------------------
+inexactValues.ExamplesInexact:
+---------------
+
+ new inexactValues.ExamplesInexact:1(
+  this.st14av5 = 
+   new inexactValues.Location:2(
+    this.street = 14
+    this.avenue = 5)
+  this.st18av8 = 
+   new inexactValues.Location:3(
+    this.street = 18
+    this.avenue = 8)
+  this.st26av10 = 
+   new inexactValues.Location:4(
+    this.street = 26
+    this.avenue = 10)
+  this.pt = 
+   new inexactValues.CartPtDouble:5(
+    this.x = 3.0
+    this.y = 4.0)
+  this.p1 = 
+   new inexactValues.CartPtDouble:6(
+    this.x = 3.0
+    this.y = 4.0)
+  this.p2 = 
+   new inexactValues.CartPtDouble:7(
+    this.x = 7.0
+    this.y = 7.0)
+  this.p2a = 
+   new inexactValues.CartPtDouble:8(
+    this.x = 7.0
+    this.y = 6.9995)
+  this.p3 = 
+   new inexactValues.CartPtDouble:9(
+    this.x = 15.0
+    this.y = 8.0)
+  this.list1 = 
+   new java.util.Arrays$ArrayList:10(){
+    Iterable[0] inexactValues.CartPtDouble:6,
+    Iterable[1] inexactValues.CartPtDouble:7,
+    Iterable[2] inexactValues.CartPtDouble:9}
+  this.list2 = 
+   new java.util.Arrays$ArrayList:11(){
+    Iterable[0] inexactValues.CartPtDouble:6,
+    Iterable[1] inexactValues.CartPtDouble:8,
+    Iterable[2] inexactValues.CartPtDouble:9}
+  this.list3 = 
+   new java.util.Arrays$ArrayList:12(){
+    Iterable[0] inexactValues.CartPtDouble:6,
+    Iterable[1] inexactValues.CartPtDouble:9})
+---------------
+
+Ran 76 tests.
+7 tests failed.
+Issued 60 warnings of inexact comparison.
+
+Full test results: 
+-------------------
+
+Success in the test number 1
+Success: t.checkExpect(d1a, d1b)
+actual:                                 expected:
+3.3333333333333335                      3.3333333333333335
+
+
+
+Success in the test number 2
+Failure expected: 
+Test to fail: t.checkFail(d1a, d2a)
+The comparison involved inexact numbers with relative tolerance 0.0010
+actual:                                 expected:
+3.3333333333333335......................3.333
+
+
+
+Success in the test number 3
+Success: t.checkInexact(d1a, d1b, 0.001)
+actual:                                 expected:
+3.3333333333333335                      3.3333333333333335
+
+
+
+Success in the test number 4
+Success: t.checkInexact(d1a, d2a, 0.001)
+The comparison involved inexact numbers with relative tolerance 0.0010
+actual:                                 expected:
+3.3333333333333335......................3.333
+
+
+
+Error in test number 5
+Should fail: t.checkInexact(d1a, d2a, 0.0001)
+tester.ErrorReport: Error trace:
+	at inexactValues.ExamplesInexact.testDouble(ExamplesInexact.java:78)
+	at inexactValues.ExamplesInexact.main(ExamplesInexact.java:702)
+The comparison involved inexact numbers with relative tolerance 1.0E-4
+actual:                                 expected:
+3.3333333333333335......................3.333
+
+
+
+Success in the test number 6
+Failure expected: 
+Test to fail: t.checkInexactFail(d1a, d2a, 0.0001)
+The comparison involved inexact numbers with relative tolerance 1.0E-4
+actual:                                 expected:
+3.3333333333333335......................3.333
+
+
+
+Success in the test number 7
+Success: t.checkInexact(d0, d0001, 0.00011)
+The comparison involved inexact numbers with relative tolerance 1.1E-4
+actual:                                 expected:
+0.0.....................................1.0E-4
+
+
+
+Success in the test number 8
+Success: t.checkInexact(0.0, -0.0001, 0.00011)
+The comparison involved inexact numbers with relative tolerance 1.1E-4
+actual:                                 expected:
+0.0.....................................-1.0E-4
+
+
+
+Success in the test number 9
+Failure expected: 
+Test to fail: t.checkInexactFail(d0, d0001, 0.000099)
+The comparison involved inexact numbers with relative tolerance 9.9E-5
+actual:                                 expected:
+0.0.....................................1.0E-4
+
+
+
+Success in the test number 10
+Test to fail: t.checkInexactFail(d0, d0001, -0.00011) Failure expected: 
+
+ Test failed because the provided tolerance is < 0
+The comparison involved inexact numbers with relative tolerance 9.9E-5
+actual:                                 expected:
+0.0.....................................1.0E-4
+
+
+
+Error in test number 11
+Should fail: t.checkInexact(0.005, -0.005, 0.001)
+tester.ErrorReport: Error trace:
+	at inexactValues.ExamplesInexact.testDouble(ExamplesInexact.java:99)
+	at inexactValues.ExamplesInexact.main(ExamplesInexact.java:702)
+The comparison involved inexact numbers with relative tolerance 0.0010
+actual:                                 expected:
+0.0050..................................-0.0050
+
+
+
+Success in the test number 12
+Success: t.checkInexact(123000.0, 128000.0, 0.1)
+The comparison involved inexact numbers with relative tolerance 0.1
+actual:                                 expected:
+123000.0................................128000.0
+
+
+
+Success in the test number 13
+Success: t.checkExpect(f1a, f1b)
+actual:                                 expected:
+3.3333333F                              3.3333333F
+
+
+
+Success in the test number 14
+Failure expected: 
+Test to fail: t.checkFail(f1a, f2a)
+The comparison involved inexact numbers with relative tolerance 0.1
+actual:                                 expected:
+3.3333333F..............................3.333F
+
+
+
+Success in the test number 15
+Success: t.checkInexact(d1a, d1b, 0.001)
+actual:                                 expected:
+3.3333333F                              3.3333333F
+
+
+
+Success in the test number 16
+Success: t.checkInexact(f1a, f2a, 0.001)
+The comparison involved inexact numbers with relative tolerance 0.0010
+actual:                                 expected:
+3.3333333F..............................3.333F
+
+
+
+Success in the test number 17
+Success: t.checkInexact(f1a, f2a, 0.0001)
+The comparison involved inexact numbers with relative tolerance 1.0E-4
+actual:                                 expected:
+3.3333333F..............................3.333F
+
+
+
+Success in the test number 18
+Success: t.checkInexact(f0, f0001, 0.00011)
+The comparison involved inexact numbers with relative tolerance 1.1E-4
+actual:                                 expected:
+0.0.....................................9.999999747378752E-5
+
+
+
+Success in the test number 19
+Success: t.checkInexact(0.0f, -0.0001f, 0.00011)
+The comparison involved inexact numbers with relative tolerance 1.1E-4
+actual:                                 expected:
+0.0F....................................-1.0E-4F
+
+
+
+Success in the test number 20
+Failure expected: 
+Success: Test to fail: t.checkInexactFail(f0, f0001, 0.000099)
+The comparison involved inexact numbers with relative tolerance 9.9E-5
+actual:                                 expected:
+0.0.....................................9.999999747378752E-5
+
+
+
+Error in test number 21
+Should fail: t.checkInexact(f0, f0001, -0.00011)
+Provided tolerance value was < 0
+tester.ErrorReport: Error trace:
+	at inexactValues.ExamplesInexact.testFloat(ExamplesInexact.java:148)
+	at inexactValues.ExamplesInexact.main(ExamplesInexact.java:702)
+actual:                                 expected:
+0.0.....................................9.999999747378752E-5
+
+
+
+Success in the test number 22
+Failure expected: 
+Test to fail: t.checkInexactFail(0.005f, -0.005f, 0.001)
+The comparison involved inexact numbers with relative tolerance 0.0010
+actual:                                 expected:
+0.0050F.................................-0.0050F
+
+
+
+Success in the test number 23
+Success: t.checkInexact(123000.0f, 128000.0f, 0.1)
+The comparison involved inexact numbers with relative tolerance 0.1
+actual:                                 expected:
+123000.0F...............................128000.0F
+
+
+
+Success in the test number 24
+Failure expected: 
+Test to fail: t.checkFail(1000d, 1000f)
+actual:                                 expected:
+1000.0..................................1000.0F
+
+
+
+Success in the test number 25
+Failure expected: 
+Test to fail: t.checkInexactFail(1000d, 1000f, 1.0)
+actual:                                 expected:
+1000.0..................................1000.0F
+
+
+
+Success in the test number 26
+Success: t.checkInexact(123000.0, 128000.0, 0.1)
+The comparison involved inexact numbers with relative tolerance 0.1
+actual:                                 expected:
+123000.0................................128000.0
+
+
+
+Success in the test number 27
+Test to fail: t.checkInexactFail(123000, 128000, 0.1) Failure expected: 
+
+Test failed because we cannot make inexact comparison of exact primitive or wrapper data
+The comparison involved inexact numbers with relative tolerance 0.1
+actual:                                 expected:
+123000..................................128000
+
+
+
+Success in the test number 28
+Success: t.checkInexactFail(123000, 128000, 0.1) Failure expected: 
+
+Test failed because we cannot make inexact comparison of exact primitive or wrapper data
+The comparison involved inexact numbers with relative tolerance 0.1
+actual:                                 expected:
+123000..................................128000
+
+
+
+Success in the test number 29
+Test to fail: t.checkInexactFail((long) 123000, (long) 128000, 0.1) Failure expected: 
+
+Test failed because we cannot make inexact comparison of exact primitive or wrapper data
+The comparison involved inexact numbers with relative tolerance 0.1
+actual:                                 expected:
+123000L.................................128000L
+
+
+
+Success in the test number 30
+Test to fail: t.checkInexactFail((long) 123000, (long) 128000, 0.1) Failure expected: 
+
+Test failed because we cannot make inexact comparison of exact primitive or wrapper data
+The comparison involved inexact numbers with relative tolerance 0.1
+actual:                                 expected:
+123000L.................................128000L
+
+
+
+Success in the test number 31
+Test to fail: t.checkInexactFail((short) 12300, (short) 12800, 0.1) Failure expected: 
+
+Test failed because we cannot make inexact comparison of exact primitive or wrapper data
+The comparison involved inexact numbers with relative tolerance 0.1
+actual:                                 expected:
+12300S..................................12800S
+
+
+
+Success in the test number 32
+Test to fail: t.checkInexactFail((short) 12300, (short) 12800, 0.1) Failure expected: 
+
+Test failed because we cannot make inexact comparison of exact primitive or wrapper data
+The comparison involved inexact numbers with relative tolerance 0.1
+actual:                                 expected:
+12300S..................................12800S
+
+
+
+Success in the test number 33
+Test to fail: t.checkInexactFail((byte) 123, (byte) 127, 0.1) Failure expected: 
+
+Test failed because we cannot make inexact comparison of exact primitive or wrapper data
+The comparison involved inexact numbers with relative tolerance 0.1
+actual:                                 expected:
+123.....................................127
+
+
+
+Success in the test number 34
+Test to fail: t.checkInexactFail((byte) 123, (byte) 127, 0.1) Failure expected: 
+
+Test failed because we cannot make inexact comparison of exact primitive or wrapper data
+The comparison involved inexact numbers with relative tolerance 0.1
+actual:                                 expected:
+123.....................................127
+
+
+
+Success in the test number 35
+Test to fail: t.checkInexactFail('m', 'n', 0.1) Failure expected: 
+
+Test failed because we cannot make inexact comparison of exact primitive or wrapper data
+The comparison involved inexact numbers with relative tolerance 0.1
+actual:                                 expected:
+m.......................................n
+
+
+
+Success in the test number 36
+Test to fail: t.checkInexactFail('m', 'n', 0.1) Failure expected: 
+
+Test failed because we cannot make inexact comparison of exact primitive or wrapper data
+The comparison involved inexact numbers with relative tolerance 0.1
+actual:                                 expected:
+m.......................................n
+
+
+
+Success in the test number 37
+Test to fail: t.checkInexactFail(true, true, 0.1) Failure expected: 
+
+Test failed because we cannot make inexact comparison of exact primitive or wrapper data
+The comparison involved inexact numbers with relative tolerance 0.1
+actual:                                 expected:
+true                                    true
+
+
+
+Success in the test number 38
+Test to fail: t.checkInexactFail(true, true, 0.1) Failure expected: 
+
+Test failed because we cannot make inexact comparison of exact primitive or wrapper data
+The comparison involved inexact numbers with relative tolerance 0.1
+actual:                                 expected:
+true                                    true
+
+
+
+Success in the test number 39
+Success: Check exact testWalkDistTo
+actual:                                 expected:
+7                                       7
+
+
+
+Success in the test number 40
+Test to fail: Check inexact testWalkDistTo Failure expected: 
+
+Test failed because we cannot make inexact comparison of exact primitive or wrapper data
+actual:                                 expected:
+17......................................17.01
+
+
+
+Success in the test number 41
+Success: Check exact testFlyDistTo
+actual:                                 expected:
+5.0                                     5.0
+
+
+
+Success in the test number 42
+Success: Check inexact testFlyDistTo
+The comparison involved inexact numbers with relative tolerance 0.1
+actual:                                 expected:
+13.0....................................12.99
+
+
+
+Success in the test number 43
+Success: Check exact distTo0 - Double
+actual:                                 expected:
+5.0                                     5.0
+
+
+
+Success in the test number 44
+Failure expected: 
+Test to fail: 9.0/2.999 vs. 3.0 (should be inexact) - Double
+The comparison involved inexact numbers with relative tolerance 0.1
+actual:                                 expected:
+3.0010003334444812......................3.0
+
+
+
+Success in the test number 45
+Failure expected: 
+Test to fail: x=9.0/2.999 vs. x=3.0 (should be inexact) - Double
+The comparison involved inexact numbers with relative tolerance 0.1
+actual:                                 expected:
+ new inexactValues.CartPtDouble:1(       new inexactValues.CartPtDouble:1(
+  this.x = 3.0..........................  this.x = 3.0010003334444812
+  this.y = 4.0)                           this.y = 4.0)
+
+
+
+Success in the test number 46
+Failure expected: 
+Test to fail: 9.0/2.998 vs. 3.0 (inaccurate since tolerance = 0.000001) - Double
+The comparison involved inexact numbers with relative tolerance 1.0E-6
+actual:                                 expected:
+3.0010003334444812......................3.0
+
+
+
+Success in the test number 47
+Failure expected: 
+Test to fail: x=9.0/2.998 vs. x=3.0 (inaccurate since tolerance = 0.000001) - Double
+The comparison involved inexact numbers with relative tolerance 1.0E-6
+actual:                                 expected:
+ new inexactValues.CartPtDouble:1(       new inexactValues.CartPtDouble:1(
+  this.x = 3.0..........................  this.x = 3.0010003334444812
+  this.y = 4.0)                           this.y = 4.0)
+
+
+
+Success in the test number 48
+Success: 9.0/2.999 vs. 3.0 (tolerance = 0.01) - Double
+The comparison involved inexact numbers with relative tolerance 0.01
+actual:                                 expected:
+3.0010003334444812......................3.0
+
+
+
+Success in the test number 49
+Success: x=9.0/2.998 vs. x=3.0 (tolerance = 0.01) - Double
+The comparison involved inexact numbers with relative tolerance 0.01
+actual:                                 expected:
+ new inexactValues.CartPtDouble:1(       new inexactValues.CartPtDouble:1(
+  this.x = 3.0..........................  this.x = 3.0010003334444812
+  this.y = 4.0)                           this.y = 4.0)
+
+
+
+Success in the test number 50
+Success: Check exact distTo0 - double
+actual:                                 expected:
+5.0                                     5.0
+
+
+
+Error in test number 51
+Should fail: 9.0/2.999 vs. 3.0 (should be inexact) - double
+tester.ErrorReport: Error trace:
+	at inexactValues.ExamplesInexact.testCartPtPrimitiveDouble(ExamplesInexact.java:397)
+	at inexactValues.ExamplesInexact.main(ExamplesInexact.java:702)
+The comparison involved inexact numbers with relative tolerance 0.01
+actual:                                 expected:
+3.0010003334444812......................3.0
+
+
+
+Success in the test number 52
+Failure expected: 
+Test to fail: x=9.0/2.999 vs. x=3.0 (should be inexact) - double
+The comparison involved inexact numbers with relative tolerance 0.01
+actual:                                 expected:
+
+--  actual  :  new inexactValues.CartPtPrimitiveDouble:1(          
+
+--  expected:  new inexactValues.CartPtPrimitiveDouble:1(
+
+  this.x = 3.0..........................  this.x = 3.0010003334444812
+  this.y = 4.0)                           this.y = 4.0)
+
+
+
+Success in the test number 53
+Failure expected: 
+Test to fail: 9.0/2.998 vs. 3.0 (inaccurate since tolerance = 0.000001) - double
+The comparison involved inexact numbers with relative tolerance 1.0E-6
+actual:                                 expected:
+3.0010003334444812......................3.0
+
+
+
+Success in the test number 54
+Failure expected: 
+Test to fail: x=9.0/2.998 vs. x=3.0 (inaccurate since tolerance = 0.000001) - double
+The comparison involved inexact numbers with relative tolerance 1.0E-6
+actual:                                 expected:
+
+--  actual  :  new inexactValues.CartPtPrimitiveDouble:1(          
+
+--  expected:  new inexactValues.CartPtPrimitiveDouble:1(
+
+  this.x = 3.0..........................  this.x = 3.0010003334444812
+  this.y = 4.0)                           this.y = 4.0)
+
+
+
+Success in the test number 55
+Success: 9.0/2.999 vs. 3.0 (tolerance = 0.01) - double
+The comparison involved inexact numbers with relative tolerance 0.01
+actual:                                 expected:
+3.0010003334444812......................3.0
+
+
+
+Success in the test number 56
+Success: x=9.0/2.998 vs. x=3.0 (tolerance = 0.01) - double
+The comparison involved inexact numbers with relative tolerance 0.01
+actual:                                 expected:
+
+--  actual  :  new inexactValues.CartPtPrimitiveDouble:1(          
+
+--  expected:  new inexactValues.CartPtPrimitiveDouble:1(
+
+  this.x = 3.0..........................  this.x = 3.0010003334444812
+  this.y = 4.0)                           this.y = 4.0)
+
+
+
+Success in the test number 57
+Success: Check exact distTo0 - Float
+actual:                                 expected:
+5.0F                                    5.0F
+
+
+
+Success in the test number 58
+Failure expected: 
+Test to fail: 9.0f/2.999f vs. 3.0f (should be inexact) - Float
+The comparison involved inexact numbers with relative tolerance 0.01
+actual:                                 expected:
+3.0010002F..............................3.0F
+
+
+
+Success in the test number 59
+Failure expected: 
+Test to fail: x=9.0f/2.999f vs. x=3.0f (should be inexact) - Float
+The comparison involved inexact numbers with relative tolerance 0.01
+actual:                                 expected:
+ new inexactValues.CartPtFloat:1(        new inexactValues.CartPtFloat:1(
+  this.x = 3.0F.........................  this.x = 3.0010002F
+  this.y = 4.0F)                          this.y = 4.0F)
+
+
+
+Success in the test number 60
+Failure expected: 
+Test to fail: 9.0f/2.998f vs. 3.0f (inaccurate since tolerance = 0.000001) - Float
+The comparison involved inexact numbers with relative tolerance 1.0E-6
+actual:                                 expected:
+3.0010002F..............................3.0F
+
+
+
+Success in the test number 61
+Failure expected: 
+Test to fail: x=9.0f/2.998f vs. x=3.0f (inaccurate since tolerance = 0.000001) - Float
+The comparison involved inexact numbers with relative tolerance 1.0E-6
+actual:                                 expected:
+ new inexactValues.CartPtFloat:1(        new inexactValues.CartPtFloat:1(
+  this.x = 3.0F.........................  this.x = 3.0010002F
+  this.y = 4.0F)                          this.y = 4.0F)
+
+
+
+Success in the test number 62
+Success: 9.0f/2.999f vs. 3.0f (tolerance = 0.01) - Float
+The comparison involved inexact numbers with relative tolerance 0.009999999776482582
+actual:                                 expected:
+3.0010002F..............................3.0F
+
+
+
+Success in the test number 63
+Success: x=9.0f/2.998f vs. x=3.0f (tolerance = 0.01) - Float
+The comparison involved inexact numbers with relative tolerance 0.01
+actual:                                 expected:
+ new inexactValues.CartPtFloat:1(        new inexactValues.CartPtFloat:1(
+  this.x = 3.0F.........................  this.x = 3.0010002F
+  this.y = 4.0F)                          this.y = 4.0F)
+
+
+
+Success in the test number 64
+Success: Check exact distTo0 - float
+actual:                                 expected:
+5.0F                                    5.0F
+
+
+
+Success in the test number 65
+Failure expected: 
+Test to fail: 9.0f/2.999f vs. 3.0f (should be inexact) - float
+The comparison involved inexact numbers with relative tolerance 0.01
+actual:                                 expected:
+3.0010002F..............................3.0F
+
+
+
+Success in the test number 66
+Failure expected: 
+Test to fail: x=9.0f/2.999f vs. x=3.0f (should be inexact) - float
+The comparison involved inexact numbers with relative tolerance 0.01
+actual:                                 expected:
+
+--  actual  :  new inexactValues.CartPtPrimitiveFloat:1(          
+
+--  expected:  new inexactValues.CartPtPrimitiveFloat:1(
+
+  this.x = 3.0F.........................  this.x = 3.0010002F
+  this.y = 4.0F)                          this.y = 4.0F)
+
+
+
+Success in the test number 67
+Failure expected: 
+Test to fail: 9.0f/2.998f vs. 3.0f (inaccurate since tolerance = 0.000001) - float
+The comparison involved inexact numbers with relative tolerance 1.0E-6
+actual:                                 expected:
+3.0010002F..............................3.0F
+
+
+
+Success in the test number 68
+Failure expected: 
+Test to fail: x=9.0f/2.998f vs. x=3.0f (inaccurate since tolerance = 0.000001) - float
+The comparison involved inexact numbers with relative tolerance 1.0E-6
+actual:                                 expected:
+
+--  actual  :  new inexactValues.CartPtPrimitiveFloat:1(          
+
+--  expected:  new inexactValues.CartPtPrimitiveFloat:1(
+
+  this.x = 3.0F.........................  this.x = 3.0010002F
+  this.y = 4.0F)                          this.y = 4.0F)
+
+
+
+Success in the test number 69
+Success: 9.0f/2.999f vs. 3.0f (tolerance = 0.01) - float
+The comparison involved inexact numbers with relative tolerance 0.009999999776482582
+actual:                                 expected:
+3.0010002F..............................3.0F
+
+
+
+Success in the test number 70
+Success: x=9.0f/2.998f vs. x=3.0f (tolerance = 0.01) - float
+The comparison involved inexact numbers with relative tolerance 0.01
+actual:                                 expected:
+
+--  actual  :  new inexactValues.CartPtPrimitiveFloat:1(          
+
+--  expected:  new inexactValues.CartPtPrimitiveFloat:1(
+
+  this.x = 3.0F.........................  this.x = 3.0010002F
+  this.y = 4.0F)                          this.y = 4.0F)
+
+
+
+Success in the test number 71
+Success: Check distance to origin exact - will succeed
+
+ new inexactValues.CartPtDouble:1(
+  this.x = 3.0
+  this.y = 4.0)
+ invoked method distTo0 in the class inexactValues.CartPtDouble
+ with arguments ()
+
+actual:                                 expected:
+5.0                                     5.0
+
+
+
+Success in the test number 72
+Success: Inexact check distance to - success
+
+ new inexactValues.CartPtDouble:1(
+  this.x = 3.0
+  this.y = 4.0)
+ invoked method distTo in the class inexactValues.CartPtDouble
+ with arguments (
+ new inexactValues.CartPtDouble:1(
+  this.x = 7.0
+  this.y = 7.0))
+
+The comparison involved inexact numbers with relative tolerance 0.0010
+actual:                                 expected:
+5.0.....................................4.998
+
+
+
+Error in test number 73
+Should fail: should be checkInexactIterable
+tester.ErrorReport: Error trace:
+	at inexactValues.ExamplesInexact.testIterableExact(ExamplesInexact.java:635)
+	at inexactValues.ExamplesInexact.main(ExamplesInexact.java:702)
+The comparison involved inexact numbers with relative tolerance 0.0010
+actual:                                 expected:
+Iterable[0]                             Iterable[0] 
+ new inexactValues.CartPtDouble:1(       new inexactValues.CartPtDouble:1(
+  this.x = 3.0                            this.x = 3.0
+  this.y = 4.0),                          this.y = 4.0),
+Iterable[1]                             Iterable[1] 
+ new inexactValues.CartPtDouble:2(       new inexactValues.CartPtDouble:2(
+  this.x = 7.0                            this.x = 7.0
+  this.y = 7.0),........................  this.y = 6.9995),
+Iterable[2]                             Iterable[2] 
+ new inexactValues.CartPtDouble:3(       new inexactValues.CartPtDouble:3(
+  this.x = 15.0                           this.x = 15.0
+  this.y = 8.0)                           this.y = 8.0)
+
+
+
+Error in test number 74
+Should fail: tolerance < 0
+Provided tolerance value was < 0
+tester.ErrorReport: Error trace:
+	at inexactValues.ExamplesInexact.testIterableInexactNegativeTolerance(ExamplesInexact.java:648)
+	at inexactValues.ExamplesInexact.main(ExamplesInexact.java:702)
+actual:                                 expected:
+Iterable[0]                             Iterable[0] 
+ new inexactValues.CartPtDouble:1(       new inexactValues.CartPtDouble:1(
+  this.x = 3.0                            this.x = 3.0
+  this.y = 4.0),                          this.y = 4.0),
+Iterable[1]                             Iterable[1] 
+ new inexactValues.CartPtDouble:2(       new inexactValues.CartPtDouble:2(
+  this.x = 7.0                            this.x = 7.0
+  this.y = 7.0),........................  this.y = 6.9995),
+Iterable[2]                             Iterable[2] 
+ new inexactValues.CartPtDouble:3(       new inexactValues.CartPtDouble:3(
+  this.x = 15.0                           this.x = 15.0
+  this.y = 8.0)                           this.y = 8.0)
+
+
+
+Success in the test number 75
+Success: Test Inexact Iterable
+The comparison involved inexact numbers with relative tolerance 0.01
+actual:                                 expected:
+Iterable[0]                             Iterable[0] 
+ new inexactValues.CartPtDouble:1(       new inexactValues.CartPtDouble:1(
+  this.x = 3.0                            this.x = 3.0
+  this.y = 4.0),                          this.y = 4.0),
+Iterable[1]                             Iterable[1] 
+ new inexactValues.CartPtDouble:2(       new inexactValues.CartPtDouble:2(
+  this.x = 7.0                            this.x = 7.0
+  this.y = 7.0),........................  this.y = 6.9995),
+Iterable[2]                             Iterable[2] 
+ new inexactValues.CartPtDouble:3(       new inexactValues.CartPtDouble:3(
+  this.x = 15.0                           this.x = 15.0
+  this.y = 8.0)                           this.y = 8.0)
+
+
+
+Error in test number 76
+Should fail: not the same lists
+tester.ErrorReport: Error trace:
+	at inexactValues.ExamplesInexact.testIterableInexactDifferentSize(ExamplesInexact.java:680)
+	at inexactValues.ExamplesInexact.main(ExamplesInexact.java:702)
+The comparison involved inexact numbers with relative tolerance 0.01
+actual:                                 expected:
+Iterable[0]                             Iterable[0] 
+ new inexactValues.CartPtDouble:1(       new inexactValues.CartPtDouble:1(
+  this.x = 3.0                            this.x = 3.0
+  this.y = 4.0),                          this.y = 4.0),
+Iterable[1]                             Iterable[1] 
+ new inexactValues.CartPtDouble:2(       new inexactValues.CartPtDouble:2(
+  this.x = 7.0..........................  this.x = 15.0
+  this.y = 7.0),                          this.y = 8.0)
+Iterable[2] 
+ new inexactValues.CartPtDouble:3(
+  this.x = 15.0
+  this.y = 8.0)
+
+
+
+--- END OF FULL TEST RESULTS ---
+
+---------------------------------------------------
+
+---------------------------------------------------
+
+---------------------------------------------------
+Invoke tester.runReport(this, false, false, true):
+Print no data, all test results, no warnings
+Tester Prima v.1.4.1 - 5 October 2010
+----------------------------------
+
+Ran 76 tests.
+7 tests failed.
+Issued 60 warnings of inexact comparison.
+
+Failed test results: 
+--------------
+
+Error in test number 5
+Should fail: t.checkInexact(d1a, d2a, 0.0001)
+tester.ErrorReport: Error trace:
+	at inexactValues.ExamplesInexact.testDouble(ExamplesInexact.java:78)
+	at inexactValues.ExamplesInexact.main(ExamplesInexact.java:710)
+The comparison involved inexact numbers with relative tolerance 1.0E-4
+actual:                                 expected:
+3.3333333333333335......................3.333
+
+
+
+Error in test number 11
+Should fail: t.checkInexact(0.005, -0.005, 0.001)
+tester.ErrorReport: Error trace:
+	at inexactValues.ExamplesInexact.testDouble(ExamplesInexact.java:99)
+	at inexactValues.ExamplesInexact.main(ExamplesInexact.java:710)
+The comparison involved inexact numbers with relative tolerance 0.0010
+actual:                                 expected:
+0.0050..................................-0.0050
+
+
+
+Error in test number 21
+Should fail: t.checkInexact(f0, f0001, -0.00011)
+Provided tolerance value was < 0
+tester.ErrorReport: Error trace:
+	at inexactValues.ExamplesInexact.testFloat(ExamplesInexact.java:148)
+	at inexactValues.ExamplesInexact.main(ExamplesInexact.java:710)
+actual:                                 expected:
+0.0.....................................9.999999747378752E-5
+
+
+
+Error in test number 51
+Should fail: 9.0/2.999 vs. 3.0 (should be inexact) - double
+tester.ErrorReport: Error trace:
+	at inexactValues.ExamplesInexact.testCartPtPrimitiveDouble(ExamplesInexact.java:397)
+	at inexactValues.ExamplesInexact.main(ExamplesInexact.java:710)
+The comparison involved inexact numbers with relative tolerance 0.01
+actual:                                 expected:
+3.0010003334444812......................3.0
+
+
+
+Error in test number 73
+Should fail: should be checkInexactIterable
+tester.ErrorReport: Error trace:
+	at inexactValues.ExamplesInexact.testIterableExact(ExamplesInexact.java:635)
+	at inexactValues.ExamplesInexact.main(ExamplesInexact.java:710)
+The comparison involved inexact numbers with relative tolerance 0.0010
+actual:                                 expected:
+Iterable[0]                             Iterable[0] 
+ new inexactValues.CartPtDouble:1(       new inexactValues.CartPtDouble:1(
+  this.x = 3.0                            this.x = 3.0
+  this.y = 4.0),                          this.y = 4.0),
+Iterable[1]                             Iterable[1] 
+ new inexactValues.CartPtDouble:2(       new inexactValues.CartPtDouble:2(
+  this.x = 7.0                            this.x = 7.0
+  this.y = 7.0),........................  this.y = 6.9995),
+Iterable[2]                             Iterable[2] 
+ new inexactValues.CartPtDouble:3(       new inexactValues.CartPtDouble:3(
+  this.x = 15.0                           this.x = 15.0
+  this.y = 8.0)                           this.y = 8.0)
+
+
+
+Error in test number 74
+Should fail: tolerance < 0
+Provided tolerance value was < 0
+tester.ErrorReport: Error trace:
+	at inexactValues.ExamplesInexact.testIterableInexactNegativeTolerance(ExamplesInexact.java:648)
+	at inexactValues.ExamplesInexact.main(ExamplesInexact.java:710)
+actual:                                 expected:
+Iterable[0]                             Iterable[0] 
+ new inexactValues.CartPtDouble:1(       new inexactValues.CartPtDouble:1(
+  this.x = 3.0                            this.x = 3.0
+  this.y = 4.0),                          this.y = 4.0),
+Iterable[1]                             Iterable[1] 
+ new inexactValues.CartPtDouble:2(       new inexactValues.CartPtDouble:2(
+  this.x = 7.0                            this.x = 7.0
+  this.y = 7.0),........................  this.y = 6.9995),
+Iterable[2]                             Iterable[2] 
+ new inexactValues.CartPtDouble:3(       new inexactValues.CartPtDouble:3(
+  this.x = 15.0                           this.x = 15.0
+  this.y = 8.0)                           this.y = 8.0)
+
+
+
+Error in test number 76
+Should fail: not the same lists
+tester.ErrorReport: Error trace:
+	at inexactValues.ExamplesInexact.testIterableInexactDifferentSize(ExamplesInexact.java:680)
+	at inexactValues.ExamplesInexact.main(ExamplesInexact.java:710)
+The comparison involved inexact numbers with relative tolerance 0.01
+actual:                                 expected:
+Iterable[0]                             Iterable[0] 
+ new inexactValues.CartPtDouble:1(       new inexactValues.CartPtDouble:1(
+  this.x = 3.0                            this.x = 3.0
+  this.y = 4.0),                          this.y = 4.0),
+Iterable[1]                             Iterable[1] 
+ new inexactValues.CartPtDouble:2(       new inexactValues.CartPtDouble:2(
+  this.x = 7.0..........................  this.x = 15.0
+  this.y = 7.0),                          this.y = 8.0)
+Iterable[2] 
+ new inexactValues.CartPtDouble:3(
+  this.x = 15.0
+  this.y = 8.0)
+
+
+
+--- END OF TEST RESULTS ---
