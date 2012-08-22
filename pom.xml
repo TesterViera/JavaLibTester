@@ -19,16 +19,11 @@
       <artifactId>quickcheck</artifactId>
       <version>0.6</version>
     </dependency>
-    <dependency>
-      <groupId>org.scannotation</groupId>
-      <artifactId>scannotation</artifactId>
-      <version>1.0.2/version>
-    </dependency>
   </dependencies>
 
   <build>
     <directory>${project.basedir}/target</directory>
-    <sourceDirectory>${project.basedir}/src/tester</sourceDirectory>
+    <sourceDirectory>${project.basedir}/src</sourceDirectory>
   </build>
 
 </project>
