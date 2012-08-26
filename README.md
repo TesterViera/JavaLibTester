@@ -8,4 +8,4 @@ The tester library is published under the LGPL license. The sources, documentati
 
 http://www.ccs.neu.edu/javalib/Tester/index.html 
 
-provides additional information, detailed user's guide, insstructions for running tests and for setting up the environment for the IDEs typically used in educational settings.
+provides additional information, detailed user's guide, instructions for running tests and for setting up the environment for the IDEs typically used in educational settings.
