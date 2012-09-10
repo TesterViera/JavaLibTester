@@ -314,7 +314,7 @@ public class Tester {
 
   /**
    * Test nothing, just report failure.
-   * 
+   *
    * @return always returns <code>false</code>
    */
   public boolean fail() {
