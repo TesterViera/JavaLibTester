@@ -2,34 +2,22 @@ package tester;
 
 //src: http://mike.shannonandmike.net/2009/09/02/java-reflecting-to-get-all-classes-in-a-package/
 
-import java.io.ByteArrayOutputStream;
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Modifier;
-import java.lang.reflect.Type;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Enumeration;
 import java.util.HashSet;
 import java.util.Iterator;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.Queue;
 import java.util.Set;
-import java.util.jar.JarEntry;
-import java.util.jar.JarFile;
-import java.util.jar.JarInputStream;
 
-public class Utils {
-
+public class Utils
+{
     /*
      * private JarFile jar;
-     * 
+     *
      * private Collection<Class<?>> loadJar() throws IOException {
      * List<Class<?>> classes = new ArrayList<Class<?>>(); for
      * (Enumeration<JarEntry> e = jar.entries(); e.hasMoreElements(){ JarEntry
@@ -47,7 +35,7 @@ public class Utils {
     /**
      * Given a package name, attempts to reflect to find all classes within the
      * package on the local file system.
-     * 
+     *
      * @param packageName
      * @return all classes in the given package
      */
@@ -80,7 +68,7 @@ public class Utils {
 		    // Remove the .class extension
 		    fileName = fileName.substring(0, fileName.length() - 6);
 		    try {
-			classes.add(Class.forName(packageName + "." + fileName));
+            classes.add(Reflector.classForName(packageName + "." + fileName));
 		    } catch (ClassNotFoundException e) {
 			// LOG.warn(packageName + "." + fileName +
 			// " does not appear to be a valid class.", e);
@@ -116,7 +104,7 @@ public class Utils {
           }
           if((jarEntry.getName ().startsWith (packageName)) &&
                (jarEntry.getName ().endsWith (".class")) ) {
-            if (debug) System.out.println 
+            if (debug) System.out.println
               ("Found " + jarEntry.getName().replaceAll("/", "\\."));
             classes.add (jarEntry.getName().replaceAll("/", "\\."));
           }
@@ -128,7 +116,7 @@ public class Utils {
       return classes;
    }
 	*/
-    
+
     public static Set<Class> getConcreteDescendentsInSamePackage(
 	    Class parentType) {
 	Set<Class> classes = Utils.getClassesInPackage(parentType.getPackage()
@@ -154,15 +142,14 @@ public class Utils {
     // ensure concrete before calling this
     public static Object getDummyObject(Class cls) {
 	Object obj = null;
-	Constructor ctor = null;
 
 	try {
-	    ctor = cls.getDeclaredConstructor();
-	    ctor.setAccessible(true);
+        Constructor<?> ctor = cls.getDeclaredConstructor();
+        Reflector.ensureIsAccessible(ctor);
 	    obj = ctor.newInstance();
 	} catch (NoSuchMethodException e1) {
 	    // just get "a" constructor ("any" constructor)
-	    ctor = cls.getConstructors()[0];
+        final Constructor<?> ctor = cls.getConstructors()[0];
 	    Class[] paramTypes = ctor.getParameterTypes();
 	    List<Object> params = new ArrayList<Object>();
 	    for (Class paramType : paramTypes)
@@ -223,7 +210,7 @@ public class Utils {
 	throw new IllegalArgumentException("Not primitive type : " + typeName);
     }
 
-    
+
     public static boolean isConcrete(Class type){
 	int modifiers = type.getModifiers();
 	return !(Modifier.isInterface(modifiers) || Modifier.isAbstract(modifiers));

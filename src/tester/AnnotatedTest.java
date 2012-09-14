@@ -7,7 +7,7 @@ import java.lang.reflect.InvocationTargetException;
 /**
  * Ideally, this class will be used to create threaded tests that
  * can execute sequentially.  Unfortunately, the current limitations of
- * Cobertura prevent us from running non-synchronous tests.  
+ * Cobertura prevent us from running non-synchronous tests.
  * @author Weston Jossey
  * @since December 12 2008
  * @version 2.0
@@ -15,19 +15,18 @@ import java.lang.reflect.InvocationTargetException;
 public class AnnotatedTest implements Runnable{
     String name;
     Object o = null;
-    
+
     public AnnotatedTest(String name){
         this.name = name;
         init();
     }
-    
+
     private void init() {
-        Class<?> examples;
-        Constructor<?> constructor;
         try {
-            examples = Class.forName(name);
-            constructor = examples.getDeclaredConstructor();
-            constructor.setAccessible(true);
+            Class<?> examples = Reflector.classForName(name);
+            Constructor<?> constructor =
+                examples.getDeclaredConstructor();
+            Reflector.ensureIsAccessible(constructor);
             o = constructor.newInstance();
 
             System.out.println("Tester Results");
@@ -57,5 +56,5 @@ public class AnnotatedTest implements Runnable{
             t.runAnyTests(o);
         }
     }
-    
+
 }
