@@ -4,7 +4,7 @@
 
   <groupId>ccs.neu.edu</groupId>
   <artifactId>tester</artifactId>
-  <version>1.5.1</version>
+  <version>1.5.2</version>
   <packaging>jar</packaging>
 
   <name>tester</name>
