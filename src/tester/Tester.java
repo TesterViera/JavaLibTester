@@ -1,9 +1,21 @@
 package tester;
 
 //import java.lang.annotation.Annotation;
-import java.lang.reflect.*;
-import java.util.*;
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.io.StringWriter;
+import java.lang.reflect.Array;
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.Set;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 //import org.apache.log4j.Logger;
 
@@ -24,18 +36,19 @@ import java.io.*;
  * <P>Displays the data even if no tests are present.</P>
  *
  * @author Viera K. Proulx, Weston Jossey, Shayne Caswell, Sachin Venugopalan
+ *         Virag Shah
  * @since 21 March 2008, 11 June 2008, 24 June 2008, 16 October 2008, 11
  *        November 2008, 23 November 2008, 12 December 2008, 20 January 2009,
  *        18 May 2009, 19 October 2009, 10 November 2009, 16 November 2009,
  *        5 February 2010, 15 March 2010, 12 May 2010, 5 October 2010,
- *        18 February 2011, 5 July 2011, 12 January 2012, 17 June 2012
+ *        18 February 2011, 5 July 2011, 12 January 2012, 17 June 2012,
+ *        20 September 2012
  */
 public class Tester {
   // private static final Logger logger = Logger.getLogger(Tester.class);
 
-	/** A <code>String</code> that reports the current tester version */
-	private String version = "Tester Prima v.1.5.1 - 17 June 2012\n" +
-                           "-----------------------------------";
+  /** A <code>String</code> that reports the current tester version */	
+  private static String version;
 
   /** A <code>String</code> that records the results for all failed tests */
   protected StringBuilder failedResults = new StringBuilder(
@@ -62,11 +75,41 @@ public class Tester {
 
   /** start with no tests and no failures */
   public Tester() {
-    Inspector.TOLERANCE = 0.001;
-    this.numberOfTests = 0;
-    this.errors = 0;
-    this.warnings = 0;
-    this.testname = "";
+	  Inspector.TOLERANCE = 0.001;
+	  this.numberOfTests = 0;
+	  this.errors = 0;
+	  this.warnings = 0;
+	  this.testname = "";
+  }
+
+  /** Read the current version of tester from the pom.xml file **/
+  static {
+	  try {
+		  InputStream inputStream = Tester.class.getClassLoader().getResourceAsStream("META-INF/maven/ccs.neu.edu/tester/pom.xml");
+		  BufferedReader br;
+
+		  if(inputStream == null)
+			  br = new BufferedReader(new FileReader(new File("pom.xml")));
+		  else
+			  br = new BufferedReader(new InputStreamReader(inputStream, "UTF-8"));
+
+		  String line;
+		  StringBuilder sb = new StringBuilder();
+
+		  while((line = br.readLine()) != null) {
+			  sb.append(line.trim());
+		  }
+
+		  Pattern p = Pattern.compile("<version>(.*?)</version>");
+		  Matcher m = p.matcher(sb);
+		  m.find();
+
+		  version = "Tester Prima v." + m.group(1) + "\n-----------------------------------";
+
+	  } catch(Exception e) {
+		  System.out.println("** Failed to read tester version from pom.xml file. **");
+		  e.printStackTrace();
+	  }
   }
 
   /*--------------------------------------------------------------------*/
@@ -136,7 +179,7 @@ public class Tester {
     this.numberOfTests = 0; // number of tests run
     boolean failed = false; // any tests failed?
 
-    System.out.println(this.version);
+    System.out.println(version);
     // print the name of the 'Examples' class
     System.out.println("Tests defined in the class: " + f.getClass().getName() +
                     ":\n---------------------------");
