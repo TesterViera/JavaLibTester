@@ -260,7 +260,7 @@ public class UDTGenerator<T> implements net.java.quickcheck.Generator<T>
      * return sameValues; }
      */
 
-    @Override
+    
     public T next() {
 
 	T genObj = null;
