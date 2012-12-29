@@ -2518,9 +2518,10 @@ public class Tester {
 	 * @param obj
 	 *            The 'Examples' class instance where the tests are defined
 	 */
-	public static void run(Object obj) {
+	public static boolean run(Object obj) {
 		Tester t = new Tester();
 		t.runAnyTests(obj, false, true);
+		return t.errors==0;
 	}
 
 	/**
@@ -2529,13 +2530,14 @@ public class Tester {
 	 *
 	 * @param objs An array of 'Examples' class instances where tests are defined
 	 */
-	public static void runFullReport(Object... objs) {
+	public static boolean runFullReport(Object... objs) {
 		Tester t = new Tester();
 		if(objs != null){
 			for(Object obj : objs){
 				t.runAnyTests(obj, true, true);
 			}
 		}
+		return t.errors==0;
 	}
 
 	/**
@@ -2544,9 +2546,10 @@ public class Tester {
 	 *
 	 * @param obj The 'Examples' class instance where the tests are defined
 	 */
-	public static void runReport(Object obj, boolean full, boolean printall) {
+	public static boolean runReport(Object obj, boolean full, boolean printall) {
 		Tester t = new Tester();
 		t.runAnyTests(obj, full, printall);
+		return t.errors==0;
 	}
 
 	/**
@@ -2557,7 +2560,7 @@ public class Tester {
 	 * @param printall true if all data should be displayed
 	 * @param objs An array of 'Examples' class instances where tests are defined
 	 */
-	public static void runReports(boolean full, boolean printall,
+	public static boolean runReports(boolean full, boolean printall,
 			Object... objs) {
 		Tester t = new Tester();
 		if(objs != null){
@@ -2565,5 +2568,6 @@ public class Tester {
 				t.runAnyTests(obj, full, printall);
 			}
 		}
+		return t.errors==0;
 	}
 }
