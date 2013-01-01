@@ -1852,6 +1852,23 @@ public class Tester {
 
 	/**
 	 * Use the given <CODE>{@link Equivalence Equivalence}</CODE>
+	 * function object to determine the NON-equivalence
+	 * of the two given objects.
+	 *
+	 * @param obj1 the first object to compare
+	 * @param obj2 the second object to compare
+	 * @param equiv the function object that implements the
+	 * <CODE>{@link Equivalence Equivalence}</CODE> comparison
+	 *
+	 * @return <code>true</code> if the two objects are equivalent
+	 */
+	public <T> boolean checkInequivalent(T obj1, T obj2,
+			Equivalence<T> equiv) {
+		return this.checkInequivalent(obj1, obj2, equiv, "");
+	}
+
+	/**
+	 * Use the given <CODE>{@link Equivalence Equivalence}</CODE>
 	 * function object to determine the equivalence
 	 * of the two given objects.
 	 *
@@ -1868,6 +1885,25 @@ public class Tester {
 		this.testname = "Equivalence test: \n" + testname;
 		return this.report(equiv.equivalent(obj1, obj2), testname,
 				this.combine(obj1, obj2));
+	}
+
+	/**
+	 * Use the given <CODE>{@link Equivalence Equivalence}</CODE>
+	 * function object to determine the equivalence
+	 * of the two given objects.
+	 *
+	 * @param obj1 the first object to compare
+	 * @param obj2 the second object to compare
+	 * @param equiv the function object that implements the
+	 * <CODE>{@link Equivalence Equivalence}</CODE> comparison
+	 * @param testname the <code>String</code> that describes this test
+	 *
+	 * @return <code>true</code> if the two objects are equivalent
+	 */
+	public <T> boolean checkInequivalent(T obj1, T obj2,
+			Equivalence<T> equiv, String testname) {
+		this.testname = "Equivalence test: \n" + testname;
+		return this.checkExpect(! equiv.equivalent(obj1, obj2), "Should be inequivalent: \n" + testname);
 	}
 
 	/*--------------------------------------------------------------------*/
