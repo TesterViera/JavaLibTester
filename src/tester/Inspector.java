@@ -802,9 +802,10 @@ public class Inspector {
                 "funworld", "impworld", "appletworld", 
                 "impsoundworld", "appletsoundworld"));
         ArrayList<String> worldImageClassNames = new ArrayList<String>(Arrays.asList(
-                "CircleImage", "DiskImage", "EllipseImage", "FrameImage",
-                "FromFileImage", "LineImage", "OvalImage", "OverlayImages", 
-                "OverlayImagesXY", "RectangleImage", "TextImage"));
+                "CircleImage", "Crop", "EllipseImage", 
+                "FreezeImage", "FromFileImage", "FromURLImage", "LinearImage",
+                "OverlayImage", "PolygonImage", "RasterImage", 
+                "RectangleImage", "TextImage"));
         for(String packagename: worldPackageNames){
             if (name.startsWith(packagename))
         
