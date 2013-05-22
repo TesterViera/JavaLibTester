@@ -434,29 +434,30 @@ public class Inspector {
                 return isSameMap((Map) obj1, (Map) obj2);
 
             /** now handle the general case */
-            boolean sameValues = true;
-            int i = 0;
-            try {
-                for (; i < Array.getLength(r1.sampleDeclaredFields); i++) {
-                    sameValues = sameValues
-                            && isSamePrivate(
-                                    r1.sampleDeclaredFields[i].get(obj1),
-                                    r2.sampleDeclaredFields[i].get(obj2));
-                }
-            } catch (IllegalAccessException e) {
-                System.out.println("same comparing "
-                        + r1.sampleDeclaredFields[i].getType().getName()
-                        + " and "
-                        + r2.sampleDeclaredFields[i].getType().getName()
-                        + "cannot access the field " + i + " message: "
-                        + e.getMessage());
-                System.out.println("class 1: " + r1.sampleClass.getName());
-                System.out.println("class 2: " + r2.sampleClass.getName());
-            }
-
-            return sameValues;
-        // } else      // not same class
-           //    return false;
+            if (sameClass) {
+              boolean sameValues = true;
+              int i = 0;
+              try {
+                  for (; i < Array.getLength(r1.sampleDeclaredFields); i++) {
+                      sameValues = sameValues
+                              && isSamePrivate(
+                                      r1.sampleDeclaredFields[i].get(obj1),
+                                      r2.sampleDeclaredFields[i].get(obj2));
+                  }
+              } catch (IllegalAccessException e) {
+                  System.out.println("same comparing "
+                          + r1.sampleDeclaredFields[i].getType().getName()
+                          + " and "
+                          + r2.sampleDeclaredFields[i].getType().getName()
+                          + "cannot access the field " + i + " message: "
+                          + e.getMessage());
+                  System.out.println("class 1: " + r1.sampleClass.getName());
+                  System.out.println("class 2: " + r2.sampleClass.getName());
+              }
+  
+              return sameValues;
+           } else      // not same class
+             return false;
     }
 
     /**
