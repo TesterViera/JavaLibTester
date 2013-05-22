@@ -1852,6 +1852,23 @@ public class Tester {
 
 	/**
 	 * Use the given <CODE>{@link Equivalence Equivalence}</CODE>
+	 * function object to determine the NON-equivalence
+	 * of the two given objects.
+	 *
+	 * @param obj1 the first object to compare
+	 * @param obj2 the second object to compare
+	 * @param equiv the function object that implements the
+	 * <CODE>{@link Equivalence Equivalence}</CODE> comparison
+	 *
+	 * @return <code>true</code> if the two objects are equivalent
+	 */
+	public <T> boolean checkInequivalent(T obj1, T obj2,
+			Equivalence<T> equiv) {
+		return this.checkInequivalent(obj1, obj2, equiv, "");
+	}
+
+	/**
+	 * Use the given <CODE>{@link Equivalence Equivalence}</CODE>
 	 * function object to determine the equivalence
 	 * of the two given objects.
 	 *
@@ -1868,6 +1885,25 @@ public class Tester {
 		this.testname = "Equivalence test: \n" + testname;
 		return this.report(equiv.equivalent(obj1, obj2), testname,
 				this.combine(obj1, obj2));
+	}
+
+	/**
+	 * Use the given <CODE>{@link Equivalence Equivalence}</CODE>
+	 * function object to determine the equivalence
+	 * of the two given objects.
+	 *
+	 * @param obj1 the first object to compare
+	 * @param obj2 the second object to compare
+	 * @param equiv the function object that implements the
+	 * <CODE>{@link Equivalence Equivalence}</CODE> comparison
+	 * @param testname the <code>String</code> that describes this test
+	 *
+	 * @return <code>true</code> if the two objects are equivalent
+	 */
+	public <T> boolean checkInequivalent(T obj1, T obj2,
+			Equivalence<T> equiv, String testname) {
+		this.testname = "Equivalence test: \n" + testname;
+		return this.checkExpect(! equiv.equivalent(obj1, obj2), "Should be inequivalent: \n" + testname);
 	}
 
 	/*--------------------------------------------------------------------*/
@@ -2518,9 +2554,10 @@ public class Tester {
 	 * @param obj
 	 *            The 'Examples' class instance where the tests are defined
 	 */
-	public static void run(Object obj) {
+	public static boolean run(Object obj) {
 		Tester t = new Tester();
 		t.runAnyTests(obj, false, true);
+		return t.errors==0;
 	}
 
 	/**
@@ -2529,13 +2566,14 @@ public class Tester {
 	 *
 	 * @param objs An array of 'Examples' class instances where tests are defined
 	 */
-	public static void runFullReport(Object... objs) {
+	public static boolean runFullReport(Object... objs) {
 		Tester t = new Tester();
 		if(objs != null){
 			for(Object obj : objs){
 				t.runAnyTests(obj, true, true);
 			}
 		}
+		return t.errors==0;
 	}
 
 	/**
@@ -2544,9 +2582,10 @@ public class Tester {
 	 *
 	 * @param obj The 'Examples' class instance where the tests are defined
 	 */
-	public static void runReport(Object obj, boolean full, boolean printall) {
+	public static boolean runReport(Object obj, boolean full, boolean printall) {
 		Tester t = new Tester();
 		t.runAnyTests(obj, full, printall);
+		return t.errors==0;
 	}
 
 	/**
@@ -2557,7 +2596,7 @@ public class Tester {
 	 * @param printall true if all data should be displayed
 	 * @param objs An array of 'Examples' class instances where tests are defined
 	 */
-	public static void runReports(boolean full, boolean printall,
+	public static boolean runReports(boolean full, boolean printall,
 			Object... objs) {
 		Tester t = new Tester();
 		if(objs != null){
@@ -2565,5 +2604,6 @@ public class Tester {
 				t.runAnyTests(obj, full, printall);
 			}
 		}
+		return t.errors==0;
 	}
 }
